@@ -16,7 +16,12 @@ SOURCE_URL = "https://www.nvidia.com/ko-kr/ai-days/"
 MAIN_URL = "https://www.nvidia.com/ko-kr/ai-days/"
 HERO_TEXT_NODES = 12  # h1 다음에서 hero 줄을 찾는 텍스트 노드 수
 _TITLE_RE = re.compile(r"AI Day Seoul\s+(20\d\d)")
-_HERO_RE = re.compile(r"(\d{1,2})월\s*(\d{1,2})\s*[~\-–]\s*(\d{1,2})일,?\s*(20\d\d)\s*\|\s*([^|\s]+)")
+_RANGE = r"(?P<month>\d{1,2})월\s*(?P<first>\d{1,2})\s*[~\-–]\s*(?P<last>\d{1,2})일"
+_VENUE = r"\s*\|\s*(?P<venue>[^|\s]+)"
+_HERO_RES = (  # '11월 9~10일, 2026 | 코엑스'와 '2026년 11월 9~10일 | 코엑스'
+    re.compile(_RANGE + r",?\s*(?P<year>20\d\d)" + _VENUE),
+    re.compile(r"(?P<year>20\d\d)년\s*" + _RANGE + _VENUE),
+)
 _CTA_TEXT = "지금 등록하기"
 
 
@@ -35,10 +40,10 @@ def parse_main(html):
     if h1 is None or _norm(h1.get_text()) != "AI Day Seoul":
         raise StructureError("NVIDIA AI Day 페이지 h1이 'AI Day Seoul'이 아님")
     hero = _norm(" ".join(h1.find_all_next(string=True, limit=HERO_TEXT_NODES)))
-    m = _HERO_RE.search(hero)
+    m = next((m for m in (r.search(hero) for r in _HERO_RES) if m), None)
     if not m:
         raise StructureError("NVIDIA AI Day hero의 연도 포함 기간 표기를 읽지 못함")
-    month, first, last, year, venue = int(m[1]), m[2], m[3], m[4], m[5]
+    month, first, last, year, venue = int(m["month"]), m["first"], m["last"], m["year"], m["venue"]
     if year != title_match[1]:
         raise StructureError(f"NVIDIA AI Day title 연도({title_match[1]})와 hero 연도({year})가 다름")
     start = rules.parse_date(f"{year}-{month}-{first}")

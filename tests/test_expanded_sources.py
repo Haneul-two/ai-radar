@@ -224,6 +224,12 @@ class NvidiaTest(unittest.TestCase):
         self.assertEqual((data["startDate"], data["endDate"]), ("2026-11-09", "2026-11-10"))
         self.assertEqual(data["venue"], "코엑스")
 
+    def test_hero_year_first_format(self):
+        # 2026-10 공식 페이지가 '2026년 11월 9~10일 | 코엑스'로 표기를 바꿨다.
+        html = fixture("nvidia_ai_day.html").replace("11월 9&#xFF5E;10일, 2026", "2026년 11월 9~10일")
+        data = source("nvidia").parse_main(html)
+        self.assertEqual((data["year"], data["startDate"], data["endDate"], data["venue"]), ("2026", "2026-11-09", "2026-11-10", "코엑스"))
+
     def test_item(self):
         raw = self.collect().items[0]
         self.assertEqual((raw["kind"], raw["title"], raw["mode"], raw["country"]), ("event", "NVIDIA AI Day Seoul 2026", "offline", "KR"))
