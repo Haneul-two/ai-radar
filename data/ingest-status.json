@@ -1,14 +1,14 @@
 {
-  "lastAttemptAt": "2026-10-26T03:31:30Z",
+  "lastAttemptAt": "2026-10-27T03:57:23Z",
   "sources": [
     {
       "id": "devpost",
       "name": "Devpost",
       "url": "https://devpost.com/hackathons",
       "status": "ok",
-      "checkedAt": "2026-10-26T03:31:30Z",
-      "lastSuccessAt": "2026-10-26T03:31:30Z",
-      "itemCount": 14,
+      "checkedAt": "2026-10-27T03:57:23Z",
+      "lastSuccessAt": "2026-10-27T03:57:23Z",
+      "itemCount": 15,
       "message": "후보 12건 중 9건 사용, 한국 참가 근거/마감 미확인 3건 제외, 조회 실패 0건"
     },
     {
@@ -16,8 +16,8 @@
       "name": "DACON",
       "url": "https://dacon.io/competitions",
       "status": "ok",
-      "checkedAt": "2026-10-26T03:31:30Z",
-      "lastSuccessAt": "2026-10-26T03:31:30Z",
+      "checkedAt": "2026-10-27T03:57:23Z",
+      "lastSuccessAt": "2026-10-27T03:57:23Z",
       "itemCount": 9,
       "message": "AI 관련 후보 14건 중 14건 사용, 상세 조회 실패 0건"
     },
@@ -26,18 +26,18 @@
       "name": "위비티",
       "url": "https://www.wevity.com/?c=find&s=1&gub=1",
       "status": "ok",
-      "checkedAt": "2026-10-26T03:31:30Z",
-      "lastSuccessAt": "2026-10-26T03:31:30Z",
-      "itemCount": 119,
-      "message": "AI 관련 후보 52건(6페이지까지 확인) 중 52건 사용, 상세 조회 실패 0건 (목록 마감 확인 3건)"
+      "checkedAt": "2026-10-27T03:57:23Z",
+      "lastSuccessAt": "2026-10-27T03:57:23Z",
+      "itemCount": 124,
+      "message": "AI 관련 후보 55건(6페이지까지 확인) 중 55건 사용, 상세 조회 실패 0건 (목록 마감 확인 2건)"
     },
     {
       "id": "aisummit",
       "name": "AI Summit Seoul",
       "url": "https://www.aisummit.co.kr/",
       "status": "ok",
-      "checkedAt": "2026-10-26T03:31:30Z",
-      "lastSuccessAt": "2026-10-26T03:31:30Z",
+      "checkedAt": "2026-10-27T03:57:23Z",
+      "lastSuccessAt": "2026-10-27T03:57:23Z",
       "itemCount": 1,
       "message": "노출 행사 2027년 2027-08-11~2027-08-13. 경고: 페이지 title은 2026년 표기, 본문 노출 행사(2027) 기준 사용"
     },
@@ -46,8 +46,8 @@
       "name": "서초 AI 페스타",
       "url": "https://seochoai.kr/",
       "status": "ok",
-      "checkedAt": "2026-10-26T03:31:30Z",
-      "lastSuccessAt": "2026-10-26T03:31:30Z",
+      "checkedAt": "2026-10-27T03:57:23Z",
+      "lastSuccessAt": "2026-10-27T03:57:23Z",
       "itemCount": 1,
       "message": "행사 2026-10-17~2026-10-17 서초문화예술공원"
     },
@@ -56,7 +56,7 @@
       "name": "NVIDIA AI Day Seoul",
       "url": "https://www.nvidia.com/ko-kr/ai-days/",
       "status": "error",
-      "checkedAt": "2026-10-26T03:31:30Z",
+      "checkedAt": "2026-10-27T03:57:23Z",
       "lastSuccessAt": "2026-10-22T03:33:45Z",
       "itemCount": 1,
       "message": "NVIDIA AI Day hero의 연도 포함 기간 표기를 읽지 못함"
@@ -66,8 +66,8 @@
       "name": "AI FESTA",
       "url": "https://www.aifesta.kr/",
       "status": "ok",
-      "checkedAt": "2026-10-26T03:31:30Z",
-      "lastSuccessAt": "2026-10-26T03:31:30Z",
+      "checkedAt": "2026-10-27T03:57:23Z",
+      "lastSuccessAt": "2026-10-27T03:57:23Z",
       "itemCount": 1,
       "message": "행사 2026-10-06~2026-10-08 코엑스 C홀"
     },
@@ -76,28 +76,28 @@
       "name": "콘테스트코리아",
       "url": "https://www.contestkorea.com/sub/list.php?int_gbn=1",
       "status": "ok",
-      "checkedAt": "2026-10-26T03:31:30Z",
-      "lastSuccessAt": "2026-10-26T03:31:30Z",
-      "itemCount": 38,
-      "message": "AI 활성 후보 45건(15페이지 확인) 중 45건 사용, 상세 조회·검증 실패 0건 (목록 마감 확인 3건)"
+      "checkedAt": "2026-10-27T03:57:23Z",
+      "lastSuccessAt": "2026-10-27T03:57:23Z",
+      "itemCount": 41,
+      "message": "AI 활성 후보 48건(15페이지 확인) 중 48건 사용, 상세 조회·검증 실패 0건"
     },
     {
       "id": "devevent",
       "name": "Dev-Event",
       "url": "https://github.com/brave-people/Dev-Event",
       "status": "ok",
-      "checkedAt": "2026-10-26T03:31:30Z",
-      "lastSuccessAt": "2026-10-26T03:31:30Z",
+      "checkedAt": "2026-10-27T03:57:23Z",
+      "lastSuccessAt": "2026-10-27T03:57:23Z",
       "itemCount": 53,
-      "message": "월별 항목 96건 중 AI 진행·예정 32건 사용(비AI·지난 행사·날짜 미확정·비HTTPS 링크·해외 오프라인 제외 64건)"
+      "message": "월별 항목 96건 중 AI 진행·예정 28건 사용(비AI·지난 행사·날짜 미확정·비HTTPS 링크·해외 오프라인 제외 68건)"
     },
     {
       "id": "aiexpo",
       "name": "AI EXPO KOREA",
       "url": "https://aiexpo.co.kr/",
       "status": "ok",
-      "checkedAt": "2026-10-26T03:31:30Z",
-      "lastSuccessAt": "2026-10-26T03:31:30Z",
+      "checkedAt": "2026-10-27T03:57:23Z",
+      "lastSuccessAt": "2026-10-27T03:57:23Z",
       "itemCount": 1,
       "message": "직접 조회 실패(blocked); 한국전시산업진흥회 SHOWALA로 확인. 행사 2027-04-14~2027-04-16 코엑스 (COEX) Hall A"
     }
