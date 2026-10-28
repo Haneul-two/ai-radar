@@ -9,6 +9,7 @@
 - 교차 리뷰(Codex, read-only): P0/P1 없음. P2 2건·P3 1건 반영 — 링커리어 상세 status가 OPEN이 아니면 저장하지 않고 마감 전파에만 사용, 롯데 title 연도와 마감 연도 불일치는 오류, 링커리어 마감 밀리초 보존(23:59:59.999). 'AX' 의미적 오탐·`AX2026` 누락은 정책 위험으로 기록만.
 - 검증: Python 281 OK, Node 118 pass. 실데이터 전체 dry-run(파일 미수정): 12출처 모두 ok, 전체 293건, 링커리어 AI 후보 82건(34페이지) 중 교차 출처 중복 제거 후 29건, lotteax 1건(링커리어의 같은 챌린지는 공식 출처 우선으로 제거).
 - 한계: 링커리어와 위비티·콘테스트코리아 사이 제목 표기가 다른 같은 공모전 8건은 중복으로 남는다(기존 '누락보다 중복' 정책). 수집 요청이 약 120건 늘어 실행이 2~3분 길어진다(수집 step 18분 안).
+- 배포: PR #8 병합(merge 938f7cc, CI node·python pass). 수동 update run 40645504322 success(7분 21초), 수집 2026-10-28T06:42:46Z, data commit d12ce7f, Pages 40646252345 success. 공개 `ingest-status.json` 12출처 모두 ok(nvidia 2026-11-09~10 코엑스, lotteax, linkareer AI 후보 84건·35페이지), 운영 데이터 294건, 공개 `opportunities.json`에 LOTTE AX CHALLENGE 2026(마감 2026-11-04T23:59:59+09:00) 노출 확인.
 
 ## 2026-10-26 — NVIDIA AI Day 갱신 실패 수정: hero 날짜 표기 변경
 
