@@ -19,7 +19,7 @@
 - 내 저장(브라우저 localStorage). 데이터에서 사라진 저장 id는 지우지 않고 건수와 안내를 표시
 - 마감 임박(최대 5건)·출처 상태(성공/확인 실패/접근 제한 + 마지막 성공 확인 시각)는 필터 하단 접이식 영역
 - 필터는 URL query 우선 → localStorage → 기본값. 잘못된 값은 기본값으로 복구
-- 수집 출처 10곳: 기존 7곳(Devpost · DACON · 위비티 · AI Summit Seoul · 서초 AI 페스타 · NVIDIA AI Day Seoul · AI FESTA) + 새 3곳(콘테스트코리아 · Dev-Event · AI EXPO KOREA). 공식 행사 출처는 지정한 사이트만 매일 다시 확인하며 웹 전체 행사 발견을 보장하지 않습니다. 출처별 한도·한계는 `docs/sources.md`, 검토 후 반려한 후보와 사유는 [`docs/evidence/radar-source-audit.md`](docs/evidence/radar-source-audit.md). 운영 중 AI API 호출·토큰 사용은 없습니다.
+- 수집 출처 12곳: 기존 7곳(Devpost · DACON · 위비티 · AI Summit Seoul · 서초 AI 페스타 · NVIDIA AI Day Seoul · AI FESTA) + 콘테스트코리아 · Dev-Event · AI EXPO KOREA + 2026-10-28 추가 LOTTE AX CHALLENGE(공식) · 링커리어(기업 챌린지가 일찍 올라오는 공모전 모음). 제목의 `AX`(AI 전환)도 AI 관련으로 본다. 공식 행사 출처는 지정한 사이트만 매일 다시 확인하며 웹 전체 행사 발견을 보장하지 않습니다. 출처별 한도·한계는 `docs/sources.md`, 검토 후 반려한 후보와 사유는 [`docs/evidence/radar-source-audit.md`](docs/evidence/radar-source-audit.md). 운영 중 AI API 호출·토큰 사용은 없습니다.
 - AI Summit 응답 진단: `python tools/diagnose_aisummit.py`. 기존 robots/호스트/2.5MB 제한으로 읽고 크기·본문 위치·날짜 파싱 결과만 출력합니다. `Test` workflow를 수동 실행하면 같은 진단을 GitHub runner에서도 수행합니다.
 - AI EXPO는 공식 사이트 조회 실패 시 접근이 허용된 SHOWALA 공개 행사 기록으로 동일 행사인지 검증해 갱신합니다. 실제 확인 출처를 표시하며 기존 행사 ID를 유지합니다. `python tools/diagnose_aiexpo.py`와 `Test` 수동 실행으로 기본·대체 경로를 진단할 수 있습니다.
 
