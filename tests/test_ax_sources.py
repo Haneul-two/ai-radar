@@ -77,6 +77,7 @@ class LotteAxTest(unittest.TestCase):
             "prelim end mismatch": base.replace("11월 4일(수)", "11월 5일(목)"),
             "final before deadline": base.replace("11월 24일(화)~11월 25일(수)", "11월 2일(월)~11월 3일(화)"),
             "title year": base.replace("<title>LOTTE AX CHALLENGE 2026</title>", "<title>LOTTE AX CHALLENGE</title>"),
+            "title year mismatch": base.replace("<title>LOTTE AX CHALLENGE 2026</title>", "<title>LOTTE AX CHALLENGE 2027</title>"),
             "no next data": "<html><title>LOTTE AX CHALLENGE 2026</title></html>",
         }
         for name, html in broken.items():
@@ -94,7 +95,7 @@ def listing_page(acts):
 
 def detail_page(act_id, title, start_ms, close_ms, **extra):
     act = {"__typename": "Activity", "id": act_id, "title": title, "organizationName": "주최", "recruitStartAt": start_ms,
-           "recruitCloseAt": close_ms, "targets": [], "interests": [], "tenThousandUnitOfReward": None, "homepageURL": None, **extra}
+           "recruitCloseAt": close_ms, "status": "OPEN", "targets": [], "interests": [], "tenThousandUnitOfReward": None, "homepageURL": None, **extra}
     blob = json.dumps({"props": {"pageProps": {"__APOLLO_STATE__": {f"Activity:{act_id}": act}}}}, ensure_ascii=False)
     return f'<html><script id="__NEXT_DATA__" type="application/json">{blob}</script></html>'
 
@@ -117,7 +118,7 @@ class LinkareerTest(unittest.TestCase):
     def test_detail_fields(self):
         d = linkareer.parse_detail(fixture("linkareer_detail.html"), "360080")
         self.assertEqual(d["registrationStartDate"], "2026-10-28")
-        self.assertEqual(d["deadlineAt"], "2026-11-04T23:59:59+09:00")
+        self.assertEqual(d["deadlineAt"], "2026-11-04T23:59:59.999+09:00")  # 밀리초 보존(1초 일찍 숨기지 않음)
         self.assertEqual(d["organizer"], "롯데지주")
         self.assertEqual(d["eligibility"], "대상 제한 없음")
         self.assertEqual(d["prize"], "총 상금 2,000만원")
@@ -143,7 +144,7 @@ class LinkareerTest(unittest.TestCase):
         lotte = next(i for i in result.items if i["title"] == "LOTTE AX CHALLENGE 2026")
         self.assertEqual(lotte["sourceUrl"], "https://linkareer.com/activity/360080")
         self.assertEqual(lotte["url"], lotte["sourceUrl"])  # 홈페이지 링크가 없으면 링커리어 안내 페이지
-        self.assertEqual(lotte["deadlineAt"], "2026-11-04T23:59:59+09:00")
+        self.assertEqual(lotte["deadlineAt"], "2026-11-04T23:59:59.999+09:00")
         self.assertIsNotNone(rules.normalize_item(lotte, "linkareer", NOW_ISO))
 
     def test_detail_close_mismatch_counts_as_failure(self):
@@ -156,6 +157,18 @@ class LinkareerTest(unittest.TestCase):
         result = linkareer.collect(FakeFetcher(pages), NOW, None)
         self.assertEqual([i["title"] for i in result.items], ["AI 공모전 B"])
         self.assertIn("실패 1건", result.message)
+
+    def test_detail_closed_early_is_not_saved_but_observed(self):
+        pages = {
+            linkareer.page_url(1): listing_page([("1", "AI 공모전 A", CLOSE), ("2", "AI 공모전 B", CLOSE)]),
+            linkareer.page_url(2): listing_page([]),
+            linkareer.detail_url("1"): detail_page("1", "AI 공모전 A", START, CLOSE, status="CLOSED"),
+            linkareer.detail_url("2"): detail_page("2", "AI 공모전 B", START, CLOSE),
+        }
+        result = linkareer.collect(FakeFetcher(pages), NOW, None)
+        self.assertEqual([i["title"] for i in result.items], ["AI 공모전 B"])
+        self.assertEqual(result.closed_source_urls, [linkareer.detail_url("1")])
+        self.assertIn("조기 마감 1건", result.message)
 
     def test_all_details_failing_is_source_error(self):
         pages = {linkareer.page_url(1): listing_page([("1", "AI 공모전 A", CLOSE)]), linkareer.page_url(2): listing_page([])}

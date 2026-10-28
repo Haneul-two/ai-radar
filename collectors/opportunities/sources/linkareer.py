@@ -42,7 +42,7 @@ def _state(text):
 def _kst_iso(ms):
     if not isinstance(ms, int) or isinstance(ms, bool):
         return None
-    return datetime.fromtimestamp(ms / 1000, rules.SEOUL).replace(microsecond=0).isoformat()
+    return datetime.fromtimestamp(ms / 1000, rules.SEOUL).isoformat(timespec="milliseconds")  # 23:59:59.999를 1초 일찍 자르지 않는다
 
 
 def parse_listing(text):
@@ -70,7 +70,7 @@ def parse_detail(text, act_id):
     start = _kst_iso(act.get("recruitStartAt"))
     homepage = act.get("homepageURL")
     return {
-        "title": act["title"], "organizer": act.get("organizationName"), "closeAt": act.get("recruitCloseAt"),
+        "title": act["title"], "organizer": act.get("organizationName"), "closeAt": act.get("recruitCloseAt"), "status": act.get("status"),
         "registrationStartDate": start[:10] if start else None, "deadlineAt": _kst_iso(act.get("recruitCloseAt")),
         "eligibility": ", ".join(n for n in names("targets") if n) or None, "interests": [n for n in names("interests") if n],
         "prize": f"총 상금 {reward:,}만원" if isinstance(reward, int) and reward > 0 else None,
@@ -118,7 +118,7 @@ def collect(fetcher, now, max_items=None):
         seen.update(r["id"] for r in new)
         rows.extend(r for r in new if _is_candidate(r))
     rows = rows[:limit]
-    items, failures = [], []
+    items, failures, closed = [], [], []
     for row in rows:
         try:
             detail = parse_detail(fetcher.get(detail_url(row["id"])).text, row["id"])
@@ -127,6 +127,9 @@ def collect(fetcher, now, max_items=None):
         except (FetchError, StructureError) as exc:
             failures.append(exc)
             continue
+        if detail["status"] != "OPEN":  # 목록 조회 뒤 조기 마감: 저장하지 않고 기존 항목 마감 전파에만 쓴다
+            closed.append(detail_url(row["id"]))
+            continue
         items.append(build_raw(row, detail))
     fail_if_every_fetch_failed(len(rows), failures, "링커리어")
-    return CollectResult(items, f"AI 후보 {len(rows)}건({pages_read}페이지 확인) 중 {len(items)}건 사용, 상세 조회·검증 실패 {len(failures)}건")
+    return CollectResult(items, f"AI 후보 {len(rows)}건({pages_read}페이지 확인) 중 {len(items)}건 사용, 조기 마감 {len(closed)}건, 상세 조회·검증 실패 {len(failures)}건", closed)

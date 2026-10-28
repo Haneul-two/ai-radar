@@ -65,6 +65,8 @@ def parse_main(html):
     if prelim is None or final is None:
         raise StructureError("LOTTE AX 일정에서 예선·본선 단계를 찾지 못함")
     deadline_day = rules.seoul_date_from_iso(deadline_at)
+    if deadline_day[:4] != year[1]:
+        raise StructureError(f"LOTTE AX title 연도({year[1]})와 마감 연도({deadline_day[:4]})가 다름")
     reg_start, reg_end = _range(prelim[0], deadline_day[:4])
     if reg_end != deadline_day:
         raise StructureError(f"LOTTE AX 예선 일정 끝({reg_end})과 마감 일시({deadline_day})가 다름")
