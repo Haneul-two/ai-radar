@@ -23,7 +23,7 @@ ITEM_KEYS = (
 )
 
 _AI_RE = re.compile(
-    r"(?<![A-Za-z0-9])(?:ai|a\.i\.|llms?|genai)(?![A-Za-z0-9])"
+    r"(?<![A-Za-z0-9])(?:ai|a\.i\.|llms?|genai|ax)(?![A-Za-z0-9])"  # AX = AI 전환(기업 챌린지 제목에 AI 없이 쓰임)
     r"|인공지능|머신러닝|딥러닝|기계학습|생성형"
     r"|machine learning|deep learning|artificial intelligence|generative",
     re.IGNORECASE,

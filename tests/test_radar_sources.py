@@ -45,7 +45,7 @@ class AllowListTest(unittest.TestCase):
 
 class RegistryTest(unittest.TestCase):
     def test_ten_sources_existing_priority_first(self):
-        self.assertEqual([s.id for s in default_sources()],
+        self.assertEqual([s.id for s in default_sources()][:10],  # 이후 추가 출처는 test_ax_sources
                          ["devpost", "dacon", "wevity", "aisummit", "seocho", "nvidia", "aifesta", "contestkorea", "devevent", "aiexpo"])
 
 

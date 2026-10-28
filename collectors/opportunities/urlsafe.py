@@ -6,7 +6,7 @@ ALLOWED_HOST_SUFFIXES = ("devpost.com",)
 ALLOWED_HOSTS = {
     "wevity.com", "www.wevity.com", "dacon.io", "www.dacon.io", "aisummit.co.kr", "www.aisummit.co.kr",
     "seochoai.kr", "www.seochoai.kr", "www.nvidia.com", "aifesta.kr", "www.aifesta.kr",
-    "www.contestkorea.com", "aiexpo.co.kr", "www.showala.com", "raw.githubusercontent.com",  # 정확한 호스트만(하위 도메인·와일드카드 아님)
+    "www.contestkorea.com", "aiexpo.co.kr", "www.showala.com", "raw.githubusercontent.com", "lotteaxchallenge.com", "linkareer.com",  # 정확한 호스트만(하위 도메인·와일드카드 아님)
 }
 _TRACKING_PREFIXES = ("utm_",)
 
