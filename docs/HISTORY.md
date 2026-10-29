@@ -223,3 +223,8 @@
 - 실검증(로컬 8012, Edge): `check_focus_ui.py` 42/42(1440~320 폭, 로딩/오류/새로고침 실패 요약 포함), `check_radar_ui.py` 98/98 pageerror 0, Node 118 pass. Python 수집기 테스트·실수집은 UI 전용 작업이라 실행하지 않았다. 증거 `docs/evidence/focus-ui-checks.json`·`focus-{1440,768,390}.png`.
 - 기존 검사 수정 1건: `check_radar_ui.py`의 검색어를 `items[0]`(이미 마감돼 목록에서 빠진 항목일 수 있음) 대신 `visible[0]`에서 고르도록 바꿨다 — 실데이터 갱신 후 0건으로 실패한 기존 취약점이며 디자인과 무관.
 - **미완료**: Codex 독립 git diff·실Edge 캡처·기능 회귀 교차 리뷰 대기. commit·push·배포 없음(공개 사이트는 이전 디자인 그대로).
+
+- 2026-10-29 포커스 디자인 공개 배포: PR #9 병합(구현 ccb0918, merge 4422dcd3555deab2a9b18af112d45e0c9d353b18, 02:02:56Z). Push Test 40803866908·PR Test 40803911122·master Test 40804029908·Pages 40804029630 모두 success, Pages builds/latest built = 4422dcd. root 최종 로컬 Python 281·Node 118, 기능 회귀 98/98·포커스 42/42, Claude 구현·Codex 교차 리뷰 완료.
+- 공개 실Edge 1440/768/390/320 검사 24/24(`docs/tasks/check_focus_public_20261029.py`, 증거 `docs/evidence/focus-release-20261029/public-checks.json`·png): h1 확정 문구, 요약 159건 = 노출 159건, 검색·유형 상시 노출, 가로 overflow 0, 운영 debug 없음, 저장·상세·달력·검색 포커스, pageerror 0.
+- 데이터 보존: 공개 JSON과 로컬 JSON은 내용 동일(updatedAt 2026-10-28T06:42:46Z, 보관 294). 바이트 차이(로컬 370640B CRLF 9208개 vs 공개 361432B CRLF 0개)는 줄바꿈뿐이며 데이터 변경 아님 → 검증기를 sha256 대신 JSON 파싱 비교로 고쳤다. 데이터·collectors·.github 수정 없음.
+- 이 기록의 커밋·푸시는 아직 하지 않았다(root 몫).

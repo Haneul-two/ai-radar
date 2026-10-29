@@ -1,0 +1,129 @@
+{
+  "verifiedAt": "2026-10-29T02:06:22.128655+00:00",
+  "url": "https://haneul-two.github.io/ai-radar/",
+  "passed": 24,
+  "total": 24,
+  "checks": [
+    {
+      "name": "1440px 확정 제목",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1440px 가로 넘침 없음",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1440px 검색·유형 상시 노출",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "1440px 운영 디버그 비노출",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "공개 요약 전체 건수 일치",
+      "passed": true,
+      "detail": 159
+    },
+    {
+      "name": "포커스 바탕색 적용",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "공개 데이터 원본 보존",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "공개 저장 보기 동작",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "공개 상세 열기·닫기",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "공개 달력 전환",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "공개 검색·포커스 유지",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "768px 확정 제목",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "768px 가로 넘침 없음",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "768px 검색·유형 상시 노출",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "768px 운영 디버그 비노출",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "390px 확정 제목",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "390px 가로 넘침 없음",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "390px 검색·유형 상시 노출",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "390px 운영 디버그 비노출",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "320px 확정 제목",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "320px 가로 넘침 없음",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "320px 검색·유형 상시 노출",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "320px 운영 디버그 비노출",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "공개 pageerror 없음",
+      "passed": true,
+      "detail": []
+    }
+  ],
+  "errors": []
+}

@@ -11,6 +11,8 @@
 
 최신 상태(2026-10-29): 포커스 디자인(제목·요약 3종·왼쪽 검색/유형 열)을 로컬 운영 소스에 적용·검증(`tools/check_focus_ui.py` 42/42, `check_radar_ui.py` 98/98). **원격 미반영, Codex 교차 리뷰 대기.** 상세 `docs/HISTORY.md`.
 
+최신 상태(2026-10-29, 공개 배포 완료): PR #9 병합(구현 ccb0918, merge 4422dcd3555deab2a9b18af112d45e0c9d353b18, 2026-10-29T02:02:56Z), master Test run 40804029908·Pages run 40804029630 success, Pages builds/latest built = 4422dcd. 공개 https://haneul-two.github.io/ai-radar/ 실Edge 1440/768/390/320 검사 24/24·pageerror 0(`docs/evidence/focus-release-20261029/public-checks.json`). 공개 JSON은 로컬과 내용 동일(줄바꿈만 다름). 기록용 커밋·푸시는 아직 하지 않았다. 아래 같은 날 '원격 미반영' 서술은 당시 기록이다.
+
 ## 프로젝트 개요
 
 국내 + 한국 참가 가능 해외 온라인 AI 행사·공모전·해커톤 탐색 보드(개인용). 정적 `index.html` + ES modules가 `data/opportunities.json`(+`data/ingest-status.json` overlay)을 fetch해 렌더링한다. 서버 없음, GitHub Pages 동작. 이전 5탭 대시보드(`ai-events.html`, 카테고리 JSON, 뉴스/논문/채용/도구 수집기)는 보관만 하고 쓰지 않는다.
