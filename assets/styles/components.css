@@ -1,4 +1,4 @@
-/* 버튼·검색·유형 탭·필터·상태 표시 */
+/* 버튼·검색·유형 탭·필터·상태 표시. 선택 상태는 연초록 바탕 + 짙은 초록 글자 */
 
 /* buttons */
 .btn {
@@ -19,7 +19,7 @@
 }
 .btn:hover:not(:disabled) { background: var(--color-accent-soft); border-color: var(--color-accent); }
 .btn:disabled { color: var(--color-muted); background: var(--color-closed-soft); }
-.btn[aria-pressed='true'] { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
+.btn[aria-pressed='true'] { background: var(--color-accent-soft); border-color: var(--color-accent); color: var(--color-accent-strong); }
 .btn[aria-pressed='true'] .icon { fill: currentColor; }
 
 .btn-primary { background: var(--color-accent); border-color: var(--color-accent); color: var(--color-on-accent); }
@@ -40,6 +40,9 @@
 .icon-btn:hover { color: var(--color-accent); border-color: var(--color-accent); }
 
 /* search */
+.rail-main { display: grid; gap: var(--space-2); }
+.rail-main .rail-heading { margin: var(--space-2) 0 0; }
+.rail-main .rail-heading:first-child { margin-top: 0; }
 .search-field { position: relative; display: flex; align-items: center; }
 .search-field .icon { position: absolute; left: var(--space-3); color: var(--color-muted); pointer-events: none; }
 .search-input {
@@ -81,7 +84,7 @@
   transition: background-color var(--transition), color var(--transition);
 }
 .tab:hover { color: var(--color-ink); background: var(--color-page); }
-.tab[aria-pressed='true'] { background: var(--color-accent); color: var(--color-on-accent); }
+.tab[aria-pressed='true'] { background: var(--color-accent-soft); color: var(--color-accent-strong); }
 .tab-count { font-size: var(--text-xs); font-weight: 600; font-variant-numeric: tabular-nums; opacity: 0.85; }
 
 /* toolbar */
@@ -113,6 +116,7 @@
   min-height: var(--control);
   padding: 0 var(--space-3);
   border: 0;
+  border-left: 3px solid transparent;
   border-radius: var(--radius-sm);
   background: transparent;
   text-align: left;
@@ -120,10 +124,10 @@
   white-space: nowrap;
   transition: background-color var(--transition), color var(--transition);
 }
-.option:hover { background: var(--color-line); }
-.option[aria-pressed='true'] { background: var(--color-accent); color: var(--color-on-accent); font-weight: 700; }
+.option:hover { background: var(--color-hover); }
+.option[aria-pressed='true'] { background: var(--color-accent-soft); border-left-color: var(--color-accent); color: var(--color-accent-strong); font-weight: 700; }
 .option-count { font-size: var(--text-xs); color: var(--color-muted); font-variant-numeric: tabular-nums; }
-.option[aria-pressed='true'] .option-count { color: var(--color-on-accent); }
+.option[aria-pressed='true'] .option-count { color: var(--color-accent-strong); }
 
 .rail-details { border-top: var(--border); padding-top: var(--space-1); }
 .rail-details summary { cursor: pointer; list-style: none; display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 0 var(--space-2); min-height: var(--control); padding: 0 var(--space-1); font-size: var(--text-sm); font-weight: 700; }
@@ -134,9 +138,20 @@
 .rail-details[open] summary::after { content: '–'; }
 .rail-details summary > span:first-child { white-space: nowrap; }
 
-/* 1279 이하: 필터는 토글로 접힌다 */
+/* 1280 이상: 유형도 왼쪽 열의 세로 목록(진행 상태·참가 방식과 같은 선택 표시) */
+@media (min-width: 1280px) {
+  .rail-panel { margin-top: var(--space-4); }
+  .search-input { font-size: var(--text-sm); }
+  .tab-group { display: grid; grid-template-columns: minmax(0, 1fr); gap: 2px; padding: 0; background: transparent; border: 0; }
+  .tab { justify-content: space-between; min-height: var(--control); padding: 0 var(--space-3); border-left: 3px solid transparent; text-align: left; }
+  .tab:hover { background: var(--color-hover); }
+  .tab[aria-pressed='true'] { border-left-color: var(--color-accent); font-weight: 800; }
+}
+
+/* 1279 이하: 검색·유형은 항상 보이고, 나머지 필터만 토글로 접힌다 */
 @media (max-width: 1279px) {
-  .rail-toggle { display: inline-flex; }
+  .rail-main .rail-heading { position: absolute; width: 1px; height: 1px; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .rail-toggle { display: inline-flex; margin-top: var(--space-2); }
   .filter-rail .rail-panel { display: none; margin-top: var(--space-2); padding: var(--space-3); background: var(--color-surface); border: var(--border); border-radius: var(--radius-md); grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); align-items: start; }
   .filter-rail.is-open .rail-panel { display: grid; }
 }

@@ -1,4 +1,4 @@
-/* 페이지 골격: 상단 바 / 검색 / 도구줄 / 필터 | 비교 목록 */
+/* 페이지 골격: 상단 바 / 제목·요약 / (검색·유형·필터 | 도구줄 + 비교 목록) */
 .debug-banner {
   background: var(--color-warn-soft);
   color: var(--color-warn);
@@ -49,7 +49,22 @@
   padding: var(--space-4) var(--gutter) var(--space-8);
 }
 
+.page-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-4) var(--space-6);
+  padding: var(--space-5) 0 var(--space-4);
+}
+.page-intro { min-width: 0; }
+.page-title { font-size: var(--text-heading); font-weight: 800; letter-spacing: -0.02em; line-height: var(--leading-tight); }
 .scope { margin-top: var(--space-2); color: var(--color-muted); font-size: var(--text-xs); }
+.stats { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-6); margin: 0; }
+.stat { display: grid; gap: 2px; }
+.stat-label { color: var(--color-muted); font-size: var(--text-xs); }
+.stat-value { font-size: var(--text-stat); font-weight: 800; line-height: var(--leading-tight); font-variant-numeric: tabular-nums; white-space: nowrap; }
+.stat-date { font-size: var(--text-md); }
 
 .notices { display: grid; gap: var(--space-2); }
 .notices:not(:empty) { margin-top: var(--space-3); }
@@ -59,8 +74,8 @@
   flex-wrap: wrap;
   align-items: center;
   gap: var(--space-3);
-  margin-top: var(--space-4);
   padding-bottom: var(--space-3);
+  margin-bottom: var(--space-3);
   border-bottom: var(--border);
 }
 
@@ -72,11 +87,12 @@
   align-items: start;
 }
 .filter-rail { position: sticky; top: var(--space-4); }
-.results { min-width: 0; }
+.main-col, .results { min-width: 0; }
 
 @media (max-width: 1279px) {
   .board { grid-template-columns: minmax(0, 1fr); gap: var(--space-3); }
   .filter-rail { position: static; }
+  .page-header { padding-top: var(--space-4); }
 }
 
 @media (max-width: 959px) {

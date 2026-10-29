@@ -1,6 +1,6 @@
 <!doctype html>
 <!--
-  AI Radar · 마감 중심 비교 목록 + 맥락 유지 상세. 상단 바 · 검색 · 유형/정렬/보기 · (필터 | 비교 목록).
+  AI Radar · 포커스 디자인. 상단 바 · 제목/요약 · (검색·유형·필터 | 건수/정렬/보기 + 비교 목록).
   tokens.css가 유일한 색·글꼴·간격·반경 원천이다. 구조와 근거는 design-lab/radar/DESIGN.md.
   이전 5개 카테고리 대시보드는 ai-events.html(보관본)과 data/*.json(미사용)로만 남아 있다.
 -->
@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AI Radar — AI 공모전·해커톤·행사 탐색</title>
   <meta name="description" content="국내와 한국에서 참가할 수 있는 해외 온라인 AI 공모전·해커톤·행사를 마감일 기준으로 비교합니다.">
-  <meta name="theme-color" content="#f6f7f5">
+  <meta name="theme-color" content="#f5f4ee">
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="tokens.css">
   <link rel="stylesheet" href="assets/styles/base.css">
@@ -36,30 +36,28 @@
   </header>
 
   <main class="page">
-    <h1 class="visually-hidden">AI Radar — 한국에서 참가할 수 있는 AI 공모전·해커톤·행사</h1>
-
-    <div class="search">
-      <label class="visually-hidden" for="q">제목·주최·태그·설명 검색</label>
-      <div class="search-field" id="search-field"></div>
-    </div>
-    <p class="scope">국내 및 한국에서 참가할 수 있는 해외 온라인 AI 공모전·해커톤·행사 · 신청이 마감된 항목은 제외</p>
+    <section class="page-header" aria-labelledby="page-title">
+      <div class="page-intro">
+        <h1 id="page-title" class="page-title">AI 공모전·해커톤·행사 모아보기</h1>
+        <p class="scope">국내 및 한국에서 참가할 수 있는 해외 온라인 AI 공모전·해커톤·행사 · 신청이 마감된 항목은 제외</p>
+      </div>
+      <dl class="stats" id="stats">
+        <div class="stat"><dt class="stat-label">참가 가능한 기회</dt><dd id="stat-total" class="stat-value">—</dd></div>
+        <div class="stat"><dt class="stat-label">7일 내 마감</dt><dd id="stat-soon" class="stat-value">—</dd></div>
+        <div class="stat"><dt class="stat-label">데이터 갱신</dt><dd id="stat-updated" class="stat-value stat-date">불러오는 중</dd></div>
+      </dl>
+    </section>
 
     <div id="notices" class="notices" aria-live="polite"></div>
 
-    <div class="toolbar">
-      <div id="kind-tabs" class="tab-group" role="group" aria-label="유형"></div>
-      <p id="result-count" class="toolbar-count" aria-live="polite"></p>
-      <label class="visually-hidden" for="sort">정렬</label>
-      <select id="sort" class="select">
-        <option value="deadline">마감 임박순</option>
-        <option value="start">개최일 빠른 순</option>
-        <option value="verified">최근 확인 순</option>
-      </select>
-      <div id="view-switch" class="view-switch" role="group" aria-label="보기 방식"></div>
-    </div>
-
     <div class="board">
       <aside id="filter-rail" class="filter-rail" aria-label="필터">
+        <div class="rail-main">
+          <label class="rail-heading" for="q">검색</label>
+          <div class="search-field" id="search-field"></div>
+          <h2 id="kind-heading" class="rail-heading">유형</h2>
+          <div id="kind-tabs" class="tab-group" role="group" aria-labelledby="kind-heading"></div>
+        </div>
         <button id="rail-toggle" type="button" class="btn rail-toggle" aria-expanded="false" aria-controls="rail-panel"></button>
         <div id="rail-panel" class="rail-panel">
           <section aria-labelledby="status-heading">
@@ -76,10 +74,23 @@
         </div>
       </aside>
 
-      <section id="results" class="results" aria-labelledby="results-heading">
-        <h2 id="results-heading" class="visually-hidden" tabindex="-1">기회 목록</h2>
-        <div id="content" aria-busy="true"></div>
-      </section>
+      <div class="main-col">
+        <div class="toolbar">
+          <p id="result-count" class="toolbar-count" aria-live="polite"></p>
+          <label class="visually-hidden" for="sort">정렬</label>
+          <select id="sort" class="select">
+            <option value="deadline">마감 임박순</option>
+            <option value="start">개최일 빠른 순</option>
+            <option value="verified">최근 확인 순</option>
+          </select>
+          <div id="view-switch" class="view-switch" role="group" aria-label="보기 방식"></div>
+        </div>
+
+        <section id="results" class="results" aria-labelledby="results-heading">
+          <h2 id="results-heading" class="visually-hidden" tabindex="-1">기회 목록</h2>
+          <div id="content" aria-busy="true"></div>
+        </section>
+      </div>
     </div>
   </main>
 

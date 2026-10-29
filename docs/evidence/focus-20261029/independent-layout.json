@@ -1,0 +1,317 @@
+{
+  "layouts": [
+    {
+      "width": 320,
+      "scroll": 320,
+      "title": "AI 공모전·해커톤·행사 모아보기",
+      "titleBox": {
+        "x": 16,
+        "y": 92,
+        "width": 288,
+        "height": 57.1875,
+        "top": 92,
+        "right": 304,
+        "bottom": 149.1875,
+        "left": 16
+      },
+      "statsBox": {
+        "x": 16,
+        "y": 165.1875,
+        "width": 288,
+        "height": 97.796875,
+        "top": 165.1875,
+        "right": 304,
+        "bottom": 262.984375,
+        "left": 16
+      },
+      "firstRow": {
+        "x": 17,
+        "y": 617.984375,
+        "width": 286,
+        "height": 431,
+        "top": 617.984375,
+        "right": 303,
+        "bottom": 1048.984375,
+        "left": 17
+      },
+      "firstTitle": {
+        "x": 29,
+        "y": 629.984375,
+        "width": 262,
+        "height": 44,
+        "top": 629.984375,
+        "right": 291,
+        "bottom": 673.984375,
+        "left": 29
+      },
+      "counts": [
+        "159",
+        "58",
+        "10.28 15:42"
+      ],
+      "searchVisible": true,
+      "kindVisible": true
+    },
+    {
+      "width": 375,
+      "scroll": 375,
+      "title": "AI 공모전·해커톤·행사 모아보기",
+      "titleBox": {
+        "x": 16,
+        "y": 92,
+        "width": 305.375,
+        "height": 28.59375,
+        "top": 92,
+        "right": 321.375,
+        "bottom": 120.59375,
+        "left": 16
+      },
+      "statsBox": {
+        "x": 16,
+        "y": 136.59375,
+        "width": 320.640625,
+        "height": 47.5,
+        "top": 136.59375,
+        "right": 336.640625,
+        "bottom": 184.09375,
+        "left": 16
+      },
+      "firstRow": {
+        "x": 17,
+        "y": 487.09375,
+        "width": 341,
+        "height": 394.5,
+        "top": 487.09375,
+        "right": 358,
+        "bottom": 881.59375,
+        "left": 17
+      },
+      "firstTitle": {
+        "x": 29,
+        "y": 499.09375,
+        "width": 317,
+        "height": 44,
+        "top": 499.09375,
+        "right": 346,
+        "bottom": 543.09375,
+        "left": 29
+      },
+      "counts": [
+        "159",
+        "58",
+        "10.28 15:42"
+      ],
+      "searchVisible": true,
+      "kindVisible": true
+    },
+    {
+      "width": 414,
+      "scroll": 414,
+      "title": "AI 공모전·해커톤·행사 모아보기",
+      "titleBox": {
+        "x": 16,
+        "y": 92,
+        "width": 305.375,
+        "height": 28.59375,
+        "top": 92,
+        "right": 321.375,
+        "bottom": 120.59375,
+        "left": 16
+      },
+      "statsBox": {
+        "x": 16,
+        "y": 136.59375,
+        "width": 320.640625,
+        "height": 47.5,
+        "top": 136.59375,
+        "right": 336.640625,
+        "bottom": 184.09375,
+        "left": 16
+      },
+      "firstRow": {
+        "x": 17,
+        "y": 487.09375,
+        "width": 380,
+        "height": 394.5,
+        "top": 487.09375,
+        "right": 397,
+        "bottom": 881.59375,
+        "left": 17
+      },
+      "firstTitle": {
+        "x": 29,
+        "y": 499.09375,
+        "width": 356,
+        "height": 44,
+        "top": 499.09375,
+        "right": 385,
+        "bottom": 543.09375,
+        "left": 29
+      },
+      "counts": [
+        "159",
+        "58",
+        "10.28 15:42"
+      ],
+      "searchVisible": true,
+      "kindVisible": true
+    },
+    {
+      "width": 768,
+      "scroll": 768,
+      "title": "AI 공모전·해커톤·행사 모아보기",
+      "titleBox": {
+        "x": 16,
+        "y": 92,
+        "width": 416.421875,
+        "height": 39,
+        "top": 92,
+        "right": 432.421875,
+        "bottom": 131,
+        "left": 16
+      },
+      "statsBox": {
+        "x": 16,
+        "y": 147,
+        "width": 320.640625,
+        "height": 47.5,
+        "top": 147,
+        "right": 336.640625,
+        "bottom": 194.5,
+        "left": 16
+      },
+      "firstRow": {
+        "x": 17,
+        "y": 497.5,
+        "width": 734,
+        "height": 373.5,
+        "top": 497.5,
+        "right": 751,
+        "bottom": 871,
+        "left": 17
+      },
+      "firstTitle": {
+        "x": 29,
+        "y": 509.5,
+        "width": 710,
+        "height": 44,
+        "top": 509.5,
+        "right": 739,
+        "bottom": 553.5,
+        "left": 29
+      },
+      "counts": [
+        "159",
+        "58",
+        "10.28 15:42"
+      ],
+      "searchVisible": true,
+      "kindVisible": true
+    },
+    {
+      "width": 1280,
+      "scroll": 1280,
+      "title": "AI 공모전·해커톤·행사 모아보기",
+      "titleBox": {
+        "x": 24,
+        "y": 100,
+        "width": 565.59375,
+        "height": 39,
+        "top": 100,
+        "right": 589.59375,
+        "bottom": 139,
+        "left": 24
+      },
+      "statsBox": {
+        "x": 935.359375,
+        "y": 119,
+        "width": 320.640625,
+        "height": 47.5,
+        "top": 119,
+        "right": 1256,
+        "bottom": 166.5,
+        "left": 935.359375
+      },
+      "firstRow": {
+        "x": 249,
+        "y": 301,
+        "width": 1006,
+        "height": 110.09375,
+        "top": 301,
+        "right": 1255,
+        "bottom": 411.09375,
+        "left": 249
+      },
+      "firstTitle": {
+        "x": 265,
+        "y": 313,
+        "width": 258,
+        "height": 41.59375,
+        "top": 313,
+        "right": 523,
+        "bottom": 354.59375,
+        "left": 265
+      },
+      "counts": [
+        "159",
+        "58",
+        "10.28 15:42"
+      ],
+      "searchVisible": true,
+      "kindVisible": true
+    },
+    {
+      "width": 1440,
+      "scroll": 1440,
+      "title": "AI 공모전·해커톤·행사 모아보기",
+      "titleBox": {
+        "x": 64,
+        "y": 100,
+        "width": 565.59375,
+        "height": 39,
+        "top": 100,
+        "right": 629.59375,
+        "bottom": 139,
+        "left": 64
+      },
+      "statsBox": {
+        "x": 1055.359375,
+        "y": 119,
+        "width": 320.640625,
+        "height": 47.5,
+        "top": 119,
+        "right": 1376,
+        "bottom": 166.5,
+        "left": 1055.359375
+      },
+      "firstRow": {
+        "x": 289,
+        "y": 301,
+        "width": 1086,
+        "height": 96,
+        "top": 301,
+        "right": 1375,
+        "bottom": 397,
+        "left": 289
+      },
+      "firstTitle": {
+        "x": 305,
+        "y": 313,
+        "width": 338,
+        "height": 20.796875,
+        "top": 313,
+        "right": 643,
+        "bottom": 333.796875,
+        "left": 305
+      },
+      "counts": [
+        "159",
+        "58",
+        "10.28 15:42"
+      ],
+      "searchVisible": true,
+      "kindVisible": true
+    }
+  ],
+  "errors": []
+}

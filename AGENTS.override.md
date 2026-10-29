@@ -13,3 +13,6 @@
 - 최신 UI 검사: `.venv/Scripts/python.exe tools/check_radar_ui.py`. 옛 `browser_check.py`는 이전 화면용 역사적 검사다.
 
 상태 보완 파일의 로드 근거: [OpenAI 공식 지침](https://learn.chatgpt.com/docs/agent-configuration/agents-md). 기존 지시파일의 사용 규칙은 위 링크 파일에서 읽는다.
+
+- 2026-10-29 디자인 비교 시안 단계(운영 미변경, Codex 검증 대기): [design-lab/shelf-20261029/DESIGN.md](design-lab/shelf-20261029/DESIGN.md)
+- 2026-10-29: 포커스 디자인(제목 "AI 공모전·해커톤·행사 모아보기" + 요약 3종 + 왼쪽 검색·유형 열)을 **로컬 운영 소스에 적용·검증했다. 원격 미반영(commit·push·배포 없음), Codex 교차 리뷰 대기.** 검증 `check_focus_ui.py` 42/42·`check_radar_ui.py` 98/98·Node 118. 상세 `docs/HISTORY.md`.

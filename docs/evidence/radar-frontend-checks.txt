@@ -1,8 +1,8 @@
-AI Radar UI 검증 2026-10-12 16:25 KST
+AI Radar UI 검증 2026-10-29 10:23 KST
 통과 98 / 98
 폭별 레이아웃 검사(제목 폭·모드·저장 버튼)는 수정 전 RED 실측이 docs/evidence/radar-layout-red.txt 에 보존되어 있다.
 
-PASS 실데이터 행 표시(건수 고정 안 함) | 118
+PASS 실데이터 행 표시(건수 고정 안 함) | 159
 PASS 브라우저 제목 AI Radar | AI Radar — AI 공모전·해커톤·행사 탐색
 PASS 브랜드 AI Radar
 PASS 구 브랜드·디버그 문구 비노출
@@ -18,16 +18,16 @@ PASS 열 머리글 표시 | 제목 · 주최
 개최
 참가 · 상금
 PASS 행 즉시 노출: 제목·마감·개최·참가·확인/출처·저장
-PASS 상태 옵션에 마감·종료 없음 | ['전체\n118', '모집중\n109', '예정\n8', '진행중\n1', '일정 미정\n0']
+PASS 상태 옵션에 마감·종료 없음 | ['전체\n159', '모집중\n146', '예정\n11', '진행중\n2', '일정 미정\n0']
 PASS 목록에 마감·종료 상태 없음 | ['모집중', '예정', '진행중']
 PASS 1440 가로 넘침 0 | {'width': 1440, 'scroll': 1440, 'outside': []}
-PASS 검색 URL 반영 | http://127.0.0.1:8012/?q=Multimodal
+PASS 검색 URL 반영 | http://127.0.0.1:8012/?q=2026
 PASS 검색 중 입력 포커스 유지
-PASS 검색 결과가 줄거나 같음 | 1
+PASS 검색 결과가 줄거나 같음 | 66
 PASS 검색 포커스·캐럿 유지(빈 결과 후에도)
 PASS 초기화 후 검색 비움
 PASS 모집중 필터: 모든 행이 모집중
-PASS 유형 탭 건수 = 목록 건수(전체) | {'전체': 118, '행사': 22, '공모전': 82, '해커톤': 14}
+PASS 유형 탭 건수 = 목록 건수(전체) | {'전체': 159, '행사': 27, '공모전': 111, '해커톤': 21}
 PASS 저장이 새로고침 후에도 유지
 PASS 저장 보기: 저장 항목만
 PASS 상세 초기 포커스는 닫기 버튼
@@ -37,7 +37,7 @@ PASS 상세 외부 링크 보안 속성
 PASS 상세에 원문 안내 링크와 저장 버튼
 PASS 상세 닫은 뒤 행 제목으로 포커스 복귀
 PASS 달력 월 이동·오늘 복귀
-PASS 달력 마커로 상세 진입 | 88
+PASS 달력 마커로 상세 진입 | 53
 PASS 콘솔 오류 없음(실데이터 데스크톱) | []
 PASS 모바일 320px 가로 넘침 0 | {'width': 320, 'scroll': 320, 'outside': []}
 PASS 모바일 360px 가로 넘침 0 | {'width': 360, 'scroll': 360, 'outside': []}
@@ -48,7 +48,7 @@ PASS 모바일 검색·유형 탭·정렬·보기 전환 모두 보임
 PASS 모바일 터치 목표 44px 이상 | []
 PASS 모바일 필터 펼침
 PASS 모바일 달력 가로 넘침 0 | {'width': 390, 'scroll': 390, 'outside': []}
-PASS 모바일 상세는 전체 화면 | {'x': 19.98604965209961, 'y': 0, 'width': 390.00000381469727, 'height': 844}
+PASS 모바일 상세는 전체 화면 | {'x': 24, 'y': 0, 'width': 390, 'height': 844}
 PASS loading 상태 표시
 PASS 로딩 중에는 미수집 알림을 띄우지 않음
 PASS empty 상태 표시
@@ -57,19 +57,19 @@ PASS error 상태 표시
 PASS error 상태 가로 넘침 0 | {'width': 390, 'scroll': 390, 'outside': []}
 PASS 폭 320: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 262, 'orgWidth': 262, 'rowHeight': 431, 'scroll': 320}
 PASS 폭 320: 레이아웃 모드(필터 접힘·라벨 세로 행) | {'rail': False, 'toggle': True, 'head': False, 'labeled': True}
-PASS 폭 320: 저장 버튼이 제목과 겹치지 않고 44px 이상 | {'save': [29, 786, 44], 'title': [29, 423, 262, 44]}
-PASS 폭 375: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 317, 'orgWidth': 317, 'rowHeight': 373.5, 'scroll': 375}
+PASS 폭 320: 저장 버튼이 제목과 겹치지 않고 44px 이상 | {'save': [29, 993, 44], 'title': [29, 630, 262, 44]}
+PASS 폭 375: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 317, 'orgWidth': 317, 'rowHeight': 394.5, 'scroll': 375}
 PASS 폭 375: 레이아웃 모드(필터 접힘·라벨 세로 행) | {'rail': False, 'toggle': True, 'head': False, 'labeled': True}
-PASS 폭 375: 저장 버튼이 제목과 겹치지 않고 44px 이상 | {'save': [29, 676, 44], 'title': [29, 371, 317, 44]}
-PASS 폭 390: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 332, 'orgWidth': 332, 'rowHeight': 373.5, 'scroll': 390}
+PASS 폭 375: 저장 버튼이 제목과 겹치지 않고 44px 이상 | {'save': [29, 826, 44], 'title': [29, 499, 317, 44]}
+PASS 폭 390: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 332, 'orgWidth': 332, 'rowHeight': 394.5, 'scroll': 390}
 PASS 폭 390: 레이아웃 모드(필터 접힘·라벨 세로 행) | {'rail': False, 'toggle': True, 'head': False, 'labeled': True}
-PASS 폭 390: 저장 버튼이 제목과 겹치지 않고 44px 이상 | {'save': [29, 676, 44], 'title': [29, 371, 332, 44]}
-PASS 폭 414: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 356, 'orgWidth': 356, 'rowHeight': 373.5, 'scroll': 414}
+PASS 폭 390: 저장 버튼이 제목과 겹치지 않고 44px 이상 | {'save': [29, 826, 44], 'title': [29, 499, 332, 44]}
+PASS 폭 414: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 356, 'orgWidth': 356, 'rowHeight': 394.5, 'scroll': 414}
 PASS 폭 414: 레이아웃 모드(필터 접힘·라벨 세로 행) | {'rail': False, 'toggle': True, 'head': False, 'labeled': True}
-PASS 폭 414: 저장 버튼이 제목과 겹치지 않고 44px 이상 | {'save': [29, 676, 44], 'title': [29, 371, 356, 44]}
+PASS 폭 414: 저장 버튼이 제목과 겹치지 않고 44px 이상 | {'save': [29, 826, 44], 'title': [29, 499, 356, 44]}
 PASS 폭 768: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 710, 'orgWidth': 710, 'rowHeight': 373.5, 'scroll': 768}
 PASS 폭 768: 레이아웃 모드(필터 접힘·라벨 세로 행) | {'rail': False, 'toggle': True, 'head': False, 'labeled': True}
-PASS 폭 768: 저장 버튼이 제목과 겹치지 않고 44px 이상 | {'save': [29, 676, 44], 'title': [29, 371, 710, 44]}
+PASS 폭 768: 저장 버튼이 제목과 겹치지 않고 44px 이상 | {'save': [29, 815, 44], 'title': [29, 510, 710, 44]}
 PASS 폭 1024: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 510, 'orgWidth': 510, 'rowHeight': 126.3, 'scroll': 1024}
 PASS 폭 1024: 레이아웃 모드(필터 접힘·머리글 열) | {'rail': False, 'toggle': True, 'head': True, 'labeled': False}
 PASS 폭 1280: 첫 행 제목 폭 200px 이상·주최 폭 120px 이상·가로 넘침 0 | {'titleWidth': 258, 'orgWidth': 258, 'rowHeight': 110.1, 'scroll': 1280}

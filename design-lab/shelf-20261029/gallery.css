@@ -1,0 +1,32 @@
+/* 비교 갤러리 전용. 시안 스타일(styles.css)과 분리한다. */
+*, *::before, *::after { box-sizing: border-box; }
+:root { --ink: #1b1f27; --muted: #576070; --line: #d5d9e0; --bg: #f3f4f6; --accent: #1b1f27; }
+html, body { overflow-x: clip; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 400 1rem/1.5 "Malgun Gothic", "Apple SD Gothic Neo", "Noto Sans KR", system-ui, sans-serif; word-break: keep-all; overflow-wrap: anywhere; }
+h1, h2, p { margin: 0; }
+:focus-visible { outline: 3px solid #1747d6; outline-offset: 2px; }
+
+.g-head { max-width: 1400px; margin: 0 auto; padding: 24px 16px 8px; }
+.g-note { display: inline-block; padding: 4px 10px; background: var(--ink); color: #fff; font-size: 0.8125rem; }
+.g-title { margin-top: 12px; font-size: clamp(1.625rem, 5vw, 2.25rem); line-height: 1.25; letter-spacing: -0.02em; }
+.g-lead { margin-top: 8px; max-width: 46em; color: var(--muted); }
+
+.g-grid { max-width: 1400px; margin: 0 auto; padding: 16px 16px 64px; display: grid; grid-template-columns: 1fr; gap: 24px; }
+.g-card { display: flex; flex-direction: column; gap: 8px; min-width: 0; padding: 12px; background: #fff; border: 1px solid var(--line); }
+.g-frame { --scale: 0.5; position: relative; width: 100%; aspect-ratio: 1280 / 800; overflow: hidden; background: #fff; border: 1px solid var(--line); }
+.g-frame iframe { position: absolute; top: 0; left: 0; width: 1280px; height: 800px; border: 0; transform: scale(var(--scale)); transform-origin: top left; pointer-events: none; }
+.g-name { font-size: 1.25rem; }
+.g-name span { margin-right: 8px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.g-diff { color: var(--muted); }
+.g-open {
+  display: flex; align-items: center; justify-content: center; min-height: 52px; margin-top: auto; padding: 0 16px;
+  background: var(--accent); color: #fff; font-weight: 700; font-size: 1.0625rem; text-decoration: none; transition: background-color 120ms;
+}
+.g-open:hover { background: #3a4252; }
+
+@media (min-width: 760px) {
+  .g-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
