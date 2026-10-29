@@ -190,10 +190,16 @@ export function createRenderer(els, actions) {
 
     const selected = ready ? selectItems(items, filters, filterCtx) : [];
     const counts = facetCounts(ready ? items : [], filters, filterCtx);
-    const activeTotal = ready ? applyFilters(items, { ...DEFAULT_FILTERS }, filterCtx).length : 0;
+    const activeItems = ready ? applyFilters(items, { ...DEFAULT_FILTERS }, filterCtx) : [];
+    const activeTotal = activeItems.length;
+    const soonTotal = activeItems.filter((item) => { const d = getDeadline(item, now).daysLeft; return d !== null && d >= 0 && d <= 7; }).length;
 
     els.today.textContent = `${formatDateKo(seoulDate(now))} 서울 기준`;
     els.updated.textContent = state.data && state.data.updatedAt ? `데이터 갱신 ${formatSeoulDateTime(state.data.updatedAt).slice(5)}` : '';
+    // 요약은 검색·유형·저장 필터와 무관한 전역 집계다. 로딩·오류에는 건수를 만들지 않는다.
+    els.statTotal.textContent = ready ? String(activeTotal) : '—';
+    els.statSoon.textContent = ready ? String(soonTotal) : '—';
+    els.statUpdated.textContent = state.data && state.data.updatedAt ? formatSeoulDateTime(state.data.updatedAt).slice(5) : state.phase === 'loading' ? '불러오는 중' : '확인 필요';
     els.navExplore.setAttribute('aria-pressed', String(!filters.saved));
     els.savedToggle.setAttribute('aria-pressed', String(filters.saved));
     els.savedToggle.setAttribute('aria-label', '저장한 기회만 보기');

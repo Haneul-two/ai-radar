@@ -26,6 +26,7 @@ const els = {
   rail: $('filter-rail'), railToggle: $('rail-toggle'), statusOptions: $('status-options'), modeOptions: $('mode-options'),
   resetFilters: $('reset-filters'), resultsHeading: $('results-heading'), resultCount: $('result-count'),
   sort: $('sort'), viewSwitch: $('view-switch'), content: $('content'), urgent: $('urgent'), sources: $('sources'),
+  statTotal: $('stat-total'), statSoon: $('stat-soon'), statUpdated: $('stat-updated'),
 };
 
 const saved = loadSavedIds(storage);
@@ -46,7 +47,7 @@ const state = {
 // ---- 검색 입력: 한 번만 만들고 다시 그리지 않는다(포커스·캐럿 유지) ----
 const searchInput = h('input', {
   id: 'q', type: 'search', class: 'search-input', autocomplete: 'off', maxlength: '100',
-  placeholder: '제목·주최·태그 검색  예: LLM, 해커톤', value: state.filters.q,
+  placeholder: '제목·주최·태그 검색', value: state.filters.q,
 });
 els.searchField.append(icon('search'), searchInput);
 let searchTimer = null;

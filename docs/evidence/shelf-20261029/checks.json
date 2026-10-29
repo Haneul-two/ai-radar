@@ -1,0 +1,642 @@
+{
+  "checks": [
+    {
+      "name": "01-focus 실데이터 표시",
+      "pass": true,
+      "detail": 159
+    },
+    {
+      "name": "01-focus 링크 https/새탭 보호",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "01-focus 320px 가로 넘침 없음",
+      "pass": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "title": 254,
+        "buttons": []
+      }
+    },
+    {
+      "name": "01-focus 320px 제목 폭",
+      "pass": true,
+      "detail": 254
+    },
+    {
+      "name": "01-focus 320px 버튼 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "01-focus 375px 가로 넘침 없음",
+      "pass": true,
+      "detail": {
+        "width": 375,
+        "scroll": 375,
+        "title": 309,
+        "buttons": []
+      }
+    },
+    {
+      "name": "01-focus 375px 제목 폭",
+      "pass": true,
+      "detail": 309
+    },
+    {
+      "name": "01-focus 375px 버튼 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "01-focus 414px 가로 넘침 없음",
+      "pass": true,
+      "detail": {
+        "width": 414,
+        "scroll": 414,
+        "title": 348,
+        "buttons": []
+      }
+    },
+    {
+      "name": "01-focus 414px 제목 폭",
+      "pass": true,
+      "detail": 348
+    },
+    {
+      "name": "01-focus 414px 버튼 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "01-focus 768px 가로 넘침 없음",
+      "pass": true,
+      "detail": {
+        "width": 768,
+        "scroll": 768,
+        "title": 702,
+        "buttons": []
+      }
+    },
+    {
+      "name": "01-focus 768px 제목 폭",
+      "pass": true,
+      "detail": 702
+    },
+    {
+      "name": "01-focus 768px 버튼 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "01-focus 1440px 가로 넘침 없음",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "title": 422,
+        "buttons": []
+      }
+    },
+    {
+      "name": "01-focus 1440px 제목 폭",
+      "pass": true,
+      "detail": 422
+    },
+    {
+      "name": "01-focus 1440px 버튼 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "01-focus 빈 결과",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "01-focus 검색 포커스 유지",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "01-focus 초기화 복구",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "01-focus 유형 필터 적용",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "01-focus 참가 방식 적용",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "01-focus 오류 재시도 표시",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "01-focus 재시도 복구",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "01-focus 모션 줄이기",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "02-editorial 실데이터 표시",
+      "pass": true,
+      "detail": 159
+    },
+    {
+      "name": "02-editorial 링크 https/새탭 보호",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "02-editorial 320px 가로 넘침 없음",
+      "pass": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "title": 236,
+        "buttons": []
+      }
+    },
+    {
+      "name": "02-editorial 320px 제목 폭",
+      "pass": true,
+      "detail": 236
+    },
+    {
+      "name": "02-editorial 320px 버튼 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "02-editorial 375px 가로 넘침 없음",
+      "pass": true,
+      "detail": {
+        "width": 375,
+        "scroll": 375,
+        "title": 291,
+        "buttons": []
+      }
+    },
+    {
+      "name": "02-editorial 375px 제목 폭",
+      "pass": true,
+      "detail": 291
+    },
+    {
+      "name": "02-editorial 375px 버튼 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "02-editorial 414px 가로 넘침 없음",
+      "pass": true,
+      "detail": {
+        "width": 414,
+        "scroll": 414,
+        "title": 330,
+        "buttons": []
+      }
+    },
+    {
+      "name": "02-editorial 414px 제목 폭",
+      "pass": true,
+      "detail": 330
+    },
+    {
+      "name": "02-editorial 414px 버튼 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "02-editorial 768px 가로 넘침 없음",
+      "pass": true,
+      "detail": {
+        "width": 768,
+        "scroll": 768,
+        "title": 490,
+        "buttons": []
+      }
+    },
+    {
+      "name": "02-editorial 768px 제목 폭",
+      "pass": true,
+      "detail": 490
+    },
+    {
+      "name": "02-editorial 768px 버튼 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "02-editorial 1440px 가로 넘침 없음",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "title": 658,
+        "buttons": []
+      }
+    },
+    {
+      "name": "02-editorial 1440px 제목 폭",
+      "pass": true,
+      "detail": 658
+    },
+    {
+      "name": "02-editorial 1440px 버튼 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "02-editorial 빈 결과",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "02-editorial 검색 포커스 유지",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "02-editorial 초기화 복구",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "02-editorial 유형 필터 적용",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "02-editorial 참가 방식 적용",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "02-editorial 오류 재시도 표시",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "02-editorial 재시도 복구",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "02-editorial 모션 줄이기",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "03-discover 실데이터 표시",
+      "pass": true,
+      "detail": 159
+    },
+    {
+      "name": "03-discover 링크 https/새탭 보호",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "03-discover 320px 가로 넘침 없음",
+      "pass": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "title": 254,
+        "buttons": []
+      }
+    },
+    {
+      "name": "03-discover 320px 제목 폭",
+      "pass": true,
+      "detail": 254
+    },
+    {
+      "name": "03-discover 320px 버튼 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "03-discover 375px 가로 넘침 없음",
+      "pass": true,
+      "detail": {
+        "width": 375,
+        "scroll": 375,
+        "title": 309,
+        "buttons": []
+      }
+    },
+    {
+      "name": "03-discover 375px 제목 폭",
+      "pass": true,
+      "detail": 309
+    },
+    {
+      "name": "03-discover 375px 버튼 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "03-discover 414px 가로 넘침 없음",
+      "pass": true,
+      "detail": {
+        "width": 414,
+        "scroll": 414,
+        "title": 348,
+        "buttons": []
+      }
+    },
+    {
+      "name": "03-discover 414px 제목 폭",
+      "pass": true,
+      "detail": 348
+    },
+    {
+      "name": "03-discover 414px 버튼 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "03-discover 768px 가로 넘침 없음",
+      "pass": true,
+      "detail": {
+        "width": 768,
+        "scroll": 768,
+        "title": 326,
+        "buttons": []
+      }
+    },
+    {
+      "name": "03-discover 768px 제목 폭",
+      "pass": true,
+      "detail": 326
+    },
+    {
+      "name": "03-discover 768px 버튼 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "03-discover 1440px 가로 넘침 없음",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "title": 358,
+        "buttons": []
+      }
+    },
+    {
+      "name": "03-discover 1440px 제목 폭",
+      "pass": true,
+      "detail": 358
+    },
+    {
+      "name": "03-discover 1440px 버튼 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "03-discover 빈 결과",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "03-discover 검색 포커스 유지",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "03-discover 초기화 복구",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "03-discover 유형 필터 적용",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "03-discover 참가 방식 적용",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "03-discover 오류 재시도 표시",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "03-discover 재시도 복구",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "03-discover 모션 줄이기",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "04-planner 실데이터 표시",
+      "pass": true,
+      "detail": 159
+    },
+    {
+      "name": "04-planner 링크 https/새탭 보호",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "04-planner 320px 가로 넘침 없음",
+      "pass": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "title": 254,
+        "buttons": []
+      }
+    },
+    {
+      "name": "04-planner 320px 제목 폭",
+      "pass": true,
+      "detail": 254
+    },
+    {
+      "name": "04-planner 320px 버튼 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "04-planner 375px 가로 넘침 없음",
+      "pass": true,
+      "detail": {
+        "width": 375,
+        "scroll": 375,
+        "title": 309,
+        "buttons": []
+      }
+    },
+    {
+      "name": "04-planner 375px 제목 폭",
+      "pass": true,
+      "detail": 309
+    },
+    {
+      "name": "04-planner 375px 버튼 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "04-planner 414px 가로 넘침 없음",
+      "pass": true,
+      "detail": {
+        "width": 414,
+        "scroll": 414,
+        "title": 348,
+        "buttons": []
+      }
+    },
+    {
+      "name": "04-planner 414px 제목 폭",
+      "pass": true,
+      "detail": 348
+    },
+    {
+      "name": "04-planner 414px 버튼 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "04-planner 768px 가로 넘침 없음",
+      "pass": true,
+      "detail": {
+        "width": 768,
+        "scroll": 768,
+        "title": 526,
+        "buttons": []
+      }
+    },
+    {
+      "name": "04-planner 768px 제목 폭",
+      "pass": true,
+      "detail": 526
+    },
+    {
+      "name": "04-planner 768px 버튼 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "04-planner 1440px 가로 넘침 없음",
+      "pass": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "title": 404,
+        "buttons": []
+      }
+    },
+    {
+      "name": "04-planner 1440px 제목 폭",
+      "pass": true,
+      "detail": 404
+    },
+    {
+      "name": "04-planner 1440px 버튼 44px",
+      "pass": true,
+      "detail": []
+    },
+    {
+      "name": "04-planner 빈 결과",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "04-planner 검색 포커스 유지",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "04-planner 초기화 복구",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "04-planner 유형 필터 적용",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "04-planner 참가 방식 적용",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "04-planner 오류 재시도 표시",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "04-planner 재시도 복구",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "04-planner 모션 줄이기",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "갤러리 시안 4개",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "갤러리 320px 가로 넘침 없음",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "갤러리 375px 가로 넘침 없음",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "갤러리 414px 가로 넘침 없음",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "갤러리 768px 가로 넘침 없음",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "갤러리 1440px 가로 넘침 없음",
+      "pass": true,
+      "detail": null
+    },
+    {
+      "name": "pageerror 없음",
+      "pass": true,
+      "detail": []
+    }
+  ],
+  "errors": [],
+  "passed": 107,
+  "total": 107
+}

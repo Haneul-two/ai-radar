@@ -1,5 +1,5 @@
 /* 비교 목록 행. 데스크톱: 제목·마감·개최·참가/상금·저장 열 정렬. 모바일: 같은 정보를 세로로 */
-.opp-board { background: var(--color-surface); border: var(--border); border-radius: var(--radius-md); }
+.opp-board { background: var(--color-surface); border: 1px solid var(--color-line-strong); border-radius: var(--radius-md); }
 .opp-head, .opp {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 168px 168px 232px 84px;

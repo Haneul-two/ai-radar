@@ -134,7 +134,7 @@ with sync_playwright() as pw:
     shot(page, 'radar-desktop')
 
     # 검색: 디바운스 후 반영, 입력 포커스·캐럿 유지
-    term = page.evaluate('()=>window.__boardDebug.items[0].title.split(/\\s+/).find(w=>w.length>=3) || window.__boardDebug.items[0].title')
+    term = page.evaluate('()=>window.__boardDebug.visible[0].title.split(/\\s+/).find(w=>w.length>=3) || window.__boardDebug.visible[0].title')
     total = rows.count()
     page.locator('#q').click()
     page.keyboard.type(term)

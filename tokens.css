@@ -1,42 +1,43 @@
-/* AI Radar · 구조적 업무 도구: 무채색 바탕 + 짙은 forest 단일 강조 + 절제된 amber(임박 마감)만 사용 */
+/* AI Radar · 포커스: 미색 바탕 + 짙은 초록 + 연초록 선택 상태 + 절제된 amber(임박 마감)만 사용 */
 /* 모든 색·글꼴·간격·반경은 이 파일의 토큰만 참조한다. design-lab 이전 시안 호환을 위해 이전 토큰 이름은 유지하고 값만 바꿨다. */
 
 :root {
   /* color */
-  --color-page: #f6f7f5;
+  --color-page: #f5f4ee;
   --color-surface: #ffffff;
-  --color-ink: #202622;
-  --color-muted: #66706a;
-  --color-accent: #16604a;
-  --color-accent-strong: #0f4a39;
-  --color-accent-soft: #e6efea;
-  --color-line: #dde2de;
-  --color-line-strong: #c5ccc7;
-  --color-focus: #16604a;
+  --color-ink: #1c2a22;
+  --color-muted: #5a665f;
+  --color-accent: #1f6b4a;
+  --color-accent-strong: #174f37;
+  --color-accent-soft: #d3f0de;
+  --color-line: #e3e5dc;
+  --color-line-strong: #b9c2b8;
+  --color-focus: #1f6b4a;
+  --color-hover: #ebece4;
   --color-on-accent: #ffffff;
-  --color-scrim: rgba(32, 38, 34, 0.4);
+  --color-scrim: rgba(28, 42, 34, 0.4);
 
   /* status */
-  --color-open: #16604a;
-  --color-open-soft: #e6efea;
-  --color-upcoming: #66706a;
-  --color-upcoming-soft: #eff1ee;
-  --color-closed: #66706a;
-  --color-closed-soft: #eff1ee;
-  --color-urgent: #8a5a00;
-  --color-urgent-soft: #fff4dc;
-  --color-warn: #8a5a00;
-  --color-warn-soft: #fff4dc;
+  --color-open: #1f6b4a;
+  --color-open-soft: #d3f0de;
+  --color-upcoming: #5a665f;
+  --color-upcoming-soft: #ecede5;
+  --color-closed: #5a665f;
+  --color-closed-soft: #ecede5;
+  --color-urgent: #8f5200;
+  --color-urgent-soft: #ffe9b8;
+  --color-warn: #8f5200;
+  --color-warn-soft: #ffe9b8;
   --color-danger: #a8261c;
   --color-danger-soft: #fdecea;
 
   /* kind: 유형은 색이 아니라 글자로 구분한다 (이전 시안 호환용 중립값) */
-  --color-kind-event: #202622;
-  --color-kind-event-soft: #eff1ee;
-  --color-kind-contest: #202622;
-  --color-kind-contest-soft: #eff1ee;
-  --color-kind-hackathon: #202622;
-  --color-kind-hackathon-soft: #eff1ee;
+  --color-kind-event: #1c2a22;
+  --color-kind-event-soft: #ecede5;
+  --color-kind-contest: #1c2a22;
+  --color-kind-contest-soft: #ecede5;
+  --color-kind-hackathon: #1c2a22;
+  --color-kind-hackathon-soft: #ecede5;
 
   /* type */
   --font-body: 'Malgun Gothic', 'Apple SD Gothic Neo', system-ui, sans-serif;
@@ -48,6 +49,8 @@
   --text-xl: 1.25rem;
   --text-title: 1.5rem;
   --text-title-mobile: 1.25rem;
+  --text-heading: clamp(1.375rem, 4vw, 1.875rem);
+  --text-stat: 1.25rem;
   --leading-body: 1.5;
   --leading-tight: 1.3;
 

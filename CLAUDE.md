@@ -9,6 +9,8 @@
 최신 상태(2026-10-14, 이름 변경 완료): 폴더 `C:/Users/caring/Projects/ai-radar`, 저장소 `Haneul-two/ai-radar`(기존 저장소 이름 변경), 공개 URL https://haneul-two.github.io/ai-radar/. 위 본문의 옛 폴더·저장소·`ai-data-storage` URL과 "원격 배포 대기" 서술은 당시 기록이다. 새 주소는 PR #6 병합 2cc8744의 Pages built, 2026-10-14T07:59:28Z `tools/check_naming_public.py` 실검증(공개 JSON이 로컬 배포본과 일치, 보관 175·노출 118·10출처 ok, Edge 1440/390 통과·pageerror 0)이 확인된 범위에서만 정상 서비스로 쓴다. 예약 cron은 schedule 실행 2회 success가 확인됐다. 출처: `AGENTS.override.md`·`README.md`·`docs/HISTORY.md`, 증거 `docs/evidence/naming-production.json`. `.claude/rules/ai-radar-state.md`의 2026-10-13 준비 문구는 과거 기록이다.
 최신 상태(2026-10-28): PR #8 병합(938f7cc)으로 NVIDIA 표기 변경 수정·AI 판정 `AX` 추가·출처 2곳(lotteax·linkareer) 배포. 수동 수집 run 40645504322, data d12ce7f Pages built, 공개 12출처 모두 ok·294건. 상세 `docs/HISTORY.md`.
 
+최신 상태(2026-10-29): 포커스 디자인(제목·요약 3종·왼쪽 검색/유형 열)을 로컬 운영 소스에 적용·검증(`tools/check_focus_ui.py` 42/42, `check_radar_ui.py` 98/98). **원격 미반영, Codex 교차 리뷰 대기.** 상세 `docs/HISTORY.md`.
+
 ## 프로젝트 개요
 
 국내 + 한국 참가 가능 해외 온라인 AI 행사·공모전·해커톤 탐색 보드(개인용). 정적 `index.html` + ES modules가 `data/opportunities.json`(+`data/ingest-status.json` overlay)을 fetch해 렌더링한다. 서버 없음, GitHub Pages 동작. 이전 5탭 대시보드(`ai-events.html`, 카테고리 JSON, 뉴스/논문/채용/도구 수집기)는 보관만 하고 쓰지 않는다.

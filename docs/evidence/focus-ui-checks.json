@@ -1,0 +1,442 @@
+{
+  "passed": 42,
+  "total": 42,
+  "checks": [
+    {
+      "name": "h1 제목이 보이고 문구 일치",
+      "passed": true,
+      "detail": "AI 공모전·해커톤·행사 모아보기"
+    },
+    {
+      "name": "h1 글자 크기 28~32px",
+      "passed": true,
+      "detail": 30
+    },
+    {
+      "name": "요약 3종 라벨",
+      "passed": true,
+      "detail": [
+        {
+          "label": "참가 가능한 기회",
+          "value": "159"
+        },
+        {
+          "label": "7일 내 마감",
+          "value": "58"
+        },
+        {
+          "label": "데이터 갱신",
+          "value": "10.28 15:42"
+        }
+      ]
+    },
+    {
+      "name": "요약 건수 = 기본 필터의 노출 건수",
+      "passed": true,
+      "detail": {
+        "stat": "159",
+        "rows": 159
+      }
+    },
+    {
+      "name": "7일 내 마감 = 독립 계산",
+      "passed": true,
+      "detail": {
+        "stat": "58",
+        "calc": 58
+      }
+    },
+    {
+      "name": "데이터 갱신 값 표시",
+      "passed": true,
+      "detail": "10.28 15:42"
+    },
+    {
+      "name": "검색·유형이 바뀌어도 전역 요약은 그대로",
+      "passed": true,
+      "detail": [
+        {
+          "label": "참가 가능한 기회",
+          "value": "159"
+        },
+        {
+          "label": "7일 내 마감",
+          "value": "58"
+        },
+        {
+          "label": "데이터 갱신",
+          "value": "10.28 15:42"
+        }
+      ]
+    },
+    {
+      "name": "좌측 필터 폭 약 200px · 결과 목록이 오른쪽",
+      "passed": true,
+      "detail": {
+        "rail": {
+          "x": 64,
+          "y": 16,
+          "width": 200,
+          "height": 904.671875
+        },
+        "results": 288
+      }
+    },
+    {
+      "name": "검색·유형이 필터 열 안에 있음",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "상태·방식·초기화·마감임박·출처 모두 보임",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "결과 영역 상단에 건수·정렬·보기 전환",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "마감·개최·참가 열 보존",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "새로고침 실패 시 요약 유지 + 실패 알림",
+      "passed": true,
+      "detail": [
+        {
+          "label": "참가 가능한 기회",
+          "value": "159"
+        },
+        {
+          "label": "7일 내 마감",
+          "value": "58"
+        },
+        {
+          "label": "데이터 갱신",
+          "value": "10.28 15:42"
+        }
+      ]
+    },
+    {
+      "name": "로딩: 건수 —, 갱신 불러오는 중, 가짜 0건 없음",
+      "passed": true,
+      "detail": [
+        {
+          "label": "참가 가능한 기회",
+          "value": "—"
+        },
+        {
+          "label": "7일 내 마감",
+          "value": "—"
+        },
+        {
+          "label": "데이터 갱신",
+          "value": "불러오는 중"
+        }
+      ]
+    },
+    {
+      "name": "오류: 건수 —, 갱신 확인 필요",
+      "passed": true,
+      "detail": [
+        {
+          "label": "참가 가능한 기회",
+          "value": "—"
+        },
+        {
+          "label": "7일 내 마감",
+          "value": "—"
+        },
+        {
+          "label": "데이터 갱신",
+          "value": "확인 필요"
+        }
+      ]
+    },
+    {
+      "name": "폭 1440: 검색·유형 항상 보임, 추가 필터 고정",
+      "passed": true,
+      "detail": {
+        "always": true,
+        "toggle": false,
+        "panel": true
+      }
+    },
+    {
+      "name": "폭 1440: 가로 넘침 0",
+      "passed": true,
+      "detail": {
+        "width": 1440,
+        "scroll": 1440,
+        "outside": []
+      }
+    },
+    {
+      "name": "폭 1440: 제목·요약이 화면 안",
+      "passed": true,
+      "detail": {
+        "h1": {
+          "x": 64,
+          "y": 100,
+          "width": 565.59375,
+          "height": 39
+        },
+        "stats": {
+          "x": 1055.359375,
+          "y": 119,
+          "width": 320.640625,
+          "height": 47.5
+        }
+      }
+    },
+    {
+      "name": "폭 1280: 검색·유형 항상 보임, 추가 필터 고정",
+      "passed": true,
+      "detail": {
+        "always": true,
+        "toggle": false,
+        "panel": true
+      }
+    },
+    {
+      "name": "폭 1280: 가로 넘침 0",
+      "passed": true,
+      "detail": {
+        "width": 1280,
+        "scroll": 1280,
+        "outside": []
+      }
+    },
+    {
+      "name": "폭 1280: 제목·요약이 화면 안",
+      "passed": true,
+      "detail": {
+        "h1": {
+          "x": 24,
+          "y": 100,
+          "width": 565.59375,
+          "height": 39
+        },
+        "stats": {
+          "x": 935.359375,
+          "y": 119,
+          "width": 320.640625,
+          "height": 47.5
+        }
+      }
+    },
+    {
+      "name": "폭 1279: 검색·유형 항상 보임, 추가 필터 접힘",
+      "passed": true,
+      "detail": {
+        "always": true,
+        "toggle": true,
+        "panel": false
+      }
+    },
+    {
+      "name": "폭 1279: 토글로 진행 상태·참가 방식 펼침",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "폭 1279: 가로 넘침 0",
+      "passed": true,
+      "detail": {
+        "width": 1279,
+        "scroll": 1279,
+        "outside": []
+      }
+    },
+    {
+      "name": "폭 1279: 제목·요약이 화면 안",
+      "passed": true,
+      "detail": {
+        "h1": {
+          "x": 24,
+          "y": 92,
+          "width": 565.59375,
+          "height": 39
+        },
+        "stats": {
+          "x": 934.359375,
+          "y": 111,
+          "width": 320.640625,
+          "height": 47.5
+        }
+      }
+    },
+    {
+      "name": "폭 1024: 검색·유형 항상 보임, 추가 필터 접힘",
+      "passed": true,
+      "detail": {
+        "always": true,
+        "toggle": true,
+        "panel": false
+      }
+    },
+    {
+      "name": "폭 1024: 토글로 진행 상태·참가 방식 펼침",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "폭 1024: 가로 넘침 0",
+      "passed": true,
+      "detail": {
+        "width": 1024,
+        "scroll": 1024,
+        "outside": []
+      }
+    },
+    {
+      "name": "폭 1024: 제목·요약이 화면 안",
+      "passed": true,
+      "detail": {
+        "h1": {
+          "x": 24,
+          "y": 92,
+          "width": 565.59375,
+          "height": 39
+        },
+        "stats": {
+          "x": 679.359375,
+          "y": 111,
+          "width": 320.640625,
+          "height": 47.5
+        }
+      }
+    },
+    {
+      "name": "폭 768: 검색·유형 항상 보임, 추가 필터 접힘",
+      "passed": true,
+      "detail": {
+        "always": true,
+        "toggle": true,
+        "panel": false
+      }
+    },
+    {
+      "name": "폭 768: 토글로 진행 상태·참가 방식 펼침",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "폭 768: 가로 넘침 0",
+      "passed": true,
+      "detail": {
+        "width": 768,
+        "scroll": 768,
+        "outside": []
+      }
+    },
+    {
+      "name": "폭 768: 제목·요약이 화면 안",
+      "passed": true,
+      "detail": {
+        "h1": {
+          "x": 16,
+          "y": 92,
+          "width": 416.421875,
+          "height": 39
+        },
+        "stats": {
+          "x": 16,
+          "y": 147,
+          "width": 320.640625,
+          "height": 47.5
+        }
+      }
+    },
+    {
+      "name": "폭 390: 검색·유형 항상 보임, 추가 필터 접힘",
+      "passed": true,
+      "detail": {
+        "always": true,
+        "toggle": true,
+        "panel": false
+      }
+    },
+    {
+      "name": "폭 390: 토글로 진행 상태·참가 방식 펼침",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "폭 390: 가로 넘침 0",
+      "passed": true,
+      "detail": {
+        "width": 390,
+        "scroll": 390,
+        "outside": []
+      }
+    },
+    {
+      "name": "폭 390: 제목·요약이 화면 안",
+      "passed": true,
+      "detail": {
+        "h1": {
+          "x": 16,
+          "y": 92,
+          "width": 305.375,
+          "height": 28.59375
+        },
+        "stats": {
+          "x": 16,
+          "y": 136.59375,
+          "width": 320.640625,
+          "height": 47.5
+        }
+      }
+    },
+    {
+      "name": "폭 320: 검색·유형 항상 보임, 추가 필터 접힘",
+      "passed": true,
+      "detail": {
+        "always": true,
+        "toggle": true,
+        "panel": false
+      }
+    },
+    {
+      "name": "폭 320: 토글로 진행 상태·참가 방식 펼침",
+      "passed": true,
+      "detail": null
+    },
+    {
+      "name": "폭 320: 가로 넘침 0",
+      "passed": true,
+      "detail": {
+        "width": 320,
+        "scroll": 320,
+        "outside": []
+      }
+    },
+    {
+      "name": "폭 320: 제목·요약이 화면 안",
+      "passed": true,
+      "detail": {
+        "h1": {
+          "x": 16,
+          "y": 92,
+          "width": 288,
+          "height": 57.1875
+        },
+        "stats": {
+          "x": 16,
+          "y": 165.1875,
+          "width": 288,
+          "height": 97.796875
+        }
+      }
+    },
+    {
+      "name": "pageerror·console error 0 (의도한 요청 중단 제외)",
+      "passed": true,
+      "detail": []
+    }
+  ]
+}
