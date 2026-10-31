@@ -1,23 +1,23 @@
 {
-  "lastAttemptAt": "2026-10-30T04:39:57Z",
+  "lastAttemptAt": "2026-10-31T04:23:31Z",
   "sources": [
     {
       "id": "devpost",
       "name": "Devpost",
       "url": "https://devpost.com/hackathons",
       "status": "ok",
-      "checkedAt": "2026-10-30T04:39:57Z",
-      "lastSuccessAt": "2026-10-30T04:39:57Z",
+      "checkedAt": "2026-10-31T04:23:31Z",
+      "lastSuccessAt": "2026-10-31T04:23:31Z",
       "itemCount": 16,
-      "message": "후보 12건 중 8건 사용, 한국 참가 근거/마감 미확인 4건 제외, 조회 실패 0건"
+      "message": "후보 11건 중 7건 사용, 한국 참가 근거/마감 미확인 4건 제외, 조회 실패 0건"
     },
     {
       "id": "dacon",
       "name": "DACON",
       "url": "https://dacon.io/competitions",
       "status": "ok",
-      "checkedAt": "2026-10-30T04:39:57Z",
-      "lastSuccessAt": "2026-10-30T04:39:57Z",
+      "checkedAt": "2026-10-31T04:23:31Z",
+      "lastSuccessAt": "2026-10-31T04:23:31Z",
       "itemCount": 9,
       "message": "AI 관련 후보 14건 중 14건 사용, 상세 조회 실패 0건"
     },
@@ -26,18 +26,18 @@
       "name": "위비티",
       "url": "https://www.wevity.com/?c=find&s=1&gub=1",
       "status": "ok",
-      "checkedAt": "2026-10-30T04:39:57Z",
-      "lastSuccessAt": "2026-10-30T04:39:57Z",
-      "itemCount": 128,
-      "message": "AI 관련 후보 56건(6페이지까지 확인) 중 56건 사용, 상세 조회 실패 0건 (목록 마감 확인 1건)"
+      "checkedAt": "2026-10-31T04:23:31Z",
+      "lastSuccessAt": "2026-10-31T04:23:31Z",
+      "itemCount": 132,
+      "message": "AI 관련 후보 54건(6페이지까지 확인) 중 54건 사용, 상세 조회 실패 0건 (목록 마감 확인 5건)"
     },
     {
       "id": "aisummit",
       "name": "AI Summit Seoul",
       "url": "https://www.aisummit.co.kr/",
       "status": "ok",
-      "checkedAt": "2026-10-30T04:39:57Z",
-      "lastSuccessAt": "2026-10-30T04:39:57Z",
+      "checkedAt": "2026-10-31T04:23:31Z",
+      "lastSuccessAt": "2026-10-31T04:23:31Z",
       "itemCount": 1,
       "message": "노출 행사 2027년 2027-08-11~2027-08-13. 경고: 페이지 title은 2026년 표기, 본문 노출 행사(2027) 기준 사용"
     },
@@ -46,8 +46,8 @@
       "name": "서초 AI 페스타",
       "url": "https://seochoai.kr/",
       "status": "ok",
-      "checkedAt": "2026-10-30T04:39:57Z",
-      "lastSuccessAt": "2026-10-30T04:39:57Z",
+      "checkedAt": "2026-10-31T04:23:31Z",
+      "lastSuccessAt": "2026-10-31T04:23:31Z",
       "itemCount": 1,
       "message": "행사 2026-10-17~2026-10-17 서초문화예술공원"
     },
@@ -56,8 +56,8 @@
       "name": "NVIDIA AI Day Seoul",
       "url": "https://www.nvidia.com/ko-kr/ai-days/",
       "status": "ok",
-      "checkedAt": "2026-10-30T04:39:57Z",
-      "lastSuccessAt": "2026-10-30T04:39:57Z",
+      "checkedAt": "2026-10-31T04:23:31Z",
+      "lastSuccessAt": "2026-10-31T04:23:31Z",
       "itemCount": 1,
       "message": "행사 2026-11-09~2026-11-10 코엑스, 등록 버튼 없음"
     },
@@ -66,8 +66,8 @@
       "name": "AI FESTA",
       "url": "https://www.aifesta.kr/",
       "status": "ok",
-      "checkedAt": "2026-10-30T04:39:57Z",
-      "lastSuccessAt": "2026-10-30T04:39:57Z",
+      "checkedAt": "2026-10-31T04:23:31Z",
+      "lastSuccessAt": "2026-10-31T04:23:31Z",
       "itemCount": 1,
       "message": "행사 2026-10-06~2026-10-08 코엑스 C홀"
     },
@@ -76,28 +76,28 @@
       "name": "콘테스트코리아",
       "url": "https://www.contestkorea.com/sub/list.php?int_gbn=1",
       "status": "ok",
-      "checkedAt": "2026-10-30T04:39:57Z",
-      "lastSuccessAt": "2026-10-30T04:39:57Z",
+      "checkedAt": "2026-10-31T04:23:31Z",
+      "lastSuccessAt": "2026-10-31T04:23:31Z",
       "itemCount": 46,
-      "message": "AI 활성 후보 51건(15페이지 확인) 중 51건 사용, 상세 조회·검증 실패 0건 (목록 마감 확인 1건)"
+      "message": "AI 활성 후보 45건(15페이지 확인) 중 45건 사용, 상세 조회·검증 실패 0건 (목록 마감 확인 7건)"
     },
     {
       "id": "devevent",
       "name": "Dev-Event",
       "url": "https://github.com/brave-people/Dev-Event",
       "status": "ok",
-      "checkedAt": "2026-10-30T04:39:57Z",
-      "lastSuccessAt": "2026-10-30T04:39:57Z",
+      "checkedAt": "2026-10-31T04:23:31Z",
+      "lastSuccessAt": "2026-10-31T04:23:31Z",
       "itemCount": 64,
-      "message": "월별 항목 90건 중 AI 진행·예정 34건 사용(비AI·지난 행사·날짜 미확정·비HTTPS 링크·해외 오프라인 제외 56건)"
+      "message": "월별 항목 90건 중 AI 진행·예정 31건 사용(비AI·지난 행사·날짜 미확정·비HTTPS 링크·해외 오프라인 제외 59건)"
     },
     {
       "id": "aiexpo",
       "name": "AI EXPO KOREA",
       "url": "https://aiexpo.co.kr/",
       "status": "ok",
-      "checkedAt": "2026-10-30T04:39:57Z",
-      "lastSuccessAt": "2026-10-30T04:39:57Z",
+      "checkedAt": "2026-10-31T04:23:31Z",
+      "lastSuccessAt": "2026-10-31T04:23:31Z",
       "itemCount": 1,
       "message": "행사 2027-04-14~2027-04-16 서울 COEX 1층 Hall A"
     },
@@ -106,8 +106,8 @@
       "name": "LOTTE AX CHALLENGE",
       "url": "https://lotteaxchallenge.com/",
       "status": "ok",
-      "checkedAt": "2026-10-30T04:39:57Z",
-      "lastSuccessAt": "2026-10-30T04:39:57Z",
+      "checkedAt": "2026-10-31T04:23:31Z",
+      "lastSuccessAt": "2026-10-31T04:23:31Z",
       "itemCount": 1,
       "message": "예선 2026-10-28~2026-11-04T23:59:59+09:00, 본선 2026-11-24~2026-11-25"
     },
@@ -116,10 +116,10 @@
       "name": "링커리어",
       "url": "https://linkareer.com/list/contest",
       "status": "ok",
-      "checkedAt": "2026-10-30T04:39:57Z",
-      "lastSuccessAt": "2026-10-30T04:39:57Z",
+      "checkedAt": "2026-10-31T04:23:31Z",
+      "lastSuccessAt": "2026-10-31T04:23:31Z",
       "itemCount": 34,
-      "message": "AI 후보 88건(36페이지 확인) 중 88건 사용, 조기 마감 0건, 상세 조회·검증 실패 0건"
+      "message": "AI 후보 78건(31페이지 확인) 중 78건 사용, 조기 마감 0건, 상세 조회·검증 실패 0건"
     }
   ]
 }
