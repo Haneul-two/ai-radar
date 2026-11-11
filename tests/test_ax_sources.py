@@ -30,10 +30,10 @@ class AxKeywordTest(unittest.TestCase):
 
 
 class RegistryTest(unittest.TestCase):
-    def test_new_sources_after_existing_ten_official_before_aggregator(self):
+    def test_new_sources_after_active_nine_official_before_aggregator(self):
         ids = [s.id for s in default_sources()]
-        self.assertEqual(ids[:10], ["devpost", "dacon", "wevity", "aisummit", "seocho", "nvidia", "aifesta", "contestkorea", "devevent", "aiexpo"])
-        self.assertEqual(ids[10:], ["lotteax", "linkareer"])
+        self.assertEqual(ids[:9], ["devpost", "wevity", "aisummit", "seocho", "nvidia", "aifesta", "contestkorea", "devevent", "aiexpo"])
+        self.assertEqual(ids[9:11], ["lotteax", "linkareer"])
 
     def test_exact_hosts_only(self):
         for ok in ("https://lotteaxchallenge.com/", "https://linkareer.com/list/contest", "https://linkareer.com/activity/360080"):

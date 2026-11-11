@@ -72,8 +72,9 @@ class AllowListTest(unittest.TestCase):
 
 
 class RegistryTest(unittest.TestCase):
-    def test_existing_seven_sources_keep_priority_first(self):
-        self.assertEqual([s.id for s in default_sources()][:7], ["devpost", "dacon", "wevity", "aisummit", "seocho", "nvidia", "aifesta"])
+    def test_active_sources_exclude_dacon_and_keep_priority(self):
+        self.assertEqual([s.id for s in default_sources()][:11], ["devpost", "wevity", "aisummit", "seocho", "nvidia", "aifesta", "contestkorea", "devevent", "aiexpo", "lotteax", "linkareer"])
+        self.assertNotIn('dacon', [s.id for s in default_sources()])
 
 
 class JsonLdTest(unittest.TestCase):

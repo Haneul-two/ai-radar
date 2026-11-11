@@ -17,3 +17,7 @@
 
 - 2026-10-29 디자인 비교 시안 단계(운영 미변경, Codex 검증 대기): [design-lab/shelf-20261029/DESIGN.md](design-lab/shelf-20261029/DESIGN.md)
 - 2026-10-29: 포커스 디자인(제목 "AI 공모전·해커톤·행사 모아보기" + 요약 3종 + 왼쪽 검색·유형 열)을 **로컬 운영 소스에 적용·검증했다. 원격 미반영(commit·push·배포 없음), Codex 교차 리뷰 대기.** 검증 `check_focus_ui.py` 42/42·`check_radar_ui.py` 98/98·Node 118. 상세 `docs/HISTORY.md`.
+
+- 2026-11-11: 사용자 승인으로 이번에 한해 Codex가 기존 파일을 편집했다. DACON은 기본 수집·화면 표시에서 제외하고 원본 JSON은 보존했다. 이벤터스는 이용 조건 확인 전 자동 수집하지 않는다. Node 120·Python 281·offline 검증 통과, 운영 미배포. 상세 `docs/HISTORY.md`.
+
+- 2026-11-11 출처 확장: DACON 제외 + gpters(공식 확인)·modulabs·seoulaihub 추가로 14출처. UI·마감 필터·주기 유지. Python 326·Node 120 통과, 사용자 배포 승인으로 운영 반영 검증 중. 새 공식 호스트는 검토 없이 자동 허용하지 않는다(커뮤니티 링크를 통한 임의 호스트 조회 방지). 상세 `docs/sources.md`·`docs/HISTORY.md`.

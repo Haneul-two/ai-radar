@@ -17,6 +17,29 @@ function fakeFetch(map) {
 }
 const good = { schemaVersion: 2, updatedAt: '2026-10-01T00:00:00Z', lastAttemptAt: '2026-10-01T00:00:00Z', sources: [src()], items: [makeItem({ id: 'a' }), makeItem({ id: 'b' })] };
 
+test('loadBoardData: DACON은 제외하고 원본과 다른 출처 오류는 보존한다', async () => {
+  for (const statusSources of [null, [src({ id: 'dacon', status: 'error' }), src({ id: 'wevity', status: 'blocked' })]]) {
+    const body = { ...good, sources: [src({ id: 'dacon', status: 'error' }), src({ id: 'wevity', status: 'blocked' })], items: [makeItem({ id: 'old', sourceId: 'dacon' }), makeItem({ id: 'keep', sourceId: 'wevity' })] };
+    const original = structuredClone(body);
+    const map = { 'data/opportunities.json': { body } };
+    if (statusSources) map['data/ingest-status.json'] = { body: { sources: statusSources } };
+    const data = await loadBoardData(fakeFetch(map));
+    assert.deepEqual(data.items.map((i) => i.id), ['keep']);
+    assert.deepEqual(data.sources.map((s) => [s.id, s.status]), [['wevity', 'blocked']]);
+    assert.equal(data.dropped, 0);
+    assert.deepEqual(body, original);
+  }
+});
+
+test('loadBoardData: 상태 파일에만 남은 DACON도 제외한다', async () => {
+  const data = await loadBoardData(fakeFetch({
+    'data/opportunities.json': { body: good },
+    'data/ingest-status.json': { body: { sources: [src({ id: 'dacon', status: 'error' })] } },
+  }));
+  assert.deepEqual(data.sources.map((s) => s.id), ['s1']);
+  assert.equal(data.items.length, good.items.length);
+});
+
 test('overlaySources: id가 같은 출처는 ingest-status 값으로 덮어쓰고 나머지 필드는 유지', () => {
   const out = overlaySources([src()], [{ id: 's1', status: 'error', checkedAt: '2026-10-02T00:00:00Z', message: 'x' }]);
   assert.equal(out.length, 1);
