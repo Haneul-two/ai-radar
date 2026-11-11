@@ -38,11 +38,13 @@ export async function loadBoardData(fetchFn = fetch) {
   const status = statusResult.status === 'fulfilled' && statusResult.value && Array.isArray(statusResult.value.sources)
     ? statusResult.value
     : null;
-  const items = opp.items.filter(isUsableItem);
+  const usable = opp.items.filter(isUsableItem);
+  // 수집을 중단한 DACON은 원본을 보존하고 화면에서만 제외한다.
+  const items = usable.filter((i) => i.sourceId !== 'dacon');
   return {
     items,
-    dropped: opp.items.length - items.length,
-    sources: overlaySources(opp.sources, status && status.sources),
+    dropped: opp.items.length - usable.length,
+    sources: overlaySources(opp.sources, status && status.sources).filter((s) => s.id !== 'dacon'),
     updatedAt: opp.updatedAt ?? null,
     lastAttemptAt: (status && status.lastAttemptAt) || opp.lastAttemptAt || null,
     statusLoaded: status !== null,

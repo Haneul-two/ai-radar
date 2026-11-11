@@ -1,0 +1,10 @@
+{
+  "date": "2026-11-11",
+  "reviewerModel": "gpt-6-astra",
+  "findingsFixed": 4,
+  "blockersRemaining": 0,
+  "pythonTests": 326,
+  "nodeTests": 120,
+  "networkDryRunAllNewSourcesOk": true,
+  "claudeUnavailable": "5-hour usage limit"
+}
