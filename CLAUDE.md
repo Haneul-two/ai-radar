@@ -86,3 +86,5 @@ node --test tests/*.test.mjs
 - 2026-11-11: 사용자 승인으로 이번에 한해 Codex가 기존 파일을 편집했다. DACON은 기본 수집·화면 표시에서 제외하고 원본 JSON은 보존했다. 이벤터스는 이용 조건 확인 전 자동 수집하지 않는다. Node 120·Python 281·offline 검증 통과, 운영 미배포. 상세 `docs/HISTORY.md`.
 
 - 2026-11-11 출처 확장: DACON 제외 + gpters(공식 확인)·modulabs·seoulaihub 추가로 14출처. UI·마감 필터·주기 유지. Python 326·Node 120 통과, 사용자 배포 승인으로 운영 반영 검증 중. 새 공식 호스트는 검토 없이 자동 허용하지 않는다(커뮤니티 링크를 통한 임의 호스트 조회 방지). 상세 `docs/sources.md`·`docs/HISTORY.md`.
+
+- 2026-11-12 운영 배포 완료: PR #10 merge 93e1cd8, 수집 run 42974791385 success, 데이터 f6e9c30과 Pages built 일치. 14출처 모두 ok(gpters 1·modulabs 7·seoulaihub 5 보관), 공개 PC1440/모바일390 새 출처·런치톡 검색·DACON 제외·오류0 확인. Python326·Node120 통과. 증거 `docs/evidence/community-sources-public.json`, 경과 `docs/HISTORY.md`. 앞의 운영 미배포 문구는 과거 기록이다.
