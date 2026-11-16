@@ -23,3 +23,5 @@
 - 2026-11-11 출처 확장: DACON 제외 + gpters(공식 확인)·modulabs·seoulaihub 추가로 14출처. UI·마감 필터·주기 유지. Python 326·Node 120 통과, 사용자 배포 승인으로 운영 반영 검증 중. 새 공식 호스트는 검토 없이 자동 허용하지 않는다(커뮤니티 링크를 통한 임의 호스트 조회 방지). 상세 `docs/sources.md`·`docs/HISTORY.md`.
 
 - 2026-11-12 운영 배포 완료: PR #10 merge 93e1cd8, 수집 run 42974791385 success, 데이터 f6e9c30과 Pages built 일치. 14출처 모두 ok(gpters 1·modulabs 7·seoulaihub 5 보관), 공개 PC1440/모바일390 새 출처·런치톡 검색·DACON 제외·오류0 확인. Python326·Node120 통과. 증거 `docs/evidence/community-sources-public.json`, 경과 `docs/HISTORY.md`. 앞의 운영 미배포 문구는 과거 기록이다.
+
+- 2026-11-16: 사용자 승인으로 Codex가 브라우저 탭 제목을 `AI 행사 모아보기`로 수정했다. 관련 제목 검사와 README 동기화, HTML 제목·Python 검사 구문 확인 통과. 로컬 적용, 운영 미배포.

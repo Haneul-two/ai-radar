@@ -109,7 +109,7 @@ with sync_playwright() as pw:
     ready(page)
     rows = page.locator('.opp')
     check('실데이터 행 표시(건수 고정 안 함)', rows.count() > 0, rows.count())
-    check('브라우저 제목 AI Radar', page.title().startswith('AI Radar'), page.title())
+    check('브라우저 제목 AI 행사 모아보기', page.title() == 'AI 행사 모아보기', page.title())
     check('브랜드 AI Radar', page.locator('.brand').inner_text().replace('\n', ' ').strip() == 'AI Radar')
     check('구 브랜드·디버그 문구 비노출', '기회 보드' not in page.content() and page.locator('#debug-banner').is_hidden())
     check('데스크톱 CSS 너비 1440', page.evaluate('()=>innerWidth') == 1440)
