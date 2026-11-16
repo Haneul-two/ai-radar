@@ -260,3 +260,11 @@
 - 2026-11-12T00:12:33Z 공개 실Edge 1440/390에서 새 출처 이름, DACON 제외, 런치톡 검색, 가로 넘침 없음, pageerror 0을 확인했다. `tools/check_community_public.py` 통과. 증거 `docs/evidence/community-sources-public.json`.
 - 군것질마켓도 지피터스에서 발견하고 SKT 공식 일정과 마감을 확인해 저장했다. 신청 마감 11/9가 지나 기존 마감 제외 규칙에 따라 화면에 나오지 않는다. UI·마감 필터·수집 주기는 변경하지 않았다.
 - 공개 사이트: https://haneul-two.github.io/ai-radar/. Python 326·Node 120·운영 수집·Pages·공개 PC/모바일 검증까지 완료했다.
+
+
+## 2026-11-16. 브라우저 탭 제목 변경
+
+- 사용자 확정 제목 `AI 행사 모아보기`를 index.html에 반영했다. 긴 구분자를 제거했다.
+- 관련 브라우저 제목 검사 2곳과 README를 맞췄다. 본문 브랜드·화면·수집 기능은 유지했다.
+- Claude 사용 한도로 사용자에게 Codex 직접 편집 승인을 받아 진행했다.
+- HTMLParser로 제목 정확 일치, 두 검사 파일 Python 구문 검증 통과. 로컬 적용이며 커밋·푸시·배포는 하지 않았다.

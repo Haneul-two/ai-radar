@@ -30,7 +30,7 @@ def main():
             page.on("requestfailed", lambda r: errors.append(r.url))
             page.goto(BASE, wait_until="networkidle")
             expect(page.locator("#content")).to_have_attribute("aria-busy", "false")
-            assert page.title().startswith("AI Radar")
+            assert page.title() == "AI 행사 모아보기"
             assert page.locator(".brand").inner_text().replace("\n", " ").strip() == "AI Radar"
             assert page.locator(".opp").count() > 0
             assert page.locator("#notices").inner_text().strip() == ""
