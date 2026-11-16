@@ -268,3 +268,5 @@
 - 관련 브라우저 제목 검사 2곳과 README를 맞췄다. 본문 브랜드·화면·수집 기능은 유지했다.
 - Claude 사용 한도로 사용자에게 Codex 직접 편집 승인을 받아 진행했다.
 - HTMLParser로 제목 정확 일치, 두 검사 파일 Python 구문 검증 통과. 로컬 적용이며 커밋·푸시·배포는 하지 않았다.
+
+- 탭 제목 운영 배포 완료: PR #11, 구현 53d1f21, merge dcf7fec92b9c4ac11994fd59c9700618bacbefc3. PR Python/Node CI와 master Test run 43832174074 성공. Pages built가 merge와 일치했다. 공개 HTML 및 실Edge 1440/390에서 제목 `AI 행사 모아보기`, 기존 AI Radar 브랜드, 목록 132행 로딩, pageerror 0 확인. 증거 `docs/evidence/tab-title-public-20261116.json`.

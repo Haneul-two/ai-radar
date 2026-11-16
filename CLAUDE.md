@@ -90,3 +90,5 @@ node --test tests/*.test.mjs
 - 2026-11-12 운영 배포 완료: PR #10 merge 93e1cd8, 수집 run 42974791385 success, 데이터 f6e9c30과 Pages built 일치. 14출처 모두 ok(gpters 1·modulabs 7·seoulaihub 5 보관), 공개 PC1440/모바일390 새 출처·런치톡 검색·DACON 제외·오류0 확인. Python326·Node120 통과. 증거 `docs/evidence/community-sources-public.json`, 경과 `docs/HISTORY.md`. 앞의 운영 미배포 문구는 과거 기록이다.
 
 - 2026-11-16: 사용자 승인으로 Codex가 브라우저 탭 제목을 `AI 행사 모아보기`로 수정했다. 관련 제목 검사와 README 동기화, HTML 제목·Python 검사 구문 확인 통과. 로컬 적용, 운영 미배포.
+
+- 2026-11-16 탭 제목 배포 완료: PR #11, merge dcf7fec와 Pages built 일치. 공개 실브라우저 1440/390에서 `AI 행사 모아보기`, 기존 브랜드·목록 로딩·오류0 확인. 앞의 운영 미배포는 변경 당시 기록이다. 증거 `docs/evidence/tab-title-public-20261116.json`.
