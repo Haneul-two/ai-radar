@@ -14,6 +14,8 @@ SOURCE_STATUSES = ("open", "closed", "unknown")
 UNKNOWN_TEXT = "확인 필요"
 DESCRIPTION_LIMIT = 200
 ARCHIVE_DAYS = 90
+# 해외 현장 행사를 받는 출처(사용자 결정 2026-11-18: 해외는 대형 학회만). 다른 출처의 해외 항목은 온라인+한국 참가 근거가 있어야 한다.
+GLOBAL_OFFLINE_SOURCES = ("majorconf",)
 
 ITEM_KEYS = (
     "id", "kind", "title", "organizer", "description", "tags", "mode", "region", "country",
@@ -194,7 +196,7 @@ def normalize_item(raw, source_id, verified_at):
     if country not in COUNTRIES:
         return None
     verified = bool(raw.get("eligibilityVerified"))
-    if country == "GLOBAL" and (mode != "online" or not verified):
+    if country == "GLOBAL" and source_id not in GLOBAL_OFFLINE_SOURCES and (mode != "online" or not verified):
         return None
 
     dates = {}
@@ -305,4 +307,4 @@ def meets_contract(item):
     """저장된 항목이 지금의 관련성/지역/자격/초대 전용 계약을 여전히 만족하는지(병합 시 stale 보존 차단용)."""
     if normalize_item(item, item["sourceId"], item["verifiedAt"]) is None:
         return False
-    return item["country"] != "GLOBAL" or korea_allowed(item["eligibility"])
+    return item["country"] != "GLOBAL" or item["sourceId"] in GLOBAL_OFFLINE_SOURCES or korea_allowed(item["eligibility"])
