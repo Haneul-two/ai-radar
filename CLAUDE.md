@@ -64,6 +64,8 @@ data/opportunities.json, ingest-status.json  ←  collectors/opportunities/ (백
 - NVIDIA 수정을 로컬 브랜치에 커밋만 하고 push하지 않아 공개 보드 실패 알림이 이틀 더 남았다 → 출처 수정은 PR 병합·수동 수집·공개 JSON 확인까지 해야 끝난 것이다.
 - 'LOTTE AX CHALLENGE'가 제목에 AI 단어가 없어 모음 사이트에 올라와도 걸러질 상황이었다 → AI 판정 단어에 `AX`를 두고, 새 표현은 실제 제목으로 `AxKeywordTest`에 추가한다.
 - 검증할 때 브라우저 대기 조건을 `.opp`만 쓰면 달력 화면에서 시간초과가 난다 → `.opp, .state, .cal`.
+- 모두콘(별도 도메인)·루마 Upstage 행사를 놓쳤다 → 같은 주최의 다른 도메인은 별도 어댑터로 보고, 루마는 공식 iCal만 쓰며 AI 전용 캘린더는 제목에 AI가 없어도 받는다. iCal 주최자 CN은 개인 이름이라 저장하지 않는다.
+- 해외 현장 행사는 `rules.GLOBAL_OFFLINE_SOURCES`(majorconf)에서만 받는다 → 사용자가 해외는 대형 학회만 원했고, 다른 출처의 해외 오프라인이 섞이지 않게 하기 위해서다.
 
 ## 명령
 
@@ -92,3 +94,5 @@ node --test tests/*.test.mjs
 - 2026-11-16: 사용자 승인으로 Codex가 브라우저 탭 제목을 `AI 행사 모아보기`로 수정했다. 관련 제목 검사와 README 동기화, HTML 제목·Python 검사 구문 확인 통과. 로컬 적용, 운영 미배포.
 
 - 2026-11-16 탭 제목 배포 완료: PR #11, merge dcf7fec와 Pages built 일치. 공개 실브라우저 1440/390에서 `AI 행사 모아보기`, 기존 브랜드·목록 로딩·오류0 확인. 앞의 운영 미배포는 변경 당시 기록이다. 증거 `docs/evidence/tab-title-public-20261116.json`.
+
+- 2026-11-18 출처 확장: 모두콘·루마(iCal)·주요 AI 학회(ccfddl) 추가로 17출처. Python 347·Node 120·offline 통과, dry-run 17출처 ok·444건. 브랜치 `feat/luma-moducon-majorconf`, 운영 미배포. 상세 `docs/sources.md`·`docs/HISTORY.md`.

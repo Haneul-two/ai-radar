@@ -145,3 +145,41 @@
 - 접수 마감과 행사 일시를 구분한다. 연도나 참가 근거가 없거나 지원하지 않는 축약 날짜 범위는 추측하지 않고 제외한다. 접수 진행 상태는 미확정으로 둔다. 연락처는 저장 전에 마스킹한다.
 
 - 운영 반영 확인(2026-11-12): PR #10과 수집 run 42974791385, 데이터/Pages f6e9c30. 새 세 출처를 포함한 활성 14출처 모두 ok. 공개 PC·모바일 검증 통과. 상세 `docs/HISTORY.md`와 `docs/evidence/community-sources-public.json`.
+
+## 2026-11-18 출처 확장: 모두콘 · 루마 · 주요 AI 학회
+
+사용자 요청: 루마 행사(예: Upstage Open Stage)와 모두콘처럼 놓치던 국내외 AI 행사를 가져온다. 사용자 결정: 해외는 대형 학회만, 루마는 공식 iCal 구독 + 주최자 캘린더 목록, 루마 일정은 제목·설명에 AI가 있으면 규모와 관계없이 포함. 허용 호스트 추가(정확한 이름만): `moducon.modulabs.co.kr`, `api.lu.ma`. 우선순위는 기존 14곳 뒤에 moducon > luma > majorconf.
+
+### 놓친 원인
+
+- 모두콘은 모두의연구소 행사 목록(`biz.modulabs.co.kr/event`)이 아니라 별도 도메인에 있어 기존 `modulabs` 어댑터가 볼 수 없었다.
+- 루마 링크는 Dev-Event가 올린 것만 저장했고 루마 자체는 읽지 않았다. Upstage Open Stage는 Dev-Event에 없었다.
+- 해외 현장 행사는 계약(`country == GLOBAL`이면 온라인 + 한국 참가 근거)에 막혀 처음부터 받지 않았다.
+
+### 모두콘 (`moducon`)
+
+- `https://moducon.modulabs.co.kr/` 한 장. head의 JSON-LD Event를 공용 `sources/jsonld.py`로 읽는다(서초·AI FESTA와 같은 규칙). 신청 마감·참가비는 근거가 없어 `확인 필요`.
+
+### 루마 (`luma`)
+
+- 루마 약관은 공식 지원 인터페이스 밖의 접근과 콘텐츠 재게시를 금지한다. 그래서 웹 페이지·내부 API는 읽지 않고, 루마가 달력 앱 구독용으로 공개하는 iCal 주소 `https://api.lu.ma/ics/get?entity=...&id=...`만 읽는다(robots는 `/insights/`만 차단). 제목·일시·링크만 저장하고 설명 본문은 AI 판정에만 쓰며 저장하지 않는다(설명란에는 제목).
+- 피드: 서울 탐색(`discplace-eQieweHXBFCWbCj`, 인기 16건 수준) + `sources/luma.py`의 `CALENDARS` 9곳. 서울 피드만으로는 Upstage Open Stage가 빠져 주최자 캘린더를 함께 구독한다. 주최자 추가는 `CALENDARS` 한 줄. 개인 캘린더는 넣지 않는다.
+- AI 전용 캘린더(Upstage AI Events·Codex Community·c0mpiled·Beyond the Vibes)는 제목에 AI가 없어도 AI 행사로 본다. 나머지는 제목·설명에 AI 단어가 있어야 한다. 같은 UID는 한 번만, 서울 피드에서 걸러진 일정도 뒤의 AI 전용 캘린더에서 받을 수 있다.
+- 한국 판정: `GEO` 좌표가 한국 범위(위도 33~38.7, 경도 124.5~131)이거나, 좌표가 없으면 주소 문구(서울·Korea 등). 해외·위치 미확인(온라인 포함) 일정은 뺀다. 이미 끝난 일정과 7일 넘는 일정도 뺀다.
+- 주최자는 캘린더 이름(서울 피드는 null). iCal `ORGANIZER`의 CN은 개인 호스트 이름이라 저장하지 않는다. `STATUS:CANCELLED`만 closed, 나머지는 unknown. 신청 마감은 iCal에 없어 null.
+- 일부 피드만 실패하면 나머지로 부분 성공하고 메시지에 확인한 피드 수를 남긴다. 전부 실패하면 소스 오류. 상한 80건.
+- 한계: 목록에 없는 주최자의 행사는 서울 인기 피드에 올라올 때만 잡힌다. 온라인 루마 일정은 받지 않는다.
+
+### 주요 AI 학회 (`majorconf`)
+
+- 데이터: [ccfddl/ccf-deadlines](https://github.com/ccfddl/ccf-deadlines)(MIT, 2026-11-17에도 갱신). `raw.githubusercontent.com`(기존 허용 호스트)의 `conference/AI/{nips,icml,iclr,cvpr,iccv,eccv,aaai,ijcai,acl,emnlp,naacl}.yml` 11회 조회.
+- PyYAML 없이 `title`·`description`·`year`·`link`·`date`·`place` 스칼라 줄만 읽는다. `date`의 `Month D-D`, `Month D - Month D`, 여러 개최지 표기는 가장 이른 날~가장 늦은 날. 연도를 넘는 표기·해석 불가 표기는 추측하지 않고 뺀다(메시지에 건수).
+- 오늘 이후 끝나고 400일 안에 시작하는 회차만. 논문 제출 마감은 참가 신청 마감이 아니라 `deadline`에 쓰지 않는다. 참가비·등록 마감은 `확인 필요`.
+- 개최지에 한국이 있으면 `KR`, 아니면 `GLOBAL` + 지역 `해외 현장 · 개최지`. 해외 현장 허용은 `rules.GLOBAL_OFFLINE_SOURCES = ("majorconf",)`에서만 한다. 다른 출처의 해외 항목은 여전히 온라인 + 한국 참가 근거가 필요하다.
+- id는 회차별 공식 링크 기준(같은 파일 안 여러 연도가 같은 id가 되지 않게). 표시 출처는 GitHub 파일 페이지.
+- 한계: 학술 학회만이다. NVIDIA GTC·AWS re:Invent·Google I/O 같은 산업 행사는 아직 없다.
+
+### 실측(2026-11-18 dry-run, 파일 미수정)
+
+- 17출처 모두 ok, 전체 444건, 약 5분 56초(수집 step 제한 18분 안).
+- moducon 1(모두콘 2026, 12/12 이화여대 ECC) · luma 13(국내 AI 일정 15건 중 Dev-Event와 겹친 2건은 교차 출처 중복 제거) · majorconf 9(NeurIPS 2026 12/8~11, AAAI·ICLR·NAACL·CVPR·ICML·IJCAI·ACL·ICCV 2027).

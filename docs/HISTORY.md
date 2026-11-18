@@ -270,3 +270,12 @@
 - HTMLParser로 제목 정확 일치, 두 검사 파일 Python 구문 검증 통과. 로컬 적용이며 커밋·푸시·배포는 하지 않았다.
 
 - 탭 제목 운영 배포 완료: PR #11, 구현 53d1f21, merge dcf7fec92b9c4ac11994fd59c9700618bacbefc3. PR Python/Node CI와 master Test run 43832174074 성공. Pages built가 merge와 일치했다. 공개 HTML 및 실Edge 1440/390에서 제목 `AI 행사 모아보기`, 기존 AI Radar 브랜드, 목록 132행 로딩, pageerror 0 확인. 증거 `docs/evidence/tab-title-public-20261116.json`.
+
+
+## 2026-11-18. 모두콘·루마·주요 AI 학회 출처 추가
+
+- 사용자 요청: luma.com/xqjtwhc9(Upstage Open Stage)와 모두콘이 보드에 없다. 국내외 AI 행사를 다 알고 싶다.
+- 원인: 출처가 지정 사이트 목록이라 모두콘(별도 도메인)·루마(자체 미수집)를 볼 수 없었고, 해외 현장 행사는 계약에서 일부러 막고 있었다.
+- 사용자 결정: 해외는 대형 학회만 / 루마는 공식 iCal + 주최자 캘린더 목록 / 루마는 AI 단어가 있으면 규모 무관 / 로컬 검증·교차 리뷰 후 PR까지.
+- 구현: `sources/ical.py`·`luma.py`·`moducon.py`·`majorconf.py`, `rules.GLOBAL_OFFLINE_SOURCES`, 허용 호스트 2개. Upstage 일정은 제목·설명에 AI가 없어 처음에 빠졌고, AI 전용 캘린더 표시로 해결했다. iCal 주최자 CN이 개인 이름이라 캘린더 이름으로 바꿨다.
+- 검증: Python 347(새 21)·Node 120 통과, `--offline` 계약 통과, 전체 dry-run 17출처 ok·444건·5분 56초. 상세 `docs/sources.md`. 운영 미배포.

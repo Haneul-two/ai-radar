@@ -10,7 +10,7 @@ class CommunityRegistryTest(unittest.TestCase):
         self.assertEqual([s.id for s in default_sources()], [
             'devpost', 'wevity', 'aisummit', 'seocho', 'nvidia', 'aifesta',
             'contestkorea', 'devevent', 'aiexpo', 'lotteax', 'linkareer',
-            'gpters', 'modulabs', 'seoulaihub',
+            'gpters', 'modulabs', 'seoulaihub', 'moducon', 'luma', 'majorconf',
         ])
 
     def test_exact_community_hosts_only(self):
