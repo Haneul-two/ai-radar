@@ -1,7 +1,8 @@
 // 필터 상태 정의·검증, 필터/정렬/건수 계산. 순수 함수.
 import { getStatus, getDeadline } from './status.mjs';
-import { toMs } from './time.mjs';
+import { toMs, seoulDate, endOfSeoulDateMs, isValidDateStr } from './time.mjs';
 import { isListed } from './visibility.mjs';
+import { expandToken } from './search-aliases.mjs';
 
 export const KINDS = ['all', 'event', 'contest', 'hackathon'];
 export const STATUS_FILTERS = ['all', 'open', 'upcoming', 'ongoing', 'unknown'];
@@ -46,7 +47,7 @@ function matchesQuery(item, q) {
   const tokens = q.normalize('NFC').toLowerCase().split(/\s+/).filter(Boolean);
   if (!tokens.length) return true;
   const hay = searchText(item);
-  return tokens.every((t) => hay.includes(t));
+  return tokens.every((t) => expandToken(t).some((alt) => hay.includes(alt)));
 }
 
 // skip: 건수 계산 시 제외할 차원 ('kind' | 'status' | 'mode')
@@ -83,9 +84,21 @@ export function facetCounts(items, filters, ctx) {
   return counts;
 }
 
+// 마감이 없는 행사는 참가할 수 있는 마지막 기회(개최일, 이미 진행 중이면 오늘)를 기준으로 마감 임박 항목 사이에 둔다.
+// 개최일도 없으면 맨 뒤. 마감 날짜를 만들어 내는 것이 아니라 정렬 순서에만 쓴다.
+function openUntilMs(item, now) {
+  const today = seoulDate(now);
+  if (isValidDateStr(item.startDate) && item.startDate >= today) return endOfSeoulDateMs(item.startDate);
+  if (isValidDateStr(item.endDate) && item.endDate >= today) return endOfSeoulDateMs(today);
+  return null;
+}
+
 function deadlineRank(item, now) {
   const d = getDeadline(item, now);
-  if (d.kind === 'none') return [2, 0];
+  if (d.kind === 'none') {
+    const ms = openUntilMs(item, now);
+    return ms === null ? [2, 0] : [0, ms];
+  }
   const upcoming = d.ms >= toMs(now);
   return upcoming ? [0, d.ms] : [1, -d.ms];
 }
