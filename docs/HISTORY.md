@@ -280,3 +280,5 @@
 - 구현: `sources/ical.py`·`luma.py`·`moducon.py`·`majorconf.py`, `rules.GLOBAL_OFFLINE_SOURCES`, 허용 호스트 2개. Upstage 일정은 제목·설명에 AI가 없어 처음에 빠졌고, AI 전용 캘린더 표시로 해결했다. iCal 주최자 CN이 개인 이름이라 캘린더 이름으로 바꿨다.
 - 검증: Python 347(새 21)·Node 120 통과, `--offline` 계약 통과, 전체 dry-run 17출처 ok·444건·5분 56초. 상세 `docs/sources.md`. 운영 미배포.
 - Codex 교차 리뷰(커밋 5f2f49b 대상): HIGH 4(학회 연도 추측, 루마 해외 행사 국내 판정, 못 읽은 종료 시각 대체, 회차 id 충돌) · MEDIUM 6 · LOW 2. 전부 재현 테스트 12개를 먼저 추가해 실패를 확인한 뒤 수정했다. Python 359·Node 120 통과, 새 3출처 실조회 재확인(moducon 1·luma 15·majorconf 9 모두 계약 통과, Upstage Open Stage 포함). 상세 `docs/sources.md`.
+
+- 2026-11-18 운영 배포 완료: PR #12 merge 9a0a9e5, 수집 run 44221881708 success, 데이터 c9bc3ca와 Pages built 일치. 공개 444건·17출처 모두 ok(moducon 1·luma 13·majorconf 9). 공개 실Edge 1440/390에서 Upstage·모두콘·NeurIPS 검색 각 1건, 가로 넘침 없음, pageerror 0. 앞의 운영 미배포 문구는 당시 기록이다.
