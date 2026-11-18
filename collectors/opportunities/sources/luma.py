@@ -13,7 +13,7 @@ from .. import rules
 from ..errors import FetchError, StructureError
 from ..urlsafe import is_safe_https_url
 from .base import CollectResult, domestic_region, fail_if_every_fetch_failed
-from .ical import parse_events, parse_moment
+from .ical import is_date_value, parse_events, parse_moment
 
 SOURCE_ID = "luma"
 SOURCE_NAME = "루마(Luma)"
@@ -35,7 +35,7 @@ CALENDARS = (
     ("cal-w5PsR14bCTbwI7f", "Layergg", False),
 )
 _KOREA_RE = re.compile(r"south korea|republic of korea|대한민국|\bkorea\b|seoul|서울|경기|인천|부산|대전|대구|광주|성남|판교", re.I)
-_LUMA_URL_RE = re.compile(r"https://(?:luma\.com|lu\.ma)/[A-Za-z0-9/_-]+")
+_OFFICIAL_LINK_RE = re.compile(r"^Get up-to-date information at: (https://(?:luma\.com|lu\.ma)/[A-Za-z0-9/_-]+)")
 _MAX_DAYS = 7  # 일주일을 넘는 일정은 행사가 아니라 상시 모집·과정으로 본다
 
 
@@ -48,6 +48,14 @@ def _value(event, name):
     return (event.get(name) or ("", {}))[0].strip()
 
 
+def _place_text(event):
+    """주소로 쓸 글자만: LOCATION(링크 제외) + 설명의 'Address:' 문단(빈 줄 전까지). 본문 문구는 섞지 않는다."""
+    location = _value(event, "LOCATION")
+    body = _value(event, "DESCRIPTION")
+    address = body.split("Address:", 1)[1].strip().split("\n\n", 1)[0] if "Address:" in body else ""
+    return f"{'' if location.startswith('https://') else location} {address}"
+
+
 def _in_korea(event):
     geo = _value(event, "GEO")
     if geo:
@@ -56,16 +64,15 @@ def _in_korea(event):
         except ValueError:
             lat = lon = None
         if lat is not None:
-            return 33.0 <= lat <= 38.7 and 124.5 <= lon <= 131.0
-    location = _value(event, "LOCATION")
-    address = _value(event, "DESCRIPTION").split("Address:", 1)[1][:200] if "Address:" in _value(event, "DESCRIPTION") else ""
-    return bool(_KOREA_RE.search(f"{'' if location.startswith('https://') else location} {address}"))
+            north_of_dmz_west = lat > 37.9 and lon < 127.1  # 개성 등 군사분계선 북쪽 서부
+            return 33.0 <= lat <= 38.7 and 124.5 <= lon <= 131.0 and not north_of_dmz_west
+    return bool(_KOREA_RE.search(_place_text(event)))
 
 
 def _event_url(event):
-    match = _LUMA_URL_RE.search(_value(event, "DESCRIPTION"))
-    if match and is_safe_https_url(match.group(0)):
-        return match.group(0)
+    match = _OFFICIAL_LINK_RE.search(_value(event, "DESCRIPTION"))  # 루마가 첫 줄에 넣는 공식 안내 링크만(본문 속 다른 행사 링크 제외)
+    if match and is_safe_https_url(match.group(1)):
+        return match.group(1)
     uid = _value(event, "UID").split("@", 1)[0]
     if re.fullmatch(r"evt-[A-Za-z0-9]+", uid):
         return f"https://luma.com/event/{uid}"
@@ -73,7 +80,7 @@ def _event_url(event):
 
 
 def _city(event):
-    text = f"{_value(event, 'LOCATION')} {_value(event, 'DESCRIPTION')}"
+    text = _place_text(event)
     for pattern, name in ((r"seoul|서울", "서울"), (r"seongnam|성남|판교|pangyo", "경기 성남"), (r"busan|부산", "부산"), (r"incheon|인천", "인천")):
         if re.search(pattern, text, re.I):
             return name
@@ -86,12 +93,18 @@ def build_raw(event, now, calendar_name=None, ai_calendar=False):
     if not title:
         raise StructureError("루마 일정 제목 없음")
     start = parse_moment(*event.get("DTSTART", ("", {})))
-    end = parse_moment(*event.get("DTEND", ("", {}))) or start
-    if start is None or end < start:
+    end_value, end_params = event.get("DTEND", ("", {}))
+    end = parse_moment(end_value, end_params) if end_value else start  # DTEND가 있는데 못 읽으면 추측하지 않는다
+    if start is None or end is None or end < start:
         raise StructureError("루마 일정 시각 확인 불가")
+    all_day = is_date_value(event.get("DTSTART", ("", {}))[1])
+    if all_day and end_value and end > start:
+        end -= timedelta(days=1)  # 종일 일정의 DTEND는 다음 날(배타적)이다
     if end < now or end - start > timedelta(days=_MAX_DAYS):
         return None
     body = rules.clean_text(_value(event, "DESCRIPTION"))
+    if rules.is_excluded_title(title) or rules.is_invite_only_title(title):
+        return None  # 정규화에서 빠질 일정이 같은 UID를 먼저 차지하지 않게 여기서 거른다
     if not _in_korea(event) or not (ai_calendar or rules.is_ai_related(title, description=body)):
         return None
     url = _event_url(event)
@@ -108,7 +121,7 @@ def build_raw(event, now, calendar_name=None, ai_calendar=False):
         "eligibility": rules.UNKNOWN_TEXT, "eligibilityVerified": False, "fee": rules.UNKNOWN_TEXT, "prize": None,
         "url": url, "sourceUrl": url, "sourceName": SOURCE_NAME,
         "sourceStatus": "closed" if _value(event, "STATUS").upper() == "CANCELLED" else "unknown",
-        "dateNote": f"개최 {start:%Y-%m-%d %H:%M} ~ {end:%Y-%m-%d %H:%M} (한국 시각, 루마 일정 기준). 신청 마감·참가 조건은 루마 페이지 확인",
+        "dateNote": f"개최 {start:%Y-%m-%d}{'' if all_day else f' {start:%H:%M}'} ~ {end:%Y-%m-%d}{'' if all_day else f' {end:%H:%M}'} (한국 시각, 루마 일정 기준). 신청 마감·참가 조건은 루마 페이지 확인",
     }
 
 

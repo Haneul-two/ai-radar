@@ -279,3 +279,4 @@
 - 사용자 결정: 해외는 대형 학회만 / 루마는 공식 iCal + 주최자 캘린더 목록 / 루마는 AI 단어가 있으면 규모 무관 / 로컬 검증·교차 리뷰 후 PR까지.
 - 구현: `sources/ical.py`·`luma.py`·`moducon.py`·`majorconf.py`, `rules.GLOBAL_OFFLINE_SOURCES`, 허용 호스트 2개. Upstage 일정은 제목·설명에 AI가 없어 처음에 빠졌고, AI 전용 캘린더 표시로 해결했다. iCal 주최자 CN이 개인 이름이라 캘린더 이름으로 바꿨다.
 - 검증: Python 347(새 21)·Node 120 통과, `--offline` 계약 통과, 전체 dry-run 17출처 ok·444건·5분 56초. 상세 `docs/sources.md`. 운영 미배포.
+- Codex 교차 리뷰(커밋 5f2f49b 대상): HIGH 4(학회 연도 추측, 루마 해외 행사 국내 판정, 못 읽은 종료 시각 대체, 회차 id 충돌) · MEDIUM 6 · LOW 2. 전부 재현 테스트 12개를 먼저 추가해 실패를 확인한 뒤 수정했다. Python 359·Node 120 통과, 새 3출처 실조회 재확인(moducon 1·luma 15·majorconf 9 모두 계약 통과, Upstage Open Stage 포함). 상세 `docs/sources.md`.

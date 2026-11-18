@@ -14,6 +14,7 @@ def collect(fetcher, now, max_items=None):
     raw = raw_from_event(
         data, SOURCE_NAME, MAIN_URL, ["AI", "컨퍼런스", "모두의연구소"],
         "참가 신청 마감·참가비는 공식 사이트 확인 필요",
-        kind="event", organizer=data["organizer"] or "모두의연구소",
+        # 주최는 고정(JSON-LD organizer가 개인으로 바뀌어도 이름을 싣지 않는다). 매년 같은 주소라 id는 회차 연도로 나눈다.
+        kind="event", organizer="모두의연구소", sourceUrl=f"{MAIN_URL}?edition={data['startDate'][:4]}",
     )
     return CollectResult([raw], f"행사 {data['startDate']}~{data['endDate']} {data['venue']}")

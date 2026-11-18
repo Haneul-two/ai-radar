@@ -183,3 +183,10 @@
 
 - 17출처 모두 ok, 전체 444건, 약 5분 56초(수집 step 제한 18분 안).
 - moducon 1(모두콘 2026, 12/12 이화여대 ECC) · luma 13(국내 AI 일정 15건 중 Dev-Event와 겹친 2건은 교차 출처 중복 제거) · majorconf 9(NeurIPS 2026 12/8~11, AAAI·ICLR·NAACL·CVPR·ICML·IJCAI·ACL·ICCV 2027).
+
+### Codex 교차 리뷰 반영(2026-11-18)
+
+- 학회 날짜에 연도가 여럿이거나 회차 연도와 다르면 추측하지 않고 뺀다. `July 5 — 12`처럼 긴 대시 범위도 읽는다.
+- id: majorconf는 `GitHub 파일 페이지?edition=연도`, 모두콘은 `공식 주소?edition=연도`. 여러 회차가 같은 공식 링크를 써도 id가 겹치지 않는다. 모두콘 주최는 `모두의연구소` 고정(JSON-LD 개인 주최자 이름 미저장).
+- 루마: 한국 판정은 LOCATION과 설명의 `Address:` 문단만 본다(본문의 'Korea' 문구 무시). GEO가 군사분계선 북쪽 서부(위도 37.9 초과·경도 127.1 미만)면 제외. 링크는 첫 줄 `Get up-to-date information at:`만 쓰고 없으면 UID로 만든다. 읽을 수 없는 DTEND는 형식 오류, 종일 일정의 DTEND는 배타적이라 하루 뺀다. 초대 전용·제외 제목은 UID를 차지하기 전에 거른다. `END:VCALENDAR`가 없는 끊긴 응답은 피드 실패. iCal 날짜·시각 형식을 엄격히 검사한다.
+

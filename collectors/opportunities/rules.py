@@ -220,7 +220,7 @@ def normalize_item(raw, source_id, verified_at):
     status = raw.get("sourceStatus") if raw.get("sourceStatus") in SOURCE_STATUSES else "unknown"
     # 대체 확인 출처가 바뀌어도 AI EXPO의 기존 행사 ID는 유지한다.
     identity_url = source_url
-    if source_id in ("devevent", "majorconf") or (source_id == "aiexpo" and source_url.startswith("https://www.showala.com/ex/ex_detail.php?")):
+    if source_id == "devevent" or (source_id == "aiexpo" and source_url.startswith("https://www.showala.com/ex/ex_detail.php?")):
         identity_url = url
     return {
         "id": stable_id(source_id, identity_url),

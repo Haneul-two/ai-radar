@@ -95,4 +95,4 @@ node --test tests/*.test.mjs
 
 - 2026-11-16 탭 제목 배포 완료: PR #11, merge dcf7fec와 Pages built 일치. 공개 실브라우저 1440/390에서 `AI 행사 모아보기`, 기존 브랜드·목록 로딩·오류0 확인. 앞의 운영 미배포는 변경 당시 기록이다. 증거 `docs/evidence/tab-title-public-20261116.json`.
 
-- 2026-11-18 출처 확장: 모두콘·루마(iCal)·주요 AI 학회(ccfddl) 추가로 17출처. Python 347·Node 120·offline 통과, dry-run 17출처 ok·444건. 브랜치 `feat/luma-moducon-majorconf`, 운영 미배포. 상세 `docs/sources.md`·`docs/HISTORY.md`.
+- 2026-11-18 출처 확장: 모두콘·루마(iCal)·주요 AI 학회(ccfddl) 추가로 17출처. Python 359·Node 120·offline 통과, dry-run 17출처 ok·444건, Codex 교차 리뷰 12건 반영. 브랜치 `feat/luma-moducon-majorconf`, 운영 미배포. 상세 `docs/sources.md`·`docs/HISTORY.md`.

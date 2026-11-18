@@ -211,7 +211,7 @@ class MajorConfTest(unittest.TestCase):
         item = rules.normalize_item(raw, "majorconf", NOW.isoformat())
         self.assertIsNotNone(item)
         self.assertTrue(rules.meets_contract(item))
-        self.assertEqual(item["id"], rules.stable_id("majorconf", "https://neurips.cc/Conferences/2026"))  # 회차별 공식 링크가 id
+        self.assertEqual(item["id"], rules.stable_id("majorconf", majorconf.PAGE.format(path="AI/nips") + "?edition=2026"))  # 파일+회차 연도가 id
 
     def test_korea_place_is_domestic(self):
         text = conf_yml("ICML", 2026, "December 1-3, 2026", "COEX, Seoul, South Korea")
@@ -240,6 +240,73 @@ class RegistryTest(unittest.TestCase):
         self.assertEqual([s.id for s in default_sources()][-3:], ["moducon", "luma", "majorconf"])
         self.assertTrue(is_fetch_allowed("https://moducon.modulabs.co.kr/"))
         self.assertFalse(is_fetch_allowed("https://evil.moducon.modulabs.co.kr/"))
+
+
+class CrossReviewRegressionTest(unittest.TestCase):
+    """Codex 교차 리뷰(2026-11-18) 지적 재현."""
+
+    def test_majorconf_year_mismatch_is_not_guessed(self):
+        self.assertIsNone(majorconf.parse_period("November 30, 2026 - December 2, 2027", 2026))
+        self.assertIsNone(majorconf.parse_period("December 8-10, 2027", 2026))
+        self.assertEqual(majorconf.parse_period("July 5 — 12, 2027", 2027)[1].isoformat(), "2027-07-12")
+        self.assertEqual(majorconf.parse_period("May 3-7, 2027", 2027)[0].isoformat(), "2027-05-03")
+        self.assertEqual(majorconf.parse_period("Sept. 28 - Oct. 2, 2027", 2027)[1].isoformat(), "2027-10-02")
+
+    def test_same_link_for_two_editions_gets_two_ids(self):
+        blocks = majorconf.parse_conf_file(NIPS_YML)[2]
+        a = majorconf.build_raw("AI/nips", "NeurIPS", "d", {**blocks[1], "link": "https://same.example.org/"}, NOW.date())
+        b = majorconf.build_raw("AI/nips", "NeurIPS", "d", {**blocks[1], "year": "2027", "date": "December 1-3, 2027", "link": "https://same.example.org/"}, NOW.date())
+        ids = {rules.normalize_item(r, "majorconf", NOW.isoformat())["id"] for r in (a, b)}
+        self.assertEqual(len(ids), 2)
+
+    def test_moducon_id_differs_by_edition_and_organizer_fixed(self):
+        html = MODUCON_HTML.replace('"organizer":{"@id":"https://moducon.modulabs.co.kr/#organizer"}', '"organizer":{"@type":"Person","name":"Test Host"}')
+        raw26 = moducon.collect(FakeFetcher({moducon.MAIN_URL: html}), NOW).items[0]
+        raw27 = moducon.collect(FakeFetcher({moducon.MAIN_URL: html.replace("2026-12-12", "2027-12-11")}), NOW).items[0]
+        self.assertEqual(raw26["organizer"], "모두의연구소")
+        self.assertNotEqual(rules.normalize_item(raw26, "moducon", NOW.isoformat())["id"], rules.normalize_item(raw27, "moducon", NOW.isoformat())["id"])
+
+    def test_luma_overseas_address_with_korea_in_body(self):
+        ev = vevent(geo=None).replace("Alver Coffee Gangnam\\nSeoul, South Korea", "Shibuya\\nTokyo, Japan").replace("Hosted by Upstage", "Open to visitors from Korea")
+        self.assertIn("Tokyo", ev)
+        self.assertEqual(luma.collect(luma_fetcher({UPSTAGE_INDEX: calendar(ev)}), NOW).items, [])
+
+    def test_luma_north_of_dmz_is_not_korea(self):
+        self.assertEqual(luma.collect(luma_fetcher({UPSTAGE_INDEX: calendar(vevent(geo="37.97;126.55"))}), NOW).items, [])
+
+    def test_luma_unreadable_end_is_format_error(self):
+        ev = vevent().replace("DTEND:20261119T130000Z", "DTEND;TZID=America/New_York:20261230T130000")
+        result = luma.collect(luma_fetcher({UPSTAGE_INDEX: calendar(ev)}), NOW)
+        self.assertEqual(result.items, [])
+        self.assertIn("형식 오류 1건", result.message)
+
+    def test_luma_invite_only_does_not_consume_uid(self):
+        seoul = calendar(vevent(summary="Invite-only AI Hackathon"))
+        result = luma.collect(luma_fetcher({0: seoul, UPSTAGE_INDEX: calendar(vevent())}), NOW)
+        self.assertEqual([r["title"] for r in result.items], ["Upstage Open Stage"])
+
+    def test_truncated_feed_is_failure(self):
+        with self.assertRaises(StructureError):
+            parse_events("BEGIN:VCALENDAR\r\nBEGIN:VEVENT\r\nSUMMARY:x")
+
+    def test_all_day_end_is_exclusive(self):
+        ev = vevent().replace("DTSTART:20261119T100000Z", "DTSTART;VALUE=DATE:20261119").replace("DTEND:20261119T130000Z", "DTEND;VALUE=DATE:20261120")
+        raw = luma.collect(luma_fetcher({UPSTAGE_INDEX: calendar(ev)}), NOW).items[0]
+        self.assertEqual((raw["startDate"], raw["endDate"]), ("2026-11-19", "2026-11-19"))
+
+    def test_luma_link_only_from_official_line_else_uid(self):
+        ev = vevent().replace("Get up-to-date information at: https://luma.com/xqjtwhc9", "Next event: https://luma.com/next-event")
+        self.assertEqual(luma.collect(luma_fetcher({UPSTAGE_INDEX: calendar(ev)}), NOW).items[0]["url"], "https://luma.com/event/evt-AAA111")
+
+    def test_strict_ical_moments(self):
+        self.assertIsNone(parse_moment("20261119", {}))
+        self.assertIsNone(parse_moment("20261119T10102Z", {}))
+        self.assertEqual(parse_moment("20261119T190000", {"TZID": '"Asia/Seoul"'}).hour, 19)
+
+    def test_meets_contract_still_blocks_other_global_without_korea(self):
+        raw = majorconf.build_raw("AI/nips", "NeurIPS", "d", majorconf.parse_conf_file(NIPS_YML)[2][1], NOW.date())
+        item = rules.normalize_item(raw, "majorconf", NOW.isoformat())
+        self.assertFalse(rules.meets_contract({**item, "sourceId": "devpost", "mode": "online", "eligibilityVerified": True, "eligibility": "확인 필요"}))
 
 
 if __name__ == "__main__":

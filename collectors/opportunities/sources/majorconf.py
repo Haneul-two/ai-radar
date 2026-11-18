@@ -23,7 +23,7 @@ HORIZON_DAYS = 400  # 1년여 뒤까지만(다음 해 회차 링크가 미리 �
 
 _MONTHS = {m: i for i, m in enumerate(("jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct", "nov", "dec"), 1)}
 _MONTH = r"(jan(?:uary)?|feb(?:ruary)?|mar(?:ch)?|apr(?:il)?|may|june?|july?|aug(?:ust)?|sep(?:t(?:ember)?)?|oct(?:ober)?|nov(?:ember)?|dec(?:ember)?)\.?"
-_RANGE_RE = re.compile(_MONTH + r"\s+(\d{1,2})(?:\s*[-–~]\s*(?:" + _MONTH + r"\s+)?(\d{1,2}))?", re.I)
+_RANGE_RE = re.compile(_MONTH + r"\s+(\d{1,2})(?:\s*[-–—~]\s*(?:" + _MONTH + r"\s+)?(\d{1,2}))?", re.I)
 _YEAR_RE = re.compile(r"\b(20\d{2})\b")
 _KOREA_RE = re.compile(r"korea|seoul|busan|대한민국|서울|부산", re.I)
 _VIRTUAL_RE = re.compile(r"virtual|online", re.I)
@@ -57,8 +57,10 @@ def parse_conf_file(text):
 
 def parse_period(text, fallback_year):
     """'December 8-10 (Sydney), December 9-11 (Atlanta), 2026' → (가장 이른 날, 가장 늦은 날). 못 읽으면 None."""
-    years = _YEAR_RE.findall(text or "")
-    year = int(years[-1]) if years else fallback_year
+    years = set(_YEAR_RE.findall(text or ""))
+    if len(years) > 1 or (years and int(years.pop()) != fallback_year):
+        return None  # 연도가 여럿이거나 회차 연도와 다르면 어느 해인지 추측하지 않는다
+    year = fallback_year
     days = []
     for m1, d1, m2, d2 in _RANGE_RE.findall(text or ""):
         first_month = _MONTHS[m1[:3].lower()]
@@ -92,7 +94,8 @@ def build_raw(path, title, description, block, today):
         "startDate": period[0].isoformat(), "endDate": period[1].isoformat(),
         "registrationStartDate": None, "deadlineDate": None, "deadlineAt": None,
         "eligibility": rules.UNKNOWN_TEXT, "eligibilityVerified": False, "fee": rules.UNKNOWN_TEXT, "prize": None,
-        "url": link, "sourceUrl": PAGE.format(path=path), "sourceName": SOURCE_NAME, "sourceStatus": "unknown",
+        # 공식 링크를 여러 회차가 같이 쓸 수 있어 id는 파일+회차 연도로 만든다(sourceUrl 기준).
+        "url": link, "sourceUrl": f"{PAGE.format(path=path)}?edition={year}", "sourceName": SOURCE_NAME, "sourceStatus": "unknown",
         "dateNote": f"개최 {block.get('date')} (현지 날짜, ccfddl 학회 일정 기준). 참가 등록 마감·참가비는 공식 사이트 확인",
     }
 
@@ -110,7 +113,7 @@ def collect(fetcher, now, max_items=None):
             raw = build_raw(path, title, description, block, today)
             if raw:
                 items.append(raw)
-            elif block.get("date") and parse_period(block["date"], 2000) is None:
+            elif block.get("date") and block.get("year", "").isdigit() and parse_period(block["date"], int(block["year"])) is None:
                 skipped += 1
     fail_if_every_fetch_failed(len(CONFS), failures, SOURCE_NAME)
     if max_items is not None:
