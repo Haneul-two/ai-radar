@@ -282,3 +282,11 @@
 - Codex 교차 리뷰(커밋 5f2f49b 대상): HIGH 4(학회 연도 추측, 루마 해외 행사 국내 판정, 못 읽은 종료 시각 대체, 회차 id 충돌) · MEDIUM 6 · LOW 2. 전부 재현 테스트 12개를 먼저 추가해 실패를 확인한 뒤 수정했다. Python 359·Node 120 통과, 새 3출처 실조회 재확인(moducon 1·luma 15·majorconf 9 모두 계약 통과, Upstage Open Stage 포함). 상세 `docs/sources.md`.
 
 - 2026-11-18 운영 배포 완료: PR #12 merge 9a0a9e5, 수집 run 44221881708 success, 데이터 c9bc3ca와 Pages built 일치. 공개 444건·17출처 모두 ok(moducon 1·luma 13·majorconf 9). 공개 실Edge 1440/390에서 Upstage·모두콘·NeurIPS 검색 각 1건, 가로 넘침 없음, pageerror 0. 앞의 운영 미배포 문구는 당시 기록이다.
+
+## 2026-11-18. 검색 별칭·마감 없는 행사 정렬
+
+- 사용자 요청 3건: 한글·영어 이름 모두로 검색, Upstage 개최일 이틀 표시 오류, 마감 없는 행사가 목록 맨 뒤로 밀림.
+- Upstage: 루마 iCal·행사 페이지 모두 11/19 19:00 ~ 11/20 22:00이며 본문에 Day 1(11/19)·Day 2(11/20) 일정이 있다. 실제 이틀 행사라 수정하지 않았다.
+- 검색: `assets/search-aliases.mjs`(별칭 묶음, 2글자 이상 앞부분 일치로 확장)를 `filters.mjs` 검색에 연결. 업스테이지·MODUCON·luma 검색 0건 → 각 1·1·14건.
+- 정렬: 마감 없는 행사는 개최일(진행 중이면 오늘) 끝 시각을 정렬 키로 마감 항목 사이에 둔다. 실데이터 로컬 화면에서 Upstage 141 → 11번째.
+- 검증: Node 122(새 2)·`check_radar_ui` 98/98·`check_focus_ui` 42/42, 로컬 1440/390 가로 넘침 없음·pageerror 0. 작은 화면 로직 변경이라 교차 리뷰는 생략했다.

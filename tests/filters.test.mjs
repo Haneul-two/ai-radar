@@ -5,6 +5,7 @@ import {
   DEFAULT_FILTERS, sanitizeFilters, applyFilters, sortItems, selectItems, facetCounts, activeFilterCount,
 } from '../assets/filters.mjs';
 import { NOW, makeItem, sampleItems } from './helpers.mjs';
+import { expandToken } from '../assets/search-aliases.mjs';
 
 const ids = (items) => items.map((i) => i.id);
 const ctx = { now: NOW, savedIds: new Set() };
@@ -144,4 +145,33 @@ test('검색: 수집된 NVIDIA AI Day 항목을 한국어 표현으로 찾는다
   assert.equal(items.length, 1);
   const f = { ...DEFAULT_FILTERS, kind: 'event', q: '엔비디아 AI 데이 서울 2026' };
   assert.deepEqual(ids(applyFilters(items, f, { now: '2026-10-12T00:00:00Z', savedIds: new Set() })), [items[0].id]);
+});
+
+test('검색 별칭: 한글·영어 이름 어느 쪽으로도 찾는다 (2026-11-18 업스테이지·모두콘 미검색)', () => {
+  const items = [
+    makeItem({ id: 'up', title: 'Upstage Open Stage', organizer: 'Upstage AI Events', startDate: '2026-10-05' }),
+    makeItem({ id: 'mc', title: '모두콘 2026 · Deeper in AI', startDate: '2026-12-12' }),
+    makeItem({ id: 'lu', title: 'AI Night', tags: ['AI', '루마'], startDate: '2026-10-06' }),
+  ];
+  const q = (text) => applyFilters(items, { ...DEFAULT_FILTERS, q: text }, { now: NOW, savedIds: new Set() }).map((i) => i.id);
+  assert.deepEqual(q('업스테이지'), ['up']);
+  assert.deepEqual(q('업스테'), ['up']); // 앞부분만 입력해도
+  assert.deepEqual(q('UPSTAGE'), ['up']);
+  assert.deepEqual(q('MODUCON'), ['mc']);
+  assert.deepEqual(q('모두콘'), ['mc']);
+  assert.deepEqual(q('luma'), ['lu']);
+  assert.deepEqual(q('업스테이지 루마'), []); // 여러 단어는 여전히 모두 맞아야 한다
+  assert.deepEqual(expandToken('u'), ['u']); // 한 글자는 넓히지 않는다
+});
+
+test('정렬 deadline: 마감 없는 행사는 개최일(진행 중이면 오늘) 기준으로 사이에 끼고, 날짜 없으면 마지막', () => {
+  const items = [
+    makeItem({ id: 'nodate' }),
+    makeItem({ id: 'event-1005', startDate: '2026-10-05' }),
+    makeItem({ id: 'dl-1010', deadlineDate: '2026-10-10' }),
+    makeItem({ id: 'dl-1003', deadlineAt: '2026-10-03T00:00:00Z' }),
+    makeItem({ id: 'ongoing', startDate: '2026-09-30', endDate: '2026-10-04' }),
+    makeItem({ id: 'event-past', startDate: '2026-09-01', endDate: '2026-09-02' }),
+  ];
+  assert.deepEqual(ids(sortItems(items, 'deadline', NOW)), ['ongoing', 'dl-1003', 'event-1005', 'dl-1010', 'nodate', 'event-past']);
 });
