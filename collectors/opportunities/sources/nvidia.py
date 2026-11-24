@@ -23,6 +23,7 @@ _HERO_RES = (  # '11월 9~10일, 2026 | 코엑스'와 '2026년 11월 9~10일 | �
     re.compile(r"(?P<year>20\d\d)년\s*" + _RANGE + _VENUE),
 )
 _CTA_TEXT = "지금 등록하기"
+_REPLAY_TEXT = "다시 보기"  # 행사가 끝나면 title이 'AI Day Seoul 2026: … 세션 다시 보기'로 바뀌고 hero 날짜가 사라진다
 
 
 def _norm(text):
@@ -41,6 +42,8 @@ def parse_main(html):
         raise StructureError("NVIDIA AI Day 페이지 h1이 'AI Day Seoul'이 아님")
     hero = _norm(" ".join(h1.find_all_next(string=True, limit=HERO_TEXT_NODES)))
     m = next((m for m in (r.search(hero) for r in _HERO_RES) if m), None)
+    if not m and _REPLAY_TEXT in _norm(title.get_text()):
+        return {"year": title_match[1], "replay": True}  # 행사 종료 후 다시 보기 페이지: 새 일정 공지 전까지 항목 없음
     if not m:
         raise StructureError("NVIDIA AI Day hero의 연도 포함 기간 표기를 읽지 못함")
     month, first, last, year, venue = int(m["month"]), m["first"], m["last"], m["year"], m["venue"]
@@ -63,6 +66,8 @@ def parse_main(html):
 
 def collect(fetcher, now, max_items=None):
     data = parse_main(fetcher.get(MAIN_URL).text)
+    if data.get("replay"):
+        return CollectResult([], f"{data['year']} 행사 종료, 공식 페이지가 다시 보기로 바뀜. 다음 일정 공지 전까지 0건")
     title = f"NVIDIA AI Day Seoul {data['year']}"
     raw = {
         "kind": "event", "title": title, "organizer": "NVIDIA", "description": data["description"] or title,

@@ -290,3 +290,10 @@
 - 검색: `assets/search-aliases.mjs`(별칭 묶음, 2글자 이상 앞부분 일치로 확장)를 `filters.mjs` 검색에 연결. 업스테이지·MODUCON·luma 검색 0건 → 각 1·1·14건.
 - 정렬: 마감 없는 행사는 개최일(진행 중이면 오늘) 끝 시각을 정렬 키로 마감 항목 사이에 둔다. 실데이터 로컬 화면에서 Upstage 141 → 11번째.
 - 검증: Node 122(새 2)·`check_radar_ui` 98/98·`check_focus_ui` 42/42, 로컬 1440/390 가로 넘침 없음·pageerror 0. 작은 화면 로직 변경이라 교차 리뷰는 생략했다.
+
+## 2026-11-24. NVIDIA·지피터스 갱신 실패 수정
+
+- 증상: 공개 보드에 "일부 출처 갱신 실패". 공개 `ingest-status.json`(2026-11-23T06:02:02Z)에서 nvidia·gpters 2곳이 error, 나머지 15곳 ok.
+- NVIDIA 원인: 11/9~10 행사가 끝나 공식 페이지 title이 `AI Day Seoul 2026: AI의 미래에 관한 세션 다시 보기`로 바뀌고 hero 날짜 줄이 사라졌다. 수정: title에 `다시 보기`가 있고 hero 날짜가 없을 때만 0건 성공(fixture `nvidia_ai_day_replay.html`, 실페이지 발췌).
+- 지피터스 원인 2개: ① `/newsletter/sitemap.xml`이 사이트 전체 색인 `/sitemap.xml`로 308 이동(하위 21개, 뉴스레터 글은 여러 하위 파일에 흩어짐) ② 글 본문이 `article.prose`에서 `article > div.prose`로 바뀜. 수정: 색인이면 같은 호스트 `/sitemap/*.xml`을 모두 읽고(최대 40개, 하나라도 실패하면 소스 실패), 본문은 `article.prose, article .prose`.
+- 검증: 재현 테스트 5개 추가(수정 전 3 실패 확인) → Python 364·Node 122 통과. 실사이트 조회 nvidia ok 0건, gpters ok(뉴스레터 8건·공식 확인 1건·실패 0건).
