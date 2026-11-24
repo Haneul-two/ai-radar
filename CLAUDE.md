@@ -106,3 +106,5 @@ node --test tests/*.test.mjs
 - 2026-11-18 검색·정렬 개선: 한글·영어 검색 별칭, 마감 없는 행사 개최일 기준 정렬. Upstage Open Stage 이틀 표시는 실제 2일 행사(11/19 Career Day·11/20 Solar Day)라 수정하지 않음. Node 122·`check_radar_ui` 98/98·`check_focus_ui` 42/42 통과. 브랜치 `fix/search-alias-date-sort-20261118`.
 
 - 2026-11-24 출처 수정: NVIDIA(행사 종료 다시 보기 페이지)·지피터스(sitemap 색인 이동·본문 태그 변경) 갱신 실패 수정, Codex 리뷰 3건 반영. Python 369·Node 122 통과, 실조회 2곳 ok. 브랜치 `fix/nvidia-gpters-source-20261124`. 상세 `docs/HISTORY.md`.
+
+- 2026-11-24 운영 배포 완료: PR #15 merge dfee958, 수집 run 45307300664 success, 데이터 16df022와 Pages built 일치. 공개 17출처 모두 ok·486건, 공개 실Edge 1440/390 실패 문구 없음·pageerror 0. 앞의 브랜치 서술은 당시 기록이다.
