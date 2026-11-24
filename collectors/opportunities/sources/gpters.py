@@ -1,7 +1,7 @@
 """지피터스 공개 뉴스레터에서 행사를 발견하고 허용된 공식 페이지로 확인한다."""
 import re
 import xml.etree.ElementTree as ET
-from datetime import timedelta
+from datetime import datetime, timedelta, timezone
 from urllib.parse import urlsplit
 
 from bs4 import BeautifulSoup
@@ -48,7 +48,22 @@ def _newsletter_rows(root):
     for node in root.findall('s:url', _NS):
         url = node.findtext('s:loc', '', _NS)
         if _is_gpters(url, '/newsletter/post/'):
-            rows.append((rules.parse_iso_datetime(node.findtext('s:lastmod', '', _NS)), url))
+            rows.append((_lastmod(node.findtext('s:lastmod', '', _NS)), url))
+    return rows
+
+
+def _lastmod(text):
+    """sitemap 규격의 날짜+시각 또는 날짜만(W3C) 형식을 받는다. 날짜만이면 UTC 자정으로 본다."""
+    day = rules.parse_date(text) if len(text.strip()) == 10 else None
+    return rules.parse_iso_datetime(text) or (datetime.fromisoformat(day).replace(tzinfo=timezone.utc) if day else None)
+
+
+def _checked(rows):
+    """뉴스레터 글이 아예 없거나 수정일을 하나도 못 읽으면 0건 성공으로 숨기지 않는다."""
+    if not rows:
+        raise StructureError('지피터스 sitemap에서 뉴스레터 글을 찾지 못함')
+    if not any(stamp for stamp, _ in rows):
+        raise StructureError('지피터스 sitemap 뉴스레터 글의 수정일(lastmod)을 읽지 못함')
     return rows
 
 
@@ -73,14 +88,15 @@ def parse_sitemap_index(root):
 def fetch_posts(fetcher, now):
     root = _xml_root(fetcher.get(SITEMAP_URL).text)
     if root.tag != _SITEMAP + 'sitemapindex':
-        return _latest(_newsletter_rows(root), now)
+        return _latest(_checked(_newsletter_rows(root)), now)
     # 2026-11-23부터 뉴스레터 글이 사이트 전체 sitemap 하위 파일에 흩어져 있다. 하나라도 못 읽으면 실패로 둔다.
     rows = []
     for child in parse_sitemap_index(root):
-        rows.extend(_newsletter_rows(_xml_root(fetcher.get(child).text)))
-    if not rows:
-        raise StructureError('지피터스 sitemap 색인에서 뉴스레터 글을 찾지 못함')
-    return _latest(rows, now)
+        page = fetcher.get(child)
+        if urlsplit(page.url).hostname != 'www.gpters.org':
+            raise StructureError('지피터스 하위 sitemap이 다른 호스트로 이동함')
+        rows.extend(_newsletter_rows(_xml_root(page.text)))
+    return _latest(_checked(rows), now)
 
 
 def discover_links(html):

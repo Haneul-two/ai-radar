@@ -42,8 +42,13 @@ def parse_main(html):
         raise StructureError("NVIDIA AI Day 페이지 h1이 'AI Day Seoul'이 아님")
     hero = _norm(" ".join(h1.find_all_next(string=True, limit=HERO_TEXT_NODES)))
     m = next((m for m in (r.search(hero) for r in _HERO_RES) if m), None)
-    if not m and _REPLAY_TEXT in _norm(title.get_text()):
-        return {"year": title_match[1], "replay": True}  # 행사 종료 후 다시 보기 페이지: 새 일정 공지 전까지 항목 없음
+    register_open = any(
+        _norm(a.get_text()) == _CTA_TEXT and a.get("href", "").startswith("https://")
+        for a in soup.select("a.brand-cta")
+    )
+    # 행사 종료 후 다시 보기 페이지: 새 일정 공지 전까지 항목 없음. 등록 버튼이 있으면 새 행사라 날짜를 못 읽은 것은 오류다.
+    if not m and not register_open and _REPLAY_TEXT in _norm(title.get_text()):
+        return {"year": title_match[1], "replay": True}
     if not m:
         raise StructureError("NVIDIA AI Day hero의 연도 포함 기간 표기를 읽지 못함")
     month, first, last, year, venue = int(m["month"]), m["first"], m["last"], m["year"], m["venue"]
@@ -54,10 +59,6 @@ def parse_main(html):
     if not start or not end or start > end:
         raise StructureError("NVIDIA AI Day hero 기간 날짜가 올바르지 않음")
     description = soup.find("meta", attrs={"name": "description"})
-    register_open = any(
-        _norm(a.get_text()) == _CTA_TEXT and a.get("href", "").startswith("https://")
-        for a in soup.select("a.brand-cta")
-    )
     return {
         "year": year, "startDate": start, "endDate": end, "venue": venue, "registerOpen": register_open,
         "description": rules.shorten(_norm(description.get("content", "")), 160) if description else "",

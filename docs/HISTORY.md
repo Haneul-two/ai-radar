@@ -297,3 +297,5 @@
 - NVIDIA 원인: 11/9~10 행사가 끝나 공식 페이지 title이 `AI Day Seoul 2026: AI의 미래에 관한 세션 다시 보기`로 바뀌고 hero 날짜 줄이 사라졌다. 수정: title에 `다시 보기`가 있고 hero 날짜가 없을 때만 0건 성공(fixture `nvidia_ai_day_replay.html`, 실페이지 발췌).
 - 지피터스 원인 2개: ① `/newsletter/sitemap.xml`이 사이트 전체 색인 `/sitemap.xml`로 308 이동(하위 21개, 뉴스레터 글은 여러 하위 파일에 흩어짐) ② 글 본문이 `article.prose`에서 `article > div.prose`로 바뀜. 수정: 색인이면 같은 호스트 `/sitemap/*.xml`을 모두 읽고(최대 40개, 하나라도 실패하면 소스 실패), 본문은 `article.prose, article .prose`.
 - 검증: 재현 테스트 5개 추가(수정 전 3 실패 확인) → Python 364·Node 122 통과. 실사이트 조회 nvidia ok 0건, gpters ok(뉴스레터 8건·공식 확인 1건·실패 0건).
+- Codex 교차 리뷰(55a0546): HIGH 0·MEDIUM 2·LOW 2. 반영 3건: ① NVIDIA는 등록 버튼이 있으면 title에 `다시 보기`가 있어도 날짜 미해석을 오류로 ② 지피터스 날짜만 쓴 lastmod 허용, 뉴스레터 글 0건·수정일 전부 미해석은 0건 성공 대신 오류 ③ 하위 sitemap이 다른 호스트로 이동하면 오류. 재현 테스트 5개를 먼저 추가해 실패를 확인했다. 미반영 1건: 하위 sitemap 순차 조회 시간 증가는 실측 33.1초(최근 운영 수집 약 6분, 제한 18분)라 그대로 둔다.
+- 재검증: Python 369·Node 122 통과, 실조회 nvidia ok 0건(1.2초)·gpters ok 1건(33.1초).

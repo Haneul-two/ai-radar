@@ -289,6 +289,12 @@ class NvidiaTest(unittest.TestCase):
         with self.assertRaises(StructureError):
             self.collect(html)
 
+    def test_replay_title_with_register_cta_is_error(self):
+        # 다음 행사 등록이 열렸는데 title에 '다시 보기'가 남고 날짜 표기만 바뀌면 0건 성공으로 숨기면 안 된다.
+        html = fixture("nvidia_ai_day.html").replace("핸즈온 AI 워크숍 &amp; 기술 인증", "세션 다시 보기").replace("11월 9&#xFF5E;10일, 2026", "곧 공개")
+        with self.assertRaises(StructureError):
+            self.collect(html)
+
     def test_ascii_tilde_and_nbsp_variants(self):
         html = fixture("nvidia_ai_day.html").replace("9&#xFF5E;10일, 2026&ensp;|&ensp;코엑스", "9~10일,&nbsp;2026&nbsp;|&nbsp;코엑스")
         raw = self.collect(html).items[0]
