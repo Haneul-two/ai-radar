@@ -278,6 +278,23 @@ class NvidiaTest(unittest.TestCase):
         html = fixture("nvidia_ai_day.html").replace("지금 등록하기", "곧 공개")
         self.assertEqual(self.collect(html).items[0]["sourceStatus"], "unknown")
 
+    def test_replay_page_after_event_is_empty_success(self):
+        # 2026-11-24 행사가 끝나 공식 페이지가 '세션 다시 보기'로 바뀌고 hero 날짜 줄이 사라졌다.
+        result = self.collect(fixture("nvidia_ai_day_replay.html"))
+        self.assertEqual(result.items, [])
+        self.assertIn("다시 보기", result.message)
+
+    def test_replay_title_does_not_hide_missing_hero_on_live_page(self):
+        html = fixture("nvidia_ai_day_replay.html").replace("세션 다시 보기", "핸즈온 AI 워크숍")
+        with self.assertRaises(StructureError):
+            self.collect(html)
+
+    def test_replay_title_with_register_cta_is_error(self):
+        # 다음 행사 등록이 열렸는데 title에 '다시 보기'가 남고 날짜 표기만 바뀌면 0건 성공으로 숨기면 안 된다.
+        html = fixture("nvidia_ai_day.html").replace("핸즈온 AI 워크숍 &amp; 기술 인증", "세션 다시 보기").replace("11월 9&#xFF5E;10일, 2026", "곧 공개")
+        with self.assertRaises(StructureError):
+            self.collect(html)
+
     def test_ascii_tilde_and_nbsp_variants(self):
         html = fixture("nvidia_ai_day.html").replace("9&#xFF5E;10일, 2026&ensp;|&ensp;코엑스", "9~10일,&nbsp;2026&nbsp;|&nbsp;코엑스")
         raw = self.collect(html).items[0]

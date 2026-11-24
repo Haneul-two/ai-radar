@@ -75,6 +75,58 @@ class GptersTest(unittest.TestCase):
         with self.assertRaises(SourceError):
             gpters.collect(fetcher, NOW)
 
+    def test_sitemap_index_follows_site_children(self):
+        # 2026-11-23 뉴스레터 sitemap이 사이트 전체 색인(/sitemap.xml)으로 옮겨지고 글은 하위 파일에 흩어졌다.
+        child_a, child_b = 'https://www.gpters.org/sitemap/6.xml', 'https://www.gpters.org/sitemap/7.xml'
+        index = ('<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'
+                 f'<sitemap><loc>{child_a}</loc></sitemap><sitemap><loc>{child_b}</loc></sitemap>'
+                 '<sitemap><loc>https://evil.example/sitemap/1.xml</loc></sitemap></sitemapindex>')
+        older = 'https://www.gpters.org/newsletter/post/older'
+        fetcher = FakeFetcher({gpters.SITEMAP_URL: index, child_a: self.sitemap(older, '2026-11-01T00:00:00Z'),
+                               child_b: self.sitemap(), POST: '<article><div class="prose x"></div></article>',
+                               older: '<article><div class="prose"></div></article>'})
+        result = gpters.collect(fetcher, NOW)
+        self.assertEqual(fetcher.calls, [gpters.SITEMAP_URL, child_a, child_b, POST, older])
+        self.assertIn('뉴스레터 2건', result.message)
+
+    def test_sitemap_index_without_newsletters_is_structure_error(self):
+        child = 'https://www.gpters.org/sitemap/0.xml'
+        index = f'<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>{child}</loc></sitemap></sitemapindex>'
+        fetcher = FakeFetcher({gpters.SITEMAP_URL: index, child: self.sitemap('https://www.gpters.org/dev/post/a')})
+        with self.assertRaises(StructureError):
+            gpters.collect(fetcher, NOW)
+
+    def test_date_only_lastmod_is_read(self):
+        # sitemap 규격은 날짜만 쓴 lastmod도 허용한다. 읽지 못하면 최신 글을 놓친 채 0건 성공이 된다.
+        self.assertEqual(gpters.parse_sitemap(self.sitemap(date='2026-11-09'), NOW), [POST])
+
+    def test_unreadable_lastmod_everywhere_is_structure_error(self):
+        fetcher = FakeFetcher({gpters.SITEMAP_URL: self.sitemap(date='11/09/2026')})
+        with self.assertRaises(StructureError):
+            gpters.collect(fetcher, NOW)
+
+    def test_urlset_without_newsletters_is_structure_error(self):
+        fetcher = FakeFetcher({gpters.SITEMAP_URL: self.sitemap('https://www.gpters.org/dev/post/a')})
+        with self.assertRaises(StructureError):
+            gpters.collect(fetcher, NOW)
+
+    def test_child_sitemap_redirected_off_host_is_structure_error(self):
+        from types import SimpleNamespace
+        child = 'https://www.gpters.org/sitemap/6.xml'
+        index = f'<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><sitemap><loc>{child}</loc></sitemap></sitemapindex>'
+
+        class Moved(FakeFetcher):
+            def get(self, url):
+                page = super().get(url)
+                return SimpleNamespace(text=page.text, url='https://modulabs.co.kr/sitemap.xml') if url == child else page
+
+        with self.assertRaises(StructureError):
+            gpters.collect(Moved({gpters.SITEMAP_URL: index, child: self.sitemap()}), NOW)
+
+    def test_prose_body_nested_inside_article(self):
+        html = f'<article><header><a href="https://evil.example/">행사 신청</a></header><div class="prose break-words"><a href="{OFFICIAL}">AX Challenge 신청하기</a></div></article>'
+        self.assertEqual(gpters.discover_links(html), [OFFICIAL])
+
     def test_missing_article_is_structure_error(self):
         with self.assertRaises(StructureError):
             gpters.discover_links('<html>로그인이 필요합니다</html>')

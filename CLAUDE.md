@@ -67,6 +67,8 @@ data/opportunities.json, ingest-status.json  ←  collectors/opportunities/ (백
 - 모두콘(별도 도메인)·루마 Upstage 행사를 놓쳤다 → 같은 주최의 다른 도메인은 별도 어댑터로 보고, 루마는 공식 iCal만 쓰며 AI 전용 캘린더는 제목에 AI가 없어도 받는다. iCal 주최자 CN은 개인 이름이라 저장하지 않는다.
 - 업스테이지·MODUCON으로 검색하면 영어/한글로만 저장된 행사가 안 나왔다 → 검색은 `assets/search-aliases.mjs` 별칭 묶음으로 넓힌다. 새 주최가 한쪽 이름으로만 저장되면 여기에 한 줄 추가한다.
 - 마감이 없는 루마·모두콘 행사가 마감순 목록 140번째 근처로 밀렸다 → 마감 없는 행사는 개최일 기준으로 마감 항목 사이에 둔다(정렬에만 쓰고 마감 날짜를 만들지 않는다).
+- NVIDIA 행사 종료 후 페이지가 "다시 보기"로 바뀌어 날짜가 사라지자 갱신 실패가 떴다 → 종료 안내 페이지는 오류가 아니라 0건 성공으로 둔다(title 근거가 있을 때만).
+- 지피터스가 sitemap을 사이트 전체 색인으로 옮기고 본문 태그를 바꿔 갱신 실패가 떴다 → sitemap 색인은 하위 파일까지 따라가고, 본문 선택자는 한 단계 감싸져도 찾게 둔다.
 - 해외 현장 행사는 `rules.GLOBAL_OFFLINE_SOURCES`(majorconf)에서만 받는다 → 사용자가 해외는 대형 학회만 원했고, 다른 출처의 해외 오프라인이 섞이지 않게 하기 위해서다.
 
 ## 명령
@@ -102,3 +104,5 @@ node --test tests/*.test.mjs
 - 2026-11-18 운영 배포 완료: PR #12 merge 9a0a9e5, 수집 run 44221881708 success, 데이터 c9bc3ca와 Pages built 일치. 공개 444건·17출처 모두 ok(moducon 1·luma 13·majorconf 9). 공개 실Edge 1440/390에서 Upstage·모두콘·NeurIPS 검색 각 1건, 가로 넘침 없음, pageerror 0. 앞의 운영 미배포 문구는 당시 기록이다.
 
 - 2026-11-18 검색·정렬 개선: 한글·영어 검색 별칭, 마감 없는 행사 개최일 기준 정렬. Upstage Open Stage 이틀 표시는 실제 2일 행사(11/19 Career Day·11/20 Solar Day)라 수정하지 않음. Node 122·`check_radar_ui` 98/98·`check_focus_ui` 42/42 통과. 브랜치 `fix/search-alias-date-sort-20261118`.
+
+- 2026-11-24 출처 수정: NVIDIA(행사 종료 다시 보기 페이지)·지피터스(sitemap 색인 이동·본문 태그 변경) 갱신 실패 수정, Codex 리뷰 3건 반영. Python 369·Node 122 통과, 실조회 2곳 ok. 브랜치 `fix/nvidia-gpters-source-20261124`. 상세 `docs/HISTORY.md`.
