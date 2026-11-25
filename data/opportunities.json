@@ -1,15 +1,15 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-11-24T08:42:08Z",
-  "lastAttemptAt": "2026-11-24T08:42:08Z",
+  "updatedAt": "2026-11-25T07:16:35Z",
+  "lastAttemptAt": "2026-11-25T07:16:35Z",
   "sources": [
     {
       "id": "devpost",
       "name": "Devpost",
       "url": "https://devpost.com/hackathons",
       "status": "ok",
-      "checkedAt": "2026-11-24T08:42:08Z",
-      "lastSuccessAt": "2026-11-24T08:42:08Z",
+      "checkedAt": "2026-11-25T07:16:35Z",
+      "lastSuccessAt": "2026-11-25T07:16:35Z",
       "itemCount": 40,
       "message": "후보 18건 중 15건 사용, 한국 참가 근거/마감 미확인 3건 제외, 조회 실패 0건"
     },
@@ -18,18 +18,18 @@
       "name": "위비티",
       "url": "https://www.wevity.com/?c=find&s=1&gub=1",
       "status": "ok",
-      "checkedAt": "2026-11-24T08:42:08Z",
-      "lastSuccessAt": "2026-11-24T08:42:08Z",
-      "itemCount": 164,
-      "message": "AI 관련 후보 35건(6페이지까지 확인) 중 35건 사용, 상세 조회 실패 0건"
+      "checkedAt": "2026-11-25T07:16:35Z",
+      "lastSuccessAt": "2026-11-25T07:16:35Z",
+      "itemCount": 167,
+      "message": "AI 관련 후보 37건(6페이지까지 확인) 중 37건 사용, 상세 조회 실패 0건 (목록 마감 확인 1건)"
     },
     {
       "id": "aisummit",
       "name": "AI Summit Seoul",
       "url": "https://www.aisummit.co.kr/",
       "status": "ok",
-      "checkedAt": "2026-11-24T08:42:08Z",
-      "lastSuccessAt": "2026-11-24T08:42:08Z",
+      "checkedAt": "2026-11-25T07:16:35Z",
+      "lastSuccessAt": "2026-11-25T07:16:35Z",
       "itemCount": 1,
       "message": "노출 행사 2027년 2027-08-11~2027-08-13. 큰 응답이라 앞 2500KB만 읽음. 경고: 페이지 title은 2026년 표기, 본문 노출 행사(2027) 기준 사용"
     },
@@ -38,8 +38,8 @@
       "name": "서초 AI 페스타",
       "url": "https://seochoai.kr/",
       "status": "ok",
-      "checkedAt": "2026-11-24T08:42:08Z",
-      "lastSuccessAt": "2026-11-24T08:42:08Z",
+      "checkedAt": "2026-11-25T07:16:35Z",
+      "lastSuccessAt": "2026-11-25T07:16:35Z",
       "itemCount": 1,
       "message": "행사 2026-10-17~2026-10-17 서초문화예술공원"
     },
@@ -48,8 +48,8 @@
       "name": "NVIDIA AI Day Seoul",
       "url": "https://www.nvidia.com/ko-kr/ai-days/",
       "status": "ok",
-      "checkedAt": "2026-11-24T08:42:08Z",
-      "lastSuccessAt": "2026-11-24T08:42:08Z",
+      "checkedAt": "2026-11-25T07:16:35Z",
+      "lastSuccessAt": "2026-11-25T07:16:35Z",
       "itemCount": 1,
       "message": "2026 행사 종료, 공식 페이지가 다시 보기로 바뀜. 다음 일정 공지 전까지 0건"
     },
@@ -58,8 +58,8 @@
       "name": "AI FESTA",
       "url": "https://www.aifesta.kr/",
       "status": "ok",
-      "checkedAt": "2026-11-24T08:42:08Z",
-      "lastSuccessAt": "2026-11-24T08:42:08Z",
+      "checkedAt": "2026-11-25T07:16:35Z",
+      "lastSuccessAt": "2026-11-25T07:16:35Z",
       "itemCount": 1,
       "message": "행사 2026-10-06~2026-10-08 코엑스 C홀"
     },
@@ -68,28 +68,28 @@
       "name": "콘테스트코리아",
       "url": "https://www.contestkorea.com/sub/list.php?int_gbn=1",
       "status": "ok",
-      "checkedAt": "2026-11-24T08:42:08Z",
-      "lastSuccessAt": "2026-11-24T08:42:08Z",
-      "itemCount": 64,
-      "message": "AI 활성 후보 29건(15페이지 확인) 중 29건 사용, 상세 조회·검증 실패 0건"
+      "checkedAt": "2026-11-25T07:16:35Z",
+      "lastSuccessAt": "2026-11-25T07:16:35Z",
+      "itemCount": 66,
+      "message": "AI 활성 후보 33건(15페이지 확인) 중 33건 사용, 상세 조회·검증 실패 0건"
     },
     {
       "id": "devevent",
       "name": "Dev-Event",
       "url": "https://github.com/brave-people/Dev-Event",
       "status": "ok",
-      "checkedAt": "2026-11-24T08:42:08Z",
-      "lastSuccessAt": "2026-11-24T08:42:08Z",
+      "checkedAt": "2026-11-25T07:16:35Z",
+      "lastSuccessAt": "2026-11-25T07:16:35Z",
       "itemCount": 113,
-      "message": "월별 항목 87건 중 AI 진행·예정 40건 사용(비AI·지난 행사·날짜 미확정·비HTTPS 링크·해외 오프라인 제외 47건)"
+      "message": "월별 항목 87건 중 AI 진행·예정 37건 사용(비AI·지난 행사·날짜 미확정·비HTTPS 링크·해외 오프라인 제외 50건)"
     },
     {
       "id": "aiexpo",
       "name": "AI EXPO KOREA",
       "url": "https://aiexpo.co.kr/",
       "status": "ok",
-      "checkedAt": "2026-11-24T08:42:08Z",
-      "lastSuccessAt": "2026-11-24T08:42:08Z",
+      "checkedAt": "2026-11-25T07:16:35Z",
+      "lastSuccessAt": "2026-11-25T07:16:35Z",
       "itemCount": 1,
       "message": "행사 2027-04-14~2027-04-16 서울 COEX 1층 Hall A"
     },
@@ -98,8 +98,8 @@
       "name": "LOTTE AX CHALLENGE",
       "url": "https://lotteaxchallenge.com/",
       "status": "ok",
-      "checkedAt": "2026-11-24T08:42:08Z",
-      "lastSuccessAt": "2026-11-24T08:42:08Z",
+      "checkedAt": "2026-11-25T07:16:35Z",
+      "lastSuccessAt": "2026-11-25T07:16:35Z",
       "itemCount": 0,
       "message": "예선 2026-10-28~2026-11-04T23:59:59+09:00, 본선 2026-11-24~2026-11-25"
     },
@@ -108,18 +108,18 @@
       "name": "링커리어",
       "url": "https://linkareer.com/list/contest",
       "status": "ok",
-      "checkedAt": "2026-11-24T08:42:08Z",
-      "lastSuccessAt": "2026-11-24T08:42:08Z",
-      "itemCount": 55,
-      "message": "AI 후보 49건(21페이지 확인) 중 49건 사용, 조기 마감 0건, 상세 조회·검증 실패 0건"
+      "checkedAt": "2026-11-25T07:16:35Z",
+      "lastSuccessAt": "2026-11-25T07:16:35Z",
+      "itemCount": 54,
+      "message": "AI 후보 50건(21페이지 확인) 중 50건 사용, 조기 마감 0건, 상세 조회·검증 실패 0건"
     },
     {
       "id": "gpters",
       "name": "지피터스·공식 확인",
       "url": "https://www.gpters.org/newsletter",
       "status": "ok",
-      "checkedAt": "2026-11-24T08:42:08Z",
-      "lastSuccessAt": "2026-11-24T08:42:08Z",
+      "checkedAt": "2026-11-25T07:16:35Z",
+      "lastSuccessAt": "2026-11-25T07:16:35Z",
       "itemCount": 1,
       "message": "뉴스레터 8건, 공식 확인 1건, 미지원 공식 호스트 0건, 공식 조회·검증 실패 0건"
     },
@@ -128,8 +128,8 @@
       "name": "모두의연구소",
       "url": "https://biz.modulabs.co.kr/event",
       "status": "ok",
-      "checkedAt": "2026-11-24T08:42:08Z",
-      "lastSuccessAt": "2026-11-24T08:42:08Z",
+      "checkedAt": "2026-11-25T07:16:35Z",
+      "lastSuccessAt": "2026-11-25T07:16:35Z",
       "itemCount": 6,
       "message": "목록 1페이지·상세 8건 확인, 8건 사용, 제외 0건, 실패 0건 (목록 최대 1페이지·상세 최대 20건)"
     },
@@ -138,8 +138,8 @@
       "name": "서울 AI 허브",
       "url": "https://seoulaihub.kr/board/board_basic/board_list.asp?scrID=0000000170&pageNum=4&subNum=1&ssubNum=1",
       "status": "ok",
-      "checkedAt": "2026-11-24T08:42:08Z",
-      "lastSuccessAt": "2026-11-24T08:42:08Z",
+      "checkedAt": "2026-11-25T07:16:35Z",
+      "lastSuccessAt": "2026-11-25T07:16:35Z",
       "itemCount": 5,
       "message": "공지 3페이지, 후보 8건 중 개인 참가·일정 확인 5건, 상세 조회·검증 실패 0건"
     },
@@ -148,8 +148,8 @@
       "name": "모두콘",
       "url": "https://moducon.modulabs.co.kr/",
       "status": "ok",
-      "checkedAt": "2026-11-24T08:42:08Z",
-      "lastSuccessAt": "2026-11-24T08:42:08Z",
+      "checkedAt": "2026-11-25T07:16:35Z",
+      "lastSuccessAt": "2026-11-25T07:16:35Z",
       "itemCount": 1,
       "message": "행사 2026-12-12~2026-12-12 이화여자대학교 ECC"
     },
@@ -158,9 +158,9 @@
       "name": "루마(Luma)",
       "url": "https://luma.com/seoul",
       "status": "ok",
-      "checkedAt": "2026-11-24T08:42:08Z",
-      "lastSuccessAt": "2026-11-24T08:42:08Z",
-      "itemCount": 18,
+      "checkedAt": "2026-11-25T07:16:35Z",
+      "lastSuccessAt": "2026-11-25T07:16:35Z",
+      "itemCount": 19,
       "message": "피드 10개 중 10개 확인, 국내 AI 일정 15건 중 15건 사용, 형식 오류 0건 (상한 80건)"
     },
     {
@@ -168,8 +168,8 @@
       "name": "주요 AI 학회(ccfddl)",
       "url": "https://ccfddl.com/",
       "status": "ok",
-      "checkedAt": "2026-11-24T08:42:08Z",
-      "lastSuccessAt": "2026-11-24T08:42:08Z",
+      "checkedAt": "2026-11-25T07:16:35Z",
+      "lastSuccessAt": "2026-11-25T07:16:35Z",
       "itemCount": 9,
       "message": "학회 11곳 중 11곳 확인, 예정 회차 9건, 날짜 표기 해석 불가 0건"
     }
@@ -232,7 +232,7 @@
       "sourceUrl": "https://obscura.devpost.com/",
       "sourceId": "devpost",
       "sourceName": "Devpost",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "원문 마감 2026-11-30 10:00 (UTC-05:00), 서울 기준 2026-12-01 00:00",
       "sourceStatus": "open",
       "stale": false
@@ -262,7 +262,7 @@
       "sourceUrl": "https://global-ai-builders-challenge.devpost.com/",
       "sourceId": "devpost",
       "sourceName": "Devpost",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "원문 마감 2026-11-28 18:00 (UTC-05:00), 서울 기준 2026-11-29 08:00",
       "sourceStatus": "open",
       "stale": false
@@ -294,7 +294,7 @@
       "sourceUrl": "https://ai-agents-founders-hetic-26.devpost.com/",
       "sourceId": "devpost",
       "sourceName": "Devpost",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "원문 마감 2026-12-18 17:00 (UTC-05:00), 서울 기준 2026-12-19 07:00",
       "sourceStatus": "open",
       "stale": false
@@ -326,7 +326,7 @@
       "sourceUrl": "https://ml-build-challenge-4.devpost.com/",
       "sourceId": "devpost",
       "sourceName": "Devpost",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "원문 마감 2026-12-02 02:45 (UTC-05:00), 서울 기준 2026-12-02 16:45",
       "sourceStatus": "open",
       "stale": false
@@ -454,7 +454,7 @@
       "sourceUrl": "https://slayy-hacks.devpost.com/",
       "sourceId": "devpost",
       "sourceName": "Devpost",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "원문 마감 2026-12-07 17:00 (UTC-05:00), 서울 기준 2026-12-08 07:00",
       "sourceStatus": "open",
       "stale": false
@@ -518,7 +518,7 @@
       "sourceUrl": "https://ai-for-medicine.devpost.com/",
       "sourceId": "devpost",
       "sourceName": "Devpost",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "원문 마감 2026-12-04 23:45 (UTC-05:00), 서울 기준 2026-12-05 13:45",
       "sourceStatus": "open",
       "stale": false
@@ -646,7 +646,7 @@
       "sourceUrl": "https://genhacks-open.devpost.com/",
       "sourceId": "devpost",
       "sourceName": "Devpost",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "원문 마감 2026-12-26 17:00 (UTC-05:00), 서울 기준 2026-12-27 07:00",
       "sourceStatus": "open",
       "stale": false
@@ -774,7 +774,7 @@
       "sourceUrl": "https://ai-openbuild.devpost.com/",
       "sourceId": "devpost",
       "sourceName": "Devpost",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "원문 마감 2026-12-10 23:45 (UTC-05:00), 서울 기준 2026-12-11 13:45",
       "sourceStatus": "open",
       "stale": false
@@ -838,7 +838,7 @@
       "sourceUrl": "https://aws-agentic-msp.devpost.com/",
       "sourceId": "devpost",
       "sourceName": "Devpost",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "원문 마감 2026-12-11 15:00 (UTC-05:00), 서울 기준 2026-12-12 05:00",
       "sourceStatus": "open",
       "stale": false
@@ -966,7 +966,7 @@
       "sourceUrl": "https://code-for-humanity.devpost.com/",
       "sourceId": "devpost",
       "sourceName": "Devpost",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "원문 마감 2027-01-15 07:00 (UTC-05:00), 서울 기준 2027-01-15 21:00",
       "sourceStatus": "open",
       "stale": false
@@ -998,7 +998,7 @@
       "sourceUrl": "https://relate.devpost.com/",
       "sourceId": "devpost",
       "sourceName": "Devpost",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "원문 마감 2026-12-11 21:00 (UTC-05:00), 서울 기준 2026-12-12 11:00",
       "sourceStatus": "open",
       "stale": false
@@ -1094,7 +1094,7 @@
       "sourceUrl": "https://cloud9.devpost.com/",
       "sourceId": "devpost",
       "sourceName": "Devpost",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "원문 마감 2027-01-12 14:00 (UTC-05:00), 서울 기준 2027-01-13 04:00",
       "sourceStatus": "open",
       "stale": false
@@ -1188,7 +1188,7 @@
       "sourceUrl": "https://build-your-first-ai-app.devpost.com/",
       "sourceId": "devpost",
       "sourceName": "Devpost",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "원문 마감 2026-12-09 17:00 (UTC-05:00), 서울 기준 2026-12-10 07:00",
       "sourceStatus": "open",
       "stale": false
@@ -1348,7 +1348,7 @@
       "sourceUrl": "https://cognizant-agenticweb.devpost.com/",
       "sourceId": "devpost",
       "sourceName": "Devpost",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "원문 마감 2027-01-11 11:00 (UTC-05:00), 서울 기준 2027-01-12 01:00",
       "sourceStatus": "open",
       "stale": false
@@ -1380,7 +1380,7 @@
       "sourceUrl": "https://learn-specs.devpost.com/",
       "sourceId": "devpost",
       "sourceName": "Devpost",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "원문 마감 2026-12-07 17:00 (UTC-05:00), 서울 기준 2026-12-08 07:00",
       "sourceStatus": "open",
       "stale": false
@@ -1503,7 +1503,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112319",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "마감 시각은 위비티 상세 본문 기준",
       "sourceStatus": "open",
       "stale": false
@@ -1593,7 +1593,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112142",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -1653,7 +1653,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112438",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -1746,6 +1746,36 @@
       "verifiedAt": "2026-10-12T02:02:47Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
+      "stale": false
+    },
+    {
+      "id": "wevity-0e9559e7d028",
+      "kind": "contest",
+      "title": "대구광역시 남구 AI 행정혁신 경진대회 신규",
+      "organizer": "대구광역시 남구청, 계명대학교 창업지원단",
+      "description": "청년의 아이디어로 만드는 새로운 행정, AI로 혁신하는 지역사회!",
+      "tags": [
+        "AI"
+      ],
+      "mode": "online",
+      "region": "국내 온라인",
+      "country": "KR",
+      "startDate": null,
+      "endDate": null,
+      "registrationStartDate": "2026-11-24",
+      "deadlineDate": "2026-12-09",
+      "deadlineAt": "2026-12-09T18:00:00+09:00",
+      "eligibility": "일반인, 대학생, 기타",
+      "eligibilityVerified": true,
+      "fee": "확인 필요",
+      "prize": "총 5천만원~3천만원",
+      "url": "https://kubic.kmu.ac.kr/kubic2025/35015/subview.do?enc=Zm5jdDF8QEB8JTJGYmJzJTJGa3ViaWMyMDI1JTJGMjQ0MSUyRjI0MTkxNyUyRmFydGNsVmlldy5kbyUzRnBhZ2UlM0QxJTI2ZmluZFR5cGUlM0QlMjZmaW5kV29yZCUzRCUyNmZpbmRDbFNlcSUzRCUyNmZpbmRPcG53cmQlM0QlMjZyZ3NCZ25kZVN0ciUzRCUyNnJn",
+      "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112549",
+      "sourceId": "wevity",
+      "sourceName": "위비티",
+      "verifiedAt": "2026-11-25T07:16:35Z",
+      "dateNote": "마감 시각은 위비티 상세 본문 기준",
+      "sourceStatus": "open",
       "stale": false
     },
     {
@@ -1863,7 +1893,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=103817",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2226,6 +2256,36 @@
       "verifiedAt": "2026-11-09T04:55:10Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
+      "stale": false
+    },
+    {
+      "id": "wevity-2c46b26a332b",
+      "kind": "contest",
+      "title": "2026 제5회 대국민 K-water AI 경진대회 신규",
+      "organizer": "한국수자원공사 / 상상력집단",
+      "description": "현장 사진 속 위험요인을 찾아, 안전사고 예방을 돕는 AI를 만들어 보세요.",
+      "tags": [
+        "AI"
+      ],
+      "mode": "online",
+      "region": "국내 온라인",
+      "country": "KR",
+      "startDate": null,
+      "endDate": null,
+      "registrationStartDate": "2026-11-25",
+      "deadlineDate": "2026-12-06",
+      "deadlineAt": "2026-12-06T23:59:00+09:00",
+      "eligibility": "제한없음",
+      "eligibilityVerified": true,
+      "fee": "확인 필요",
+      "prize": "총 1천만원이하 / 1등 300만원",
+      "url": "https://hackathon.imaginationgroup.co.kr/kwater/",
+      "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112565",
+      "sourceId": "wevity",
+      "sourceName": "위비티",
+      "verifiedAt": "2026-11-25T07:16:35Z",
+      "dateNote": "마감 시각은 위비티 상세 본문 기준",
+      "sourceStatus": "open",
       "stale": false
     },
     {
@@ -2643,7 +2703,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112073",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2823,7 +2883,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111903",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2853,7 +2913,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112277",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -2973,7 +3033,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111800",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -3063,7 +3123,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112439",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "마감 시각은 위비티 상세 본문 기준",
       "sourceStatus": "open",
       "stale": false
@@ -3093,7 +3153,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112021",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "마감 시각은 위비티 상세 본문 기준",
       "sourceStatus": "open",
       "stale": false
@@ -3153,7 +3213,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112307",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -3183,7 +3243,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112299",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "마감 시각은 위비티 상세 본문 기준",
       "sourceStatus": "open",
       "stale": false
@@ -3333,7 +3393,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112295",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -3363,7 +3423,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112316",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -3549,6 +3609,36 @@
       "stale": false
     },
     {
+      "id": "wevity-79d2725a05d8",
+      "kind": "contest",
+      "title": "2026 AI·데이터 기반 융복합 기업가정신 아이디어 공모전",
+      "organizer": "포스텍 산업경영공학과",
+      "description": "AI·데이터·융복합 기반 산업·경영·BM(Business Model) 혁신 사례 분석",
+      "tags": [
+        "AI"
+      ],
+      "mode": "unknown",
+      "region": "미정",
+      "country": "KR",
+      "startDate": null,
+      "endDate": null,
+      "registrationStartDate": "2026-09-30",
+      "deadlineDate": "2026-11-30",
+      "deadlineAt": "2026-11-30T18:00:00+09:00",
+      "eligibility": "기타",
+      "eligibilityVerified": true,
+      "fee": "확인 필요",
+      "prize": "총 1천만원이하 / 1등 100만원",
+      "url": "https://ime.postech.ac.kr/ime/news/seminar.do?mode=view&articleNo=55975&article.offset=0&articleLimit=10",
+      "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112493",
+      "sourceId": "wevity",
+      "sourceName": "위비티",
+      "verifiedAt": "2026-11-25T07:16:35Z",
+      "dateNote": "마감 시각은 위비티 상세 본문 기준",
+      "sourceStatus": "open",
+      "stale": false
+    },
+    {
       "id": "wevity-7bb4234725b0",
       "kind": "contest",
       "title": "[방송미디어통신위원회] 제12회 한국문화AI영상대전",
@@ -3573,7 +3663,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111713",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -3693,7 +3783,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112234",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -3821,7 +3911,7 @@
     {
       "id": "wevity-88c85ad0691c",
       "kind": "contest",
-      "title": "제1회 AI 영상 공모전 (AI가 상상하는 중국) 신규",
+      "title": "제1회 AI 영상 공모전 (AI가 상상하는 중국)",
       "organizer": "공자아카데미㈜ / 서울공자아카데미",
       "description": "AI가 상상하는 중국: AI의 상상력을 통해 새로운 중국을 표현",
       "tags": [
@@ -3843,9 +3933,9 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112528",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "마감 시각은 위비티 상세 본문 기준",
-      "sourceStatus": "unknown",
+      "sourceStatus": "open",
       "stale": false
     },
     {
@@ -4143,7 +4233,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111065",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -4383,7 +4473,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111837",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -4593,7 +4683,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111222",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -4623,7 +4713,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111812",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -4743,7 +4833,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112221",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "마감 시각은 위비티 상세 본문 기준",
       "sourceStatus": "open",
       "stale": false
@@ -4773,7 +4863,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112343",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "마감 시각은 위비티 상세 본문 기준",
       "sourceStatus": "open",
       "stale": false
@@ -4833,7 +4923,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=111869",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -4865,7 +4955,7 @@
       "sourceName": "위비티",
       "verifiedAt": "2026-11-24T08:42:08Z",
       "dateNote": "마감 시각은 위비티 상세 본문 기준",
-      "sourceStatus": "open",
+      "sourceStatus": "closed",
       "stale": false
     },
     {
@@ -4893,7 +4983,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112285",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "마감 시각은 위비티 상세 본문 기준",
       "sourceStatus": "open",
       "stale": false
@@ -4953,7 +5043,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112236",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -5073,7 +5163,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112508",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "마감 시각은 위비티 상세 본문 기준",
       "sourceStatus": "open",
       "stale": false
@@ -5223,7 +5313,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112184",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "마감 시각은 위비티 상세 본문 기준",
       "sourceStatus": "open",
       "stale": false
@@ -5463,7 +5553,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112471",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "마감 시각은 위비티 상세 본문 기준",
       "sourceStatus": "open",
       "stale": false
@@ -5523,7 +5613,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112212",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -5703,7 +5793,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112402",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -6003,7 +6093,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=110817",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "마감 시각은 위비티 상세 본문 기준",
       "sourceStatus": "open",
       "stale": false
@@ -6093,7 +6183,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112066",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "마감 시각은 위비티 상세 본문 기준",
       "sourceStatus": "unknown",
       "stale": false
@@ -6363,7 +6453,7 @@
       "sourceUrl": "https://www.wevity.com/?c=find&s=1&gub=1&gbn=view&ix=112474",
       "sourceId": "wevity",
       "sourceName": "위비티",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -6395,7 +6485,7 @@
       "sourceUrl": "https://www.aisummit.co.kr/",
       "sourceId": "aisummit",
       "sourceName": "AI Summit Seoul",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "컨퍼런스 2027-08-11~12; EXPO 2027-08-11~13 (공식 사이트 노출 기준). 접수 마감과 참가비는 공식 사이트에서 확인 필요",
       "sourceStatus": "unknown",
       "stale": false
@@ -6427,7 +6517,7 @@
       "sourceUrl": "https://seochoai.kr/",
       "sourceId": "seocho",
       "sourceName": "서초 AI 페스타",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "공식 개최 10:00~18:00 (공식 사이트 기준). 일부 프로그램은 별도 사전예약이 있어 프로그램별 신청 상태는 공식 사이트에서 확인",
       "sourceStatus": "unknown",
       "stale": false
@@ -6494,7 +6584,7 @@
       "sourceUrl": "https://www.aifesta.kr/",
       "sourceId": "aifesta",
       "sourceName": "AI FESTA",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "공식 개최 2026-10-06 10:00 ~ 2026-10-08 16:00 (공식 사이트 기준). 참가비와 신청 마감은 공식 사이트에서 확인 필요",
       "sourceStatus": "unknown",
       "stale": false
@@ -6711,7 +6801,7 @@
       "sourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=030310001&str_no=202611170034",
       "sourceId": "contestkorea",
       "sourceName": "콘테스트코리아",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -6804,7 +6894,7 @@
       "sourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=031410001&str_no=202611160023",
       "sourceId": "contestkorea",
       "sourceName": "콘테스트코리아",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -6835,7 +6925,7 @@
       "sourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=031210001&str_no=202611160040",
       "sourceId": "contestkorea",
       "sourceName": "콘테스트코리아",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -6866,7 +6956,7 @@
       "sourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=031210001&str_no=202610300002",
       "sourceId": "contestkorea",
       "sourceName": "콘테스트코리아",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -6990,7 +7080,7 @@
       "sourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=030310001&str_no=202610140076",
       "sourceId": "contestkorea",
       "sourceName": "콘테스트코리아",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -7052,7 +7142,7 @@
       "sourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=030110001&str_no=202611070003",
       "sourceId": "contestkorea",
       "sourceName": "콘테스트코리아",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -7114,7 +7204,7 @@
       "sourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=031210001&str_no=202611120039",
       "sourceId": "contestkorea",
       "sourceName": "콘테스트코리아",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -7238,7 +7328,7 @@
       "sourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=030310001&str_no=202610270002",
       "sourceId": "contestkorea",
       "sourceName": "콘테스트코리아",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -7277,8 +7367,8 @@
     {
       "id": "contestkorea-5e520b903350",
       "kind": "hackathon",
-      "title": "TripPups AI Game Hackathon 2026",
-      "organizer": "Trip-Pups/HACK:ON(해커온)",
+      "title": "HACK:ON AI Game Hackathon 2026",
+      "organizer": "HACK:ON(해커온)/HACK:ON(해커온)",
       "description": "콘테스트코리아에 등록된 공모전. 분류: 학문•과학•IT",
       "tags": [
         "AI",
@@ -7290,7 +7380,7 @@
       "startDate": null,
       "endDate": null,
       "registrationStartDate": "2026-11-16",
-      "deadlineDate": "2026-11-28",
+      "deadlineDate": "2026-12-12",
       "deadlineAt": null,
       "eligibility": "대학생, 대학원생, 일반인, 외국인",
       "eligibilityVerified": true,
@@ -7300,10 +7390,10 @@
       "sourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=030310001&str_no=202611160001",
       "sourceId": "contestkorea",
       "sourceName": "콘테스트코리아",
-      "verifiedAt": "2026-11-24T01:45:06Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
-      "stale": true
+      "stale": false
     },
     {
       "id": "contestkorea-5f60909bc1f5",
@@ -7455,7 +7545,7 @@
       "sourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=031210001&str_no=202611090007",
       "sourceId": "contestkorea",
       "sourceName": "콘테스트코리아",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -7610,7 +7700,7 @@
       "sourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=030610001&str_no=202611070002",
       "sourceId": "contestkorea",
       "sourceName": "콘테스트코리아",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -7641,7 +7731,7 @@
       "sourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=031210001&str_no=202611120002",
       "sourceId": "contestkorea",
       "sourceName": "콘테스트코리아",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -7706,6 +7796,68 @@
       "verifiedAt": "2026-10-30T04:39:57Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "closed",
+      "stale": false
+    },
+    {
+      "id": "contestkorea-97e4d004395f",
+      "kind": "contest",
+      "title": "AI활용 전력설비 정비 및 안전지원 서비스 아이디어 공모전",
+      "organizer": "한전KPS",
+      "description": "콘테스트코리아에 등록된 공모전. 분류: 아이디어•건축•창업",
+      "tags": [
+        "AI",
+        "아이디어•건축•창업"
+      ],
+      "mode": "online",
+      "region": "국내 온라인",
+      "country": "KR",
+      "startDate": null,
+      "endDate": null,
+      "registrationStartDate": "2026-11-23",
+      "deadlineDate": "2026-12-06",
+      "deadlineAt": null,
+      "eligibility": "일반인",
+      "eligibilityVerified": true,
+      "fee": "무료",
+      "prize": "상금(총상금 : 300만원 / 1위 : 100만원)",
+      "url": "https://form.naver.com/response/C0grjmTXx4W",
+      "sourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=031410001&str_no=202611200017",
+      "sourceId": "contestkorea",
+      "sourceName": "콘테스트코리아",
+      "verifiedAt": "2026-11-25T07:16:35Z",
+      "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
+      "sourceStatus": "open",
+      "stale": false
+    },
+    {
+      "id": "contestkorea-9944698e898f",
+      "kind": "contest",
+      "title": "AI x Seoul 혁신 콘텐츠 공모전",
+      "organizer": "성균관대학교 문화예술미디어융합원, 성균관대 앵커사업단 서울앵커센터, AI중심대학사업단",
+      "description": "콘테스트코리아에 등록된 공모전. 분류: 사진•영상•영화제",
+      "tags": [
+        "AI",
+        "사진•영상•영화제"
+      ],
+      "mode": "unknown",
+      "region": "서울",
+      "country": "KR",
+      "startDate": null,
+      "endDate": null,
+      "registrationStartDate": "2026-11-09",
+      "deadlineDate": "2026-12-13",
+      "deadlineAt": null,
+      "eligibility": "대학생, 대학원생",
+      "eligibilityVerified": true,
+      "fee": "무료",
+      "prize": "상금(총상금 : 260만원 / 1위 : 100만원)",
+      "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=031210001&str_no=202611250017",
+      "sourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=031210001&str_no=202611250017",
+      "sourceId": "contestkorea",
+      "sourceName": "콘테스트코리아",
+      "verifiedAt": "2026-11-25T07:16:35Z",
+      "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
+      "sourceStatus": "open",
       "stale": false
     },
     {
@@ -7858,38 +8010,7 @@
       "sourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=030610001&str_no=202610230020",
       "sourceId": "contestkorea",
       "sourceName": "콘테스트코리아",
-      "verifiedAt": "2026-11-24T08:42:08Z",
-      "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
-      "sourceStatus": "open",
-      "stale": false
-    },
-    {
-      "id": "contestkorea-af8393bbac28",
-      "kind": "contest",
-      "title": "2026 AI·데이터 기반 융복합 기업가정신 아이디어 공모전",
-      "organizer": "포스텍 산업경영공학과",
-      "description": "콘테스트코리아에 등록된 공모전. 분류: 아이디어•건축•창업",
-      "tags": [
-        "AI",
-        "아이디어•건축•창업"
-      ],
-      "mode": "online",
-      "region": "국내 온라인",
-      "country": "KR",
-      "startDate": null,
-      "endDate": null,
-      "registrationStartDate": "2026-09-30",
-      "deadlineDate": "2026-11-30",
-      "deadlineAt": null,
-      "eligibility": "대학생",
-      "eligibilityVerified": true,
-      "fee": "무료",
-      "prize": "상금(총상금 : 330만원 / 1위 : 100만원)",
-      "url": "https://docs.google.com/forms/d/e/1FAIpQLSflMXcUSq0zlPXp1ionLKUqodf2T4pEiUi7lxmWLkIq8kYX3w/viewform",
-      "sourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=031410001&str_no=202611160042",
-      "sourceId": "contestkorea",
-      "sourceName": "콘테스트코리아",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -8106,7 +8227,7 @@
       "sourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=031210001&str_no=202610270008",
       "sourceId": "contestkorea",
       "sourceName": "콘테스트코리아",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -8137,7 +8258,7 @@
       "sourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=030310001&str_no=202611090018",
       "sourceId": "contestkorea",
       "sourceName": "콘테스트코리아",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -8422,6 +8543,37 @@
       "stale": false
     },
     {
+      "id": "contestkorea-ef4f87e56783",
+      "kind": "contest",
+      "title": "[대구광역시 남구] AI 행정혁신 경진대회",
+      "organizer": "대구광역시 남구청, 계명대학교 창업지원단",
+      "description": "콘테스트코리아에 등록된 공모전. 분류: 아이디어•건축•창업",
+      "tags": [
+        "AI",
+        "아이디어•건축•창업"
+      ],
+      "mode": "unknown",
+      "region": "전국",
+      "country": "KR",
+      "startDate": null,
+      "endDate": null,
+      "registrationStartDate": "2026-11-24",
+      "deadlineDate": "2026-12-09",
+      "deadlineAt": null,
+      "eligibility": "대학생, 대학원생, 일반인",
+      "eligibilityVerified": true,
+      "fee": "무료",
+      "prize": "기타 :선정된 개인(팀)당 3,000만원 상당의 사업화 자금 지원",
+      "url": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=031410001&str_no=202611240040",
+      "sourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=031410001&str_no=202611240040",
+      "sourceId": "contestkorea",
+      "sourceName": "콘테스트코리아",
+      "verifiedAt": "2026-11-25T07:16:35Z",
+      "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
+      "sourceStatus": "open",
+      "stale": false
+    },
+    {
       "id": "contestkorea-f352bcd5116d",
       "kind": "hackathon",
       "title": "[선착순 30명 | 참가비 무료] “AI로 아이디어를 글로벌 비즈니스로!” KU 캠퍼스타운 AI 글로벌 해커톤",
@@ -8478,7 +8630,7 @@
       "sourceUrl": "https://www.contestkorea.com/sub/view.php?int_gbn=1&Txt_bcode=031410001&str_no=202611160006",
       "sourceId": "contestkorea",
       "sourceName": "콘테스트코리아",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "날짜만 제공(시각 미확인, 접수기간 원문 기준)",
       "sourceStatus": "open",
       "stale": false
@@ -8509,7 +8661,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-11월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 11. 23(월) ~ 11. 29(일) 23:59 (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -8541,7 +8693,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-11월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 09. 10(목) 14:00 ~ 11. 26(목) 15:00 (Dev-Event 목록 표기). 접수 마감·자격은 행사 페이지에서 확인 필요",
       "sourceStatus": "unknown",
       "stale": false
@@ -8666,7 +8818,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-11월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 10. 08(목) ~ 11. 29(일) (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -8697,7 +8849,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-12월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 11. 17(화) ~ 12. 01(화) (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -8852,7 +9004,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-12월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 10. 06(화) ~ 12. 11(금) (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -8915,7 +9067,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-12월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 11. 12(목) 13:00 ~ 12. 04(금) 23:59 (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -9041,7 +9193,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-12월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 10. 26(월) 10:00 ~ 12. 21(월) 10:00 (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -9353,7 +9505,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-11월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 11. 25(수) 18:00 ~ 11. 25(수) 21:30 (Dev-Event 목록 표기). 접수 마감·자격은 행사 페이지에서 확인 필요",
       "sourceStatus": "unknown",
       "stale": false
@@ -9384,7 +9536,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#27년-1월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 11. 16(월) ~ 01. 10(일) (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -9446,7 +9598,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-11월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 10. 22(목) ~ 11. 30(월) 23:59 (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -9509,7 +9661,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-11월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 10. 30(금) ~ 11. 27(금) 18:00 (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -9603,7 +9755,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-12월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 11. 20(금) ~ 12. 03(목) 13:00 (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -9665,7 +9817,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-12월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 11. 06(금) 20:00 ~ 12. 07(월) 12:00 (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -9758,7 +9910,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-12월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 11. 23(월) ~ 12. 07(월) 23:59 (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -9789,7 +9941,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-12월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 12. 10(목) 16:00 ~ 12. 10(목) 18:30 (Dev-Event 목록 표기). 접수 마감·자격은 행사 페이지에서 확인 필요",
       "sourceStatus": "unknown",
       "stale": false
@@ -9882,7 +10034,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-11월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 11. 02(월) ~ 11. 28(토) (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -10162,7 +10314,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-11월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 11. 26(목) 19:00 ~ 11. 26(목) 21:10 (Dev-Event 목록 표기). 접수 마감·자격은 행사 페이지에서 확인 필요",
       "sourceStatus": "unknown",
       "stale": false
@@ -10256,7 +10408,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-11월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 11. 17(화) ~ 11. 28(토) 13:00 (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -10413,7 +10565,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-12월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 11. 23(월) ~ 12. 10(목) 14:00 (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -10506,7 +10658,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-12월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 11. 04(수) ~ 12. 02(수) 14:00 (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -10537,7 +10689,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-11월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 11. 25(수) 13:00 ~ 11. 25(수) 15:00 (Dev-Event 목록 표기). 접수 마감·자격은 행사 페이지에서 확인 필요",
       "sourceStatus": "unknown",
       "stale": false
@@ -10599,7 +10751,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-12월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 10. 26(월) ~ 12. 07(월) 23:30 (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -10630,7 +10782,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-12월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 11. 19(목) ~ 12. 10(목) 23:59 (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -10754,7 +10906,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-12월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 11. 09(월) ~ 12. 03(목) (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -10785,7 +10937,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-12월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 12. 11(금) 13:30 ~ 12. 11(금) 18:30 (Dev-Event 목록 표기). 접수 마감·자격은 행사 페이지에서 확인 필요",
       "sourceStatus": "unknown",
       "stale": false
@@ -10972,7 +11124,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-11월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 11. 09(월) ~ 11. 25(수) (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -11065,7 +11217,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-11월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 11. 09(월) ~ 11. 29(일) 23:59 (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -11348,7 +11500,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-11월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 11. 23(월) ~ 11. 25(수) 23:59 (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -11443,7 +11595,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-12월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 09. 07(월) ~ 12. 31(목) 23:59 (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -11598,7 +11750,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-12월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 11. 20(금) ~ 12. 06(일) 23:30 (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -11629,7 +11781,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-11월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 11. 10(화) ~ 11. 29(일) 23:59 (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -11817,7 +11969,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-11월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 11. 18(수) ~ 11. 27(금) 18:00 (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -11911,7 +12063,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-11월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 11. 16(월) ~ 11. 29(일) 23:59 (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -11973,7 +12125,7 @@
       "sourceUrl": "https://github.com/brave-people/Dev-Event#26년-12월",
       "sourceId": "devevent",
       "sourceName": "Dev-Event",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "접수 11. 10(화) 12:00 ~ 12. 09(수) 23:30 (Dev-Event 목록 표기, 날짜만 사용). 자격·참가비·접수 방법은 행사 페이지에서 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -12036,7 +12188,7 @@
       "sourceUrl": "https://aiexpo.co.kr/%ec%a0%84%ec%8b%9c%ed%9a%8c-%ea%b0%9c%ec%9a%94/",
       "sourceId": "aiexpo",
       "sourceName": "AI EXPO KOREA",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "공식 전시회 개요의 개최 기간 기준. 사전등록·참관 자격과 참가비는 공식 사이트에서 확인 필요 (공식 안내: B2B 전문 전시회)",
       "sourceStatus": "unknown",
       "stale": false
@@ -12067,7 +12219,7 @@
       "sourceUrl": "https://linkareer.com/activity/358358",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -12130,7 +12282,7 @@
       "sourceUrl": "https://linkareer.com/activity/366278",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -12256,7 +12408,7 @@
       "sourceUrl": "https://linkareer.com/activity/363775",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -12320,7 +12472,7 @@
       "sourceUrl": "https://linkareer.com/activity/362057",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -12357,38 +12509,6 @@
       "stale": false
     },
     {
-      "id": "linkareer-3328f7ff955f",
-      "kind": "contest",
-      "title": "AI x Seoul 혁신 콘텐츠 공모전",
-      "organizer": "성균관대",
-      "description": "링커리어에 등록된 공모전. 분야: 디자인/사진/예술/영상, 과학/공학/기술/IT",
-      "tags": [
-        "AI",
-        "디자인/사진/예술/영상",
-        "과학/공학/기술/IT"
-      ],
-      "mode": "unknown",
-      "region": "미정",
-      "country": "KR",
-      "startDate": null,
-      "endDate": null,
-      "registrationStartDate": "2026-11-09",
-      "deadlineDate": "2026-12-13",
-      "deadlineAt": "2026-12-13T08:59:59.999+09:00",
-      "eligibility": "대학생",
-      "eligibilityVerified": true,
-      "fee": "확인 필요",
-      "prize": "총 상금 260만원",
-      "url": "https://www.skku.edu/skku/campus/skk_comm/notice01.do?articleNo=142007&mode=view",
-      "sourceUrl": "https://linkareer.com/activity/366610",
-      "sourceId": "linkareer",
-      "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
-      "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
-      "sourceStatus": "open",
-      "stale": false
-    },
-    {
       "id": "linkareer-3b856068b9cd",
       "kind": "contest",
       "title": "[그린대로] AI 서비스 오픈 기념 이벤트",
@@ -12414,7 +12534,7 @@
       "sourceUrl": "https://linkareer.com/activity/365596",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -12477,7 +12597,7 @@
       "sourceUrl": "https://linkareer.com/activity/363354",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -12635,7 +12755,7 @@
       "sourceUrl": "https://linkareer.com/activity/365114",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -12730,7 +12850,7 @@
       "sourceUrl": "https://linkareer.com/activity/360253",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -12761,7 +12881,7 @@
       "sourceUrl": "https://linkareer.com/activity/362992",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -12857,7 +12977,7 @@
       "sourceUrl": "https://linkareer.com/activity/355997",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -12888,7 +13008,7 @@
       "sourceUrl": "https://linkareer.com/activity/363177",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -12920,7 +13040,7 @@
       "sourceUrl": "https://linkareer.com/activity/365635",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -13014,7 +13134,7 @@
       "sourceUrl": "https://linkareer.com/activity/360717",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -13110,7 +13230,7 @@
       "sourceUrl": "https://linkareer.com/activity/363787",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -13211,37 +13331,6 @@
       "stale": false
     },
     {
-      "id": "linkareer-996081524c3c",
-      "kind": "contest",
-      "title": "제1회 AI 영상 공모전 (AI가 상상하는 중국)",
-      "organizer": "공자아카데미㈜ / 서울공자아카데미",
-      "description": "링커리어에 등록된 공모전. 분야: 콘텐츠",
-      "tags": [
-        "AI",
-        "콘텐츠"
-      ],
-      "mode": "unknown",
-      "region": "미정",
-      "country": "KR",
-      "startDate": null,
-      "endDate": null,
-      "registrationStartDate": "2026-11-25",
-      "deadlineDate": "2026-12-16",
-      "deadlineAt": "2026-12-16T23:59:59.999+09:00",
-      "eligibility": "대상 제한 없음",
-      "eligibilityVerified": true,
-      "fee": "확인 필요",
-      "prize": "총 상금 110만원",
-      "url": "https://www.kongzi.co.kr/?c1=2&c2=1511&uid=1497",
-      "sourceUrl": "https://linkareer.com/activity/366665",
-      "sourceId": "linkareer",
-      "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
-      "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
-      "sourceStatus": "open",
-      "stale": false
-    },
-    {
       "id": "linkareer-9fa491c35f9f",
       "kind": "contest",
       "title": "[과학기술정보통신부] AI 달인 꿀팁 챌린지 시즌4",
@@ -13299,7 +13388,7 @@
       "sourceUrl": "https://linkareer.com/activity/362189",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -13394,7 +13483,7 @@
       "sourceUrl": "https://linkareer.com/activity/366078",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -13425,7 +13514,7 @@
       "sourceUrl": "https://linkareer.com/activity/365707",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -13488,7 +13577,7 @@
       "sourceUrl": "https://linkareer.com/activity/365775",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -13520,7 +13609,7 @@
       "sourceUrl": "https://linkareer.com/activity/359442",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -13583,7 +13672,7 @@
       "sourceUrl": "https://linkareer.com/activity/360570",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -13679,7 +13768,7 @@
       "sourceUrl": "https://linkareer.com/activity/359841",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -13710,7 +13799,7 @@
       "sourceUrl": "https://linkareer.com/activity/363760",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -13773,7 +13862,38 @@
       "sourceUrl": "https://linkareer.com/activity/363343",
       "sourceId": "linkareer",
       "sourceName": "링커리어",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
+      "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
+      "sourceStatus": "open",
+      "stale": false
+    },
+    {
+      "id": "linkareer-fdadb6861b34",
+      "kind": "hackathon",
+      "title": "TripPups AI Game Hackathon 2026",
+      "organizer": "Trip-Pups",
+      "description": "링커리어에 등록된 공모전. 분야: 콘텐츠",
+      "tags": [
+        "AI",
+        "콘텐츠"
+      ],
+      "mode": "unknown",
+      "region": "미정",
+      "country": "KR",
+      "startDate": null,
+      "endDate": null,
+      "registrationStartDate": "2026-11-16",
+      "deadlineDate": "2026-11-28",
+      "deadlineAt": "2026-11-28T23:59:59.999+09:00",
+      "eligibility": "대학생, 직장인/일반인",
+      "eligibilityVerified": true,
+      "fee": "확인 필요",
+      "prize": null,
+      "url": "https://linkareer.com/activity/364831",
+      "sourceUrl": "https://linkareer.com/activity/364831",
+      "sourceId": "linkareer",
+      "sourceName": "링커리어",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "링커리어 등록 접수 기간 기준. 세부 일정은 공고 원문 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -13801,7 +13921,7 @@
       "sourceUrl": "https://www.axchallenge.com/",
       "sourceId": "gpters",
       "sourceName": "지피터스·공식 확인",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "공식 개최 2026-11-13 15:00 ~ 2026-11-14 17:30 (공식 사이트 기준). 참가 조건은 공식 페이지에서 확인 필요. 지피터스에서 발견: https://www.gpters.org/newsletter/post/review-using-daily-errand. 일정·조건은 공식 페이지 기준",
       "sourceStatus": "unknown",
       "stale": false
@@ -13831,7 +13951,7 @@
       "sourceUrl": "https://biz.modulabs.co.kr/event/570",
       "sourceId": "modulabs",
       "sourceName": "모두의연구소",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "공식 개최 2026-11-27 14:00 ~ 2026-11-27 18:00 (한국 시각). 접수 마감·참가 조건 확인 필요",
       "sourceStatus": "open",
       "stale": false
@@ -13861,7 +13981,7 @@
       "sourceUrl": "https://biz.modulabs.co.kr/event/501",
       "sourceId": "modulabs",
       "sourceName": "모두의연구소",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "공식 개최 2026-10-22 19:00 ~ 2026-10-22 21:00 (한국 시각). 접수 마감·참가 조건 확인 필요",
       "sourceStatus": "closed",
       "stale": false
@@ -13891,7 +14011,7 @@
       "sourceUrl": "https://biz.modulabs.co.kr/event/572",
       "sourceId": "modulabs",
       "sourceName": "모두의연구소",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "공식 개최 2026-11-10 19:00 ~ 2026-11-10 21:00 (한국 시각). 접수 마감·참가 조건 확인 필요",
       "sourceStatus": "closed",
       "stale": false
@@ -13921,7 +14041,7 @@
       "sourceUrl": "https://biz.modulabs.co.kr/event/502",
       "sourceId": "modulabs",
       "sourceName": "모두의연구소",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "공식 개최 2026-10-15 13:00 ~ 2026-10-16 18:00 (한국 시각). 접수 마감·참가 조건 확인 필요",
       "sourceStatus": "closed",
       "stale": false
@@ -13951,7 +14071,7 @@
       "sourceUrl": "https://biz.modulabs.co.kr/event/500",
       "sourceId": "modulabs",
       "sourceName": "모두의연구소",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "공식 개최 2026-10-15 19:00 ~ 2026-10-15 21:00 (한국 시각). 접수 마감·참가 조건 확인 필요",
       "sourceStatus": "closed",
       "stale": false
@@ -13981,7 +14101,7 @@
       "sourceUrl": "https://biz.modulabs.co.kr/event/571",
       "sourceId": "modulabs",
       "sourceName": "모두의연구소",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "공식 개최 2026-11-26 19:00 ~ 2026-11-26 21:00 (한국 시각). 접수 마감·참가 조건 확인 필요",
       "sourceStatus": "closed",
       "stale": false
@@ -14011,7 +14131,7 @@
       "sourceUrl": "https://seoulaihub.kr/board/board_basic/board_detail.asp?scrID=0000000170&pageNum=4&subNum=1&ssubNum=1&bd_num=00000001702026000059&act=view",
       "sourceId": "seoulaihub",
       "sourceName": "서울 AI 허브",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "공식 공지 본문 행사 일시 기준. 접수 마감은 별도 표시하며 접수 상태는 확인 필요",
       "sourceStatus": "unknown",
       "stale": false
@@ -14041,7 +14161,7 @@
       "sourceUrl": "https://seoulaihub.kr/board/board_basic/board_detail.asp?scrID=0000000170&pageNum=4&subNum=1&ssubNum=1&bd_num=00000001702026000057&act=view",
       "sourceId": "seoulaihub",
       "sourceName": "서울 AI 허브",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "공식 공지 본문 행사 일시 기준. 접수 마감은 별도 표시하며 접수 상태는 확인 필요",
       "sourceStatus": "unknown",
       "stale": false
@@ -14071,7 +14191,7 @@
       "sourceUrl": "https://seoulaihub.kr/board/board_basic/board_detail.asp?scrID=0000000170&pageNum=4&subNum=1&ssubNum=1&bd_num=00000001702026000056&act=view",
       "sourceId": "seoulaihub",
       "sourceName": "서울 AI 허브",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "공식 공지 본문 행사 일시 기준. 접수 마감은 별도 표시하며 접수 상태는 확인 필요",
       "sourceStatus": "unknown",
       "stale": false
@@ -14101,7 +14221,7 @@
       "sourceUrl": "https://seoulaihub.kr/board/board_basic/board_detail.asp?scrID=0000000170&pageNum=4&subNum=1&ssubNum=1&bd_num=00000001702026000058&act=view",
       "sourceId": "seoulaihub",
       "sourceName": "서울 AI 허브",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "공식 공지 본문 행사 일시 기준. 접수 마감은 별도 표시하며 접수 상태는 확인 필요",
       "sourceStatus": "unknown",
       "stale": false
@@ -14131,7 +14251,7 @@
       "sourceUrl": "https://seoulaihub.kr/board/board_basic/board_detail.asp?scrID=0000000170&pageNum=4&subNum=1&ssubNum=1&bd_num=00000001702026000050&act=view",
       "sourceId": "seoulaihub",
       "sourceName": "서울 AI 허브",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "공식 공지 본문 행사 일시 기준. 접수 마감은 별도 표시하며 접수 상태는 확인 필요",
       "sourceStatus": "unknown",
       "stale": false
@@ -14163,7 +14283,7 @@
       "sourceUrl": "https://moducon.modulabs.co.kr/?edition=2026",
       "sourceId": "moducon",
       "sourceName": "모두콘",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "공식 개최 10:00~18:00 (공식 사이트 기준). 참가 신청 마감·참가비는 공식 사이트 확인 필요",
       "sourceStatus": "unknown",
       "stale": false
@@ -14194,8 +14314,39 @@
       "sourceUrl": "https://luma.com/uuxozc7r",
       "sourceId": "luma",
       "sourceName": "루마(Luma)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 2026-11-27 18:30 ~ 2026-11-27 21:00 (한국 시각, 루마 일정 기준). 신청 마감·참가 조건은 루마 페이지 확인",
+      "sourceStatus": "unknown",
+      "stale": false
+    },
+    {
+      "id": "luma-2a2b220af97f",
+      "kind": "hackathon",
+      "title": "Codex Community Hackathon – Suwon",
+      "organizer": "Codex Community Events",
+      "description": "Codex Community Hackathon – Suwon",
+      "tags": [
+        "AI",
+        "루마"
+      ],
+      "mode": "offline",
+      "region": "국내 오프라인",
+      "country": "KR",
+      "startDate": "2026-12-05",
+      "endDate": "2026-12-05",
+      "registrationStartDate": null,
+      "deadlineDate": null,
+      "deadlineAt": null,
+      "eligibility": "확인 필요",
+      "eligibilityVerified": false,
+      "fee": "확인 필요",
+      "prize": null,
+      "url": "https://luma.com/hwl5f9xx",
+      "sourceUrl": "https://luma.com/hwl5f9xx",
+      "sourceId": "luma",
+      "sourceName": "루마(Luma)",
+      "verifiedAt": "2026-11-25T07:16:35Z",
+      "dateNote": "개최 2026-12-05 12:00 ~ 2026-12-05 19:00 (한국 시각, 루마 일정 기준). 신청 마감·참가 조건은 루마 페이지 확인",
       "sourceStatus": "unknown",
       "stale": false
     },
@@ -14256,7 +14407,7 @@
       "sourceUrl": "https://luma.com/Base44seoul1211",
       "sourceId": "luma",
       "sourceName": "루마(Luma)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 2026-12-12 14:00 ~ 2026-12-12 17:00 (한국 시각, 루마 일정 기준). 신청 마감·참가 조건은 루마 페이지 확인",
       "sourceStatus": "unknown",
       "stale": false
@@ -14349,7 +14500,7 @@
       "sourceUrl": "https://luma.com/o7uxaja6",
       "sourceId": "luma",
       "sourceName": "루마(Luma)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 2026-12-07 18:30 ~ 2026-12-07 21:30 (한국 시각, 루마 일정 기준). 신청 마감·참가 조건은 루마 페이지 확인",
       "sourceStatus": "unknown",
       "stale": false
@@ -14380,7 +14531,7 @@
       "sourceUrl": "https://luma.com/reuf8z4u",
       "sourceId": "luma",
       "sourceName": "루마(Luma)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 2026-12-04 19:00 ~ 2026-12-04 21:00 (한국 시각, 루마 일정 기준). 신청 마감·참가 조건은 루마 페이지 확인",
       "sourceStatus": "unknown",
       "stale": false
@@ -14442,7 +14593,7 @@
       "sourceUrl": "https://luma.com/1j9tw0oj",
       "sourceId": "luma",
       "sourceName": "루마(Luma)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 2026-12-14 12:30 ~ 2026-12-14 17:40 (한국 시각, 루마 일정 기준). 신청 마감·참가 조건은 루마 페이지 확인",
       "sourceStatus": "unknown",
       "stale": false
@@ -14473,7 +14624,7 @@
       "sourceUrl": "https://luma.com/8czllyqk",
       "sourceId": "luma",
       "sourceName": "루마(Luma)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 2026-11-29 13:00 ~ 2026-11-29 17:00 (한국 시각, 루마 일정 기준). 신청 마감·참가 조건은 루마 페이지 확인",
       "sourceStatus": "unknown",
       "stale": false
@@ -14504,7 +14655,7 @@
       "sourceUrl": "https://luma.com/p8l79x8m",
       "sourceId": "luma",
       "sourceName": "루마(Luma)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 2026-11-27 13:00 ~ 2026-11-27 19:00 (한국 시각, 루마 일정 기준). 신청 마감·참가 조건은 루마 페이지 확인",
       "sourceStatus": "unknown",
       "stale": false
@@ -14566,7 +14717,7 @@
       "sourceUrl": "https://luma.com/qg5xt98w",
       "sourceId": "luma",
       "sourceName": "루마(Luma)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 2026-12-01 18:30 ~ 2026-12-01 21:00 (한국 시각, 루마 일정 기준). 신청 마감·참가 조건은 루마 페이지 확인",
       "sourceStatus": "unknown",
       "stale": false
@@ -14597,7 +14748,7 @@
       "sourceUrl": "https://luma.com/ek6u1wis",
       "sourceId": "luma",
       "sourceName": "루마(Luma)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 2026-11-27 19:00 ~ 2026-11-27 21:00 (한국 시각, 루마 일정 기준). 신청 마감·참가 조건은 루마 페이지 확인",
       "sourceStatus": "unknown",
       "stale": false
@@ -14628,7 +14779,7 @@
       "sourceUrl": "https://luma.com/buildp-hg5p",
       "sourceId": "luma",
       "sourceName": "루마(Luma)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 2026-12-21 18:00 ~ 2026-12-21 20:00 (한국 시각, 루마 일정 기준). 신청 마감·참가 조건은 루마 페이지 확인",
       "sourceStatus": "unknown",
       "stale": false
@@ -14659,7 +14810,7 @@
       "sourceUrl": "https://luma.com/clickh-gb3i",
       "sourceId": "luma",
       "sourceName": "루마(Luma)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 2026-11-25 18:30 ~ 2026-11-25 21:30 (한국 시각, 루마 일정 기준). 신청 마감·참가 조건은 루마 페이지 확인",
       "sourceStatus": "unknown",
       "stale": false
@@ -14677,8 +14828,8 @@
       "mode": "offline",
       "region": "국내 오프라인 · 서울",
       "country": "KR",
-      "startDate": "2026-11-28",
-      "endDate": "2026-11-28",
+      "startDate": "2026-12-20",
+      "endDate": "2026-12-20",
       "registrationStartDate": null,
       "deadlineDate": null,
       "deadlineAt": null,
@@ -14690,8 +14841,8 @@
       "sourceUrl": "https://luma.com/6n85kmom",
       "sourceId": "luma",
       "sourceName": "루마(Luma)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
-      "dateNote": "개최 2026-11-28 10:00 ~ 2026-11-28 20:00 (한국 시각, 루마 일정 기준). 신청 마감·참가 조건은 루마 페이지 확인",
+      "verifiedAt": "2026-11-25T07:16:35Z",
+      "dateNote": "개최 2026-12-20 10:00 ~ 2026-12-20 20:00 (한국 시각, 루마 일정 기준). 신청 마감·참가 조건은 루마 페이지 확인",
       "sourceStatus": "unknown",
       "stale": false
     },
@@ -14721,7 +14872,7 @@
       "sourceUrl": "https://luma.com/tv1m4rqy",
       "sourceId": "luma",
       "sourceName": "루마(Luma)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 2026-11-26 19:00 ~ 2026-11-26 21:30 (한국 시각, 루마 일정 기준). 신청 마감·참가 조건은 루마 페이지 확인",
       "sourceStatus": "unknown",
       "stale": false
@@ -14753,7 +14904,7 @@
       "sourceUrl": "https://github.com/ccfddl/ccf-deadlines/blob/main/conference/AI/aaai.yml?edition=2027",
       "sourceId": "majorconf",
       "sourceName": "주요 AI 학회(ccfddl)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 February 16-23, 2027 (현지 날짜, ccfddl 학회 일정 기준). 참가 등록 마감·참가비는 공식 사이트 확인",
       "sourceStatus": "unknown",
       "stale": false
@@ -14785,7 +14936,7 @@
       "sourceUrl": "https://github.com/ccfddl/ccf-deadlines/blob/main/conference/AI/acl.yml?edition=2027",
       "sourceId": "majorconf",
       "sourceName": "주요 AI 학회(ccfddl)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 August 20-22, 2027 (현지 날짜, ccfddl 학회 일정 기준). 참가 등록 마감·참가비는 공식 사이트 확인",
       "sourceStatus": "unknown",
       "stale": false
@@ -14817,7 +14968,7 @@
       "sourceUrl": "https://github.com/ccfddl/ccf-deadlines/blob/main/conference/AI/nips.yml?edition=2026",
       "sourceId": "majorconf",
       "sourceName": "주요 AI 학회(ccfddl)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 December 8-10 (Sydney), December 9-11 (Atlanta and Paris), 2026 (현지 날짜, ccfddl 학회 일정 기준). 참가 등록 마감·참가비는 공식 사이트 확인",
       "sourceStatus": "unknown",
       "stale": false
@@ -14849,7 +15000,7 @@
       "sourceUrl": "https://github.com/ccfddl/ccf-deadlines/blob/main/conference/AI/iclr.yml?edition=2027",
       "sourceId": "majorconf",
       "sourceName": "주요 AI 학회(ccfddl)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 April 26-28, 2027 (현지 날짜, ccfddl 학회 일정 기준). 참가 등록 마감·참가비는 공식 사이트 확인",
       "sourceStatus": "unknown",
       "stale": false
@@ -14881,7 +15032,7 @@
       "sourceUrl": "https://github.com/ccfddl/ccf-deadlines/blob/main/conference/AI/icml.yml?edition=2027",
       "sourceId": "majorconf",
       "sourceName": "주요 AI 학회(ccfddl)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 August 2-4, 2027 (현지 날짜, ccfddl 학회 일정 기준). 참가 등록 마감·참가비는 공식 사이트 확인",
       "sourceStatus": "unknown",
       "stale": false
@@ -14913,7 +15064,7 @@
       "sourceUrl": "https://github.com/ccfddl/ccf-deadlines/blob/main/conference/AI/iccv.yml?edition=2027",
       "sourceId": "majorconf",
       "sourceName": "주요 AI 학회(ccfddl)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 October 5-7, 2027 (현지 날짜, ccfddl 학회 일정 기준). 참가 등록 마감·참가비는 공식 사이트 확인",
       "sourceStatus": "unknown",
       "stale": false
@@ -14945,7 +15096,7 @@
       "sourceUrl": "https://github.com/ccfddl/ccf-deadlines/blob/main/conference/AI/ijcai.yml?edition=2027",
       "sourceId": "majorconf",
       "sourceName": "주요 AI 학회(ccfddl)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 August 7-13, 2027 (현지 날짜, ccfddl 학회 일정 기준). 참가 등록 마감·참가비는 공식 사이트 확인",
       "sourceStatus": "unknown",
       "stale": false
@@ -14977,7 +15128,7 @@
       "sourceUrl": "https://github.com/ccfddl/ccf-deadlines/blob/main/conference/AI/naacl.yml?edition=2027",
       "sourceId": "majorconf",
       "sourceName": "주요 AI 학회(ccfddl)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 June 1-5, 2027 (현지 날짜, ccfddl 학회 일정 기준). 참가 등록 마감·참가비는 공식 사이트 확인",
       "sourceStatus": "unknown",
       "stale": false
@@ -15009,7 +15160,7 @@
       "sourceUrl": "https://github.com/ccfddl/ccf-deadlines/blob/main/conference/AI/cvpr.yml?edition=2027",
       "sourceId": "majorconf",
       "sourceName": "주요 AI 학회(ccfddl)",
-      "verifiedAt": "2026-11-24T08:42:08Z",
+      "verifiedAt": "2026-11-25T07:16:35Z",
       "dateNote": "개최 June 22-24, 2027 (현지 날짜, ccfddl 학회 일정 기준). 참가 등록 마감·참가비는 공식 사이트 확인",
       "sourceStatus": "unknown",
       "stale": false
